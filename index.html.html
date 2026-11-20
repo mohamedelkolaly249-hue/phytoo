@@ -1,0 +1,2696 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المرجع الأكاديمي والإكلينيكي للعلاج بالنباتات الطبية | Phytotherapy (PG706)</title>
+
+    <!-- خطوط أكاديمية فاخرة للعربية واللاتينية العلمية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,700;1,700&family=Cairo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- مكتبة الأيقونات Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                        heading: ['Amiri', 'Cairo', 'serif'],
+                        en: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        ivory: '#FBFBF8',
+                        emeraldBotanical: '#0D3B2E',
+                        emeraldSoft: '#155442',
+                        antiqueGold: '#B88A3B',
+                        charcoalSlate: '#182220',
+                        borderWarm: '#E6E4DC',
+                        pharmaPlum: '#5B2C82',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* التصميم الإكلينيكي النباتي الفاتح الفاخر */
+        body {
+            background-color: #FBFBF8;
+            background-image:
+                radial-gradient(circle at 10% 2%, rgba(13, 59, 46, 0.04) 0%, transparent 34%),
+                radial-gradient(circle at 90% 4%, rgba(184, 138, 59, 0.055) 0%, transparent 32%);
+            color: #182220;
+            overflow-x: hidden;
+        }
+
+        /* قص دائري نظيف لشعار كلية الصيدلة لإزالة أي زوايا سوداء */
+        .pharmacy-logo-ring {
+            border-radius: 9999px;
+            overflow: hidden;
+            background: #FFFFFF;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 1 / 1;
+        }
+        .pharmacy-logo-ring img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.07);
+            border-radius: 9999px;
+        }
+
+        /* بطاقات تحريرية بحدود دقيقة وارتفاع ناعم */
+        .editorial-card {
+            background: #FFFFFF;
+            border: 1px solid #E6E4DC;
+            box-shadow: 0 4px 18px -8px rgba(24, 34, 32, 0.07);
+            transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+        .editorial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 36px -14px rgba(13, 59, 46, 0.14);
+            border-color: #0D3B2E;
+        }
+
+        /* نقاط الكتابة المتحركة للمساعد الذكي */
+        @keyframes typingBounce {
+            0%, 80%, 100% { transform: scale(0.7); opacity: 0.45; }
+            40% { transform: scale(1.1); opacity: 1; }
+        }
+        .typing-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 9999px;
+            background-color: #0D3B2E;
+            display: inline-block;
+            animation: typingBounce 1.2s infinite ease-in-out both;
+        }
+        .typing-dot:nth-child(2) { animation-delay: 0.18s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.36s; }
+
+        /* تنسيق مخرجات المساعد الذكي */
+        .ai-prose p { margin-bottom: 0.55rem; line-height: 1.75; }
+        .ai-prose p:last-child { margin-bottom: 0; }
+        .ai-prose ul, .ai-prose ol { margin: 0.45rem 0 0.65rem 0; padding-right: 1.25rem; }
+        .ai-prose ul { list-style-type: disc; }
+        .ai-prose ol { list-style-type: decimal; }
+        .ai-prose li { margin-bottom: 0.3rem; line-height: 1.7; }
+        .ai-prose strong { color: #0D3B2E; font-weight: 800; }
+        .ai-prose h4 { font-weight: 800; color: #0D3B2E; margin-top: 0.65rem; margin-bottom: 0.35rem; font-size: 0.92rem; }
+
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeSlideIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* تمويه الاسترجاع النشط لجدول العملي */
+        .recall-hidden {
+            filter: blur(6px);
+            user-select: none;
+            transition: filter 0.22s ease;
+        }
+        .recall-visible {
+            filter: blur(0px);
+            user-select: auto;
+        }
+
+        /* بطاقات المراجعة ثلاثية الأبعاد */
+        .flash-scene {
+            perspective: 1200px;
+        }
+        .flash-inner {
+            position: relative;
+            width: 100%;
+            min-height: 260px;
+            transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+            transform-style: preserve-3d;
+        }
+        .flash-inner.flipped {
+            transform: rotateY(180deg);
+        }
+        .flash-face {
+            position: absolute;
+            inset: 0;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1.75rem;
+            border-radius: 1.5rem;
+        }
+        .flash-back {
+            transform: rotateY(180deg);
+        }
+
+        /* شريط التمرير */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #F1EFE8; }
+        ::-webkit-scrollbar-thumb { background: #C2BEB2; border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #0D3B2E; }
+    </style>
+</head>
+<body class="antialiased selection:bg-emerald-100 selection:text-[#0D3B2E]">
+
+    <!-- إشعار عائم مخصص (بديل alert) -->
+    <div id="app-toast" class="fixed bottom-5 left-5 z-[95] hidden max-w-sm px-4 py-3 rounded-2xl bg-[#0D3B2E] text-white border border-[#B88A3B] shadow-2xl text-xs sm:text-sm font-bold items-center gap-2.5 animate-fade-in">
+        <i data-lucide="info" class="w-4 h-4 text-[#E6C27A] shrink-0"></i>
+        <span id="app-toast-text"></span>
+    </div>
+
+    <!-- زر العودة للأعلى العائم -->
+    <button id="scroll-top-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="العودة للأعلى"
+        class="fixed bottom-5 right-5 z-40 opacity-0 pointer-events-none translate-y-3 px-4 py-2.5 rounded-full bg-[#0D3B2E]/95 hover:bg-[#182220] text-white border border-[#B88A3B]/80 shadow-xl backdrop-blur-md text-xs font-bold flex items-center gap-1.5 transition-all duration-300">
+        <i data-lucide="arrow-up" class="w-4 h-4 text-[#E6C27A]"></i>
+        <span>الأعلى</span>
+    </button>
+
+    <!-- =========================================================================
+         الشريط العلوي المؤسسي (غير ثابت - يتحرك بسلاسة مع التمرير)
+         ========================================================================= -->
+    <header class="relative z-40 bg-white border-b border-[#E6E4DC]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between py-4 gap-3.5">
+
+                <!-- الشعارات الثلاثة والهوية الجامعية -->
+                <div class="flex items-center gap-3 sm:gap-4 min-w-0">
+                    <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+                        <!-- شعار جامعة المنصورة الأهلية -->
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-[#0D3B2E]/20 bg-white shadow-2xs" title="جامعة المنصورة الأهلية">
+                            <img data-asset="mnu-logo" src="mnu-logo.jpg" alt="شعار جامعة المنصورة الأهلية" class="w-full h-full object-cover">
+                        </div>
+                        <!-- شعار كلية الصيدلة مقصوصاً بدقة دائرية بدون زوايا سوداء -->
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 pharmacy-logo-ring border-2 border-[#B88A3B]/70 shadow-2xs" title="كلية الصيدلة – جامعة المنصورة الأهلية">
+                            <img data-asset="pharmacy-logo" src="pharmacy-logo.jpg" alt="شعار كلية الصيدلة">
+                        </div>
+                        <!-- شعار قسم العقاقير -->
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-[#5B2C82]/45 bg-white shadow-2xs" title="قسم العقاقير">
+                            <img data-asset="pharmacognosy-logo" src="Pharmacognosy Department.png" alt="شعار قسم العقاقير" class="w-full h-full object-contain">
+                        </div>
+                    </div>
+
+                    <div class="min-w-0 flex-1">
+                        <div class="flex items-center gap-2 flex-wrap">
+                            <span class="font-heading text-lg sm:text-xl font-bold text-[#0D3B2E] leading-tight">المرجع الأكاديمي والإكلينيكي للعلاج بالنباتات الطبية</span>
+                            <span class="hidden sm:inline text-stone-300">|</span>
+                            <span class="font-en text-xs sm:text-sm font-extrabold text-[#B88A3B] tracking-tight">Phytotherapy (PG706)</span>
+                        </div>
+                        <p class="text-[11px] sm:text-xs font-semibold text-stone-500 mt-0.5 flex items-center gap-1.5 flex-wrap">
+                            <span>كلية الصيدلة – جامعة المنصورة الأهلية</span>
+                            <span class="text-stone-300">•</span>
+                            <span class="text-[#5B2C82] font-bold">قسم العقاقير (<span class="font-en">Pharmacognosy Department</span>)</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- روابط التنقل + زر تحميل الصور المحلية -->
+                <div class="flex items-center justify-between lg:justify-end gap-2 pt-2.5 lg:pt-0 border-t border-[#F0EEE7] lg:border-t-0 shrink-0">
+                    <nav class="hidden xl:flex items-center gap-1 ml-1">
+                        <a href="#clinical-search" class="px-3 py-1.5 rounded-xl text-xs font-bold text-stone-700 hover:text-[#0D3B2E] hover:bg-emerald-50/70 transition-colors">البحث الإكلينيكي</a>
+                        <a href="#monographs-section" class="px-3 py-1.5 rounded-xl text-xs font-bold text-stone-700 hover:text-[#0D3B2E] hover:bg-emerald-50/70 transition-colors">الموسوعة النباتية</a>
+                        <a href="#interaction-checker" class="px-3 py-1.5 rounded-xl text-xs font-bold text-stone-700 hover:text-[#0D3B2E] hover:bg-emerald-50/70 transition-colors">فاحص التوافق</a>
+                        <a href="#practical-table" class="px-3 py-1.5 rounded-xl text-xs font-bold text-stone-700 hover:text-[#0D3B2E] hover:bg-emerald-50/70 transition-colors">جدول العملي</a>
+                        <a href="#review-arena" class="px-3 py-1.5 rounded-xl text-xs font-bold text-stone-700 hover:text-[#0D3B2E] hover:bg-emerald-50/70 transition-colors">المراجعة والامتحان</a>
+                    </nav>
+
+                    <button onclick="openLocalLoaderModal()"
+                        class="flex-1 sm:flex-none justify-center px-3.5 py-2 rounded-xl bg-[#FBFBF8] hover:bg-[#0D3B2E] text-[#0D3B2E] hover:text-white border border-[#DCD9CE] hover:border-[#0D3B2E] text-xs font-bold flex items-center gap-1.5 transition-all">
+                        <i data-lucide="image-plus" class="w-4 h-4 text-[#B88A3B]"></i>
+                        <span>تحميل الصور المحلية</span>
+                    </button>
+
+                    <button id="mobile-menu-toggle" aria-label="القائمة" class="xl:hidden p-2 rounded-xl bg-[#FBFBF8] hover:bg-stone-200 text-[#0D3B2E] border border-[#E6E4DC] transition-colors shrink-0">
+                        <i data-lucide="menu" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- قائمة الموبايل -->
+        <div id="mobile-menu-drawer" class="hidden xl:hidden bg-white border-t border-[#E6E4DC] px-4 py-3 space-y-1 shadow-lg">
+            <a href="#clinical-search" class="block px-3.5 py-2.5 rounded-xl text-xs font-bold text-[#182220] hover:bg-emerald-50">البحث الإكلينيكي والدوائي</a>
+            <a href="#monographs-section" class="block px-3.5 py-2.5 rounded-xl text-xs font-bold text-[#182220] hover:bg-emerald-50">موسوعة النباتات الطبية (9 نباتات)</a>
+            <a href="#interaction-checker" class="block px-3.5 py-2.5 rounded-xl text-xs font-bold text-[#182220] hover:bg-emerald-50">فاحص التداخل والتوافق الدوائي</a>
+            <a href="#practical-table" class="block px-3.5 py-2.5 rounded-xl text-xs font-bold text-[#182220] hover:bg-emerald-50">جدول المقارنة العملي</a>
+            <a href="#review-arena" class="block px-3.5 py-2.5 rounded-xl text-xs font-bold text-[#182220] hover:bg-emerald-50">ساحة المراجعة والامتحان</a>
+        </div>
+    </header>
+
+    <!-- =========================================================================
+         الواجهة الأكاديمية + القسم الأول: البحث الإكلينيكي والدوائي
+         ========================================================================= -->
+    <section id="clinical-search" class="pt-7 pb-14 border-b border-[#E6E4DC]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- بطاقة الهوية الأكاديمية والإشراف العلمي -->
+            <div class="mb-8 rounded-3xl bg-gradient-to-l from-[#0D3B2E] via-[#114637] to-[#174E3E] text-white p-6 sm:p-8 shadow-xl shadow-[#0D3B2E]/10 relative overflow-hidden">
+                <div class="absolute inset-y-0 right-0 w-1.5 bg-gradient-to-b from-[#B88A3B] via-amber-200 to-[#B88A3B]"></div>
+                <div class="absolute -left-24 -bottom-24 w-72 h-72 rounded-full bg-white/[0.04] pointer-events-none"></div>
+
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
+                    <div class="space-y-3 max-w-2xl">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-amber-200 text-[11px] font-bold">
+                                <i data-lucide="book-marked" class="w-3.5 h-3.5 text-[#E6C27A]"></i>
+                                كلية الصيدلة – جامعة المنصورة الأهلية
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#5B2C82]/60 border border-purple-200/30 text-purple-100 text-[11px] font-bold font-en">
+                                Pharmacognosy Department • PG706
+                            </span>
+                        </div>
+                        <h1 class="font-heading text-2xl sm:text-3xl lg:text-[34px] font-bold text-white leading-snug">
+                            المرجع الأكاديمي والإكلينيكي للعلاج بالنباتات الطبية
+                            <span class="block font-en text-base sm:text-lg font-bold text-[#E6C27A] mt-1">Phytotherapy (PG706) — Clinical & Pharmacognosy Reference</span>
+                        </h1>
+                        <p class="text-xs sm:text-sm text-emerald-50/90 leading-relaxed">
+                            مرجع جامعي موحّد للنباتات الطبية المقررة، يجمع بين الأصول النباتية، المواد الفعالة، الاستخدام الإكلينيكي وموانع الاستعمال، الاختبارات الكيميائية، الشرائح المجهرية الأصلية، وتحليل التوافق والتداخلات الدوائية.
+                        </p>
+                    </div>
+
+                    <!-- بطاقة الإشراف الأكاديمي الرسمي -->
+                    <div class="bg-white/[0.09] backdrop-blur-md rounded-2xl p-5 border border-[#B88A3B]/65 shrink-0 lg:min-w-[345px]">
+                        <div class="text-[11px] font-bold text-amber-200 uppercase tracking-wider mb-3 flex items-center gap-2 border-b border-white/15 pb-2">
+                            <i data-lucide="award" class="w-4 h-4 text-[#E6C27A]"></i>
+                            <span>تحت إشراف / <span class="font-en">Academic Supervision</span></span>
+                        </div>
+                        <div class="space-y-2.5 font-en">
+                            <div class="flex items-center gap-2.5 text-sm sm:text-[15px] font-bold text-white">
+                                <span class="w-2 h-2 rounded-full bg-[#E6C27A] ring-4 ring-[#E6C27A]/20 shrink-0"></span>
+                                <span>Ass. Prof. Ahmed Elsaid Elbermawi</span>
+                            </div>
+                            <div class="flex items-center gap-2.5 text-sm sm:text-[15px] font-bold text-white">
+                                <span class="w-2 h-2 rounded-full bg-emerald-300 ring-4 ring-emerald-300/20 shrink-0"></span>
+                                <span>Dr. Menna Elkenaouy</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 pt-2.5 border-t border-white/10 text-[11px] text-emerald-100/80 font-en">
+                            Pharmacognosy Department • Mansoura National University
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- المساعد الذكي للبحث والاستشارة الإكلينيكية (Gemini AI + Hybrid Engine) -->
+            <div class="bg-white rounded-3xl shadow-lg shadow-[#182220]/[0.05] border border-[#E6E4DC] overflow-hidden">
+                <!-- ترويسة المساعد الذكي -->
+                <div class="px-5 sm:px-7 py-4 sm:py-5 bg-gradient-to-l from-[#F7F9F8] via-white to-[#FBF9F3] border-b border-[#E6E4DC] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-11 h-11 rounded-2xl bg-[#0D3B2E] text-[#E6C27A] flex items-center justify-center shadow-sm shrink-0">
+                            <i data-lucide="sparkles" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2 flex-wrap">
+                                <h2 class="font-heading text-xl sm:text-2xl font-bold text-[#0D3B2E]">المساعد الذكي للبحث والاستشارة الإكلينيكية</h2>
+                                <span id="ai-mode-badge" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 text-[#0D3B2E] border border-emerald-200 text-[11px] font-bold">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                                    <span>AI جاهز للاستشارة</span>
+                                </span>
+                            </div>
+                            <p class="text-xs text-stone-500 mt-0.5">
+                                اسأل أي سؤال حر بالعامية المصرية أو الفصحى أو الإنجليزية: حالات مرضية، تداخلات دوائية، مقارنات مجهرية، اختبارات كيميائية، أو أسئلة امتحان.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 self-end sm:self-auto shrink-0">
+                        <button type="button" onclick="resetAiChat()"
+                            class="px-3 py-1.5 rounded-xl bg-[#FBFBF8] hover:bg-stone-100 text-stone-700 border border-[#E6E4DC] text-xs font-bold flex items-center gap-1.5 transition-colors">
+                            <i data-lucide="rotate-ccw" class="w-3.5 h-3.5 text-[#0D3B2E]"></i>
+                            <span>محادثة جديدة</span>
+                        </button>
+                        <button type="button" onclick="openAiSettingsModal()" title="إعدادات مفتاح Gemini API"
+                            class="px-3 py-1.5 rounded-xl bg-[#FBFBF8] hover:bg-[#0D3B2E] text-[#0D3B2E] hover:text-white border border-[#E6E4DC] hover:border-[#0D3B2E] text-xs font-bold flex items-center gap-1.5 transition-colors">
+                            <i data-lucide="sliders-horizontal" class="w-3.5 h-3.5 text-[#B88A3B]"></i>
+                            <span>إعدادات AI</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- سجل المحادثة الإكلينيكية -->
+                <div id="ai-chat-messages" class="p-4 sm:p-6 space-y-4 max-h-[460px] min-h-[240px] overflow-y-auto bg-[#FCFBF8]">
+                    <!-- يتم حقن الرسالة الترحيبية والمحادثة برمجياً -->
+                </div>
+
+                <!-- اقتراحات الأسئلة الإكلينيكية السريعة -->
+                <div class="px-4 sm:px-6 py-3 bg-white border-t border-[#F0EEE7] flex flex-wrap items-center gap-1.5">
+                    <span class="text-[11px] font-bold text-stone-400 ml-1">جرّب أن تسأل:</span>
+                    <button type="button" onclick="askQuickPrompt('مريض بياخد ديجيتاليس وثيازيد، ينفع يشرب عرق السوس؟ وما البديل الآمن؟')"
+                        class="px-3 py-1.5 rounded-full bg-[#FBFBF8] hover:bg-[#0D3B2E] hover:text-white text-[#182220] border border-[#E6E4DC] text-[11px] font-bold transition-colors">
+                        عرق السوس مع Digitalis و Thiazide؟
+                    </button>
+                    <button type="button" onclick="askQuickPrompt('عندي كحة ببلغم شديدة في صدري، إيه أفضل نباتات أو خلطة من المنهج؟')"
+                        class="px-3 py-1.5 rounded-full bg-[#FBFBF8] hover:bg-[#0D3B2E] hover:text-white text-[#182220] border border-[#E6E4DC] text-[11px] font-bold transition-colors">
+                        كحة ببلغم في صدري
+                    </button>
+                    <button type="button" onclick="askQuickPrompt('بطني بتوجعني وعندي إمساك حاد، ينفع آخد سنامكي ومعاه إيه يمنع المغص؟')"
+                        class="px-3 py-1.5 rounded-full bg-[#FBFBF8] hover:bg-[#0D3B2E] hover:text-white text-[#182220] border border-[#E6E4DC] text-[11px] font-bold transition-colors">
+                        إمساك حاد ومغص السنامكي
+                    </button>
+                    <button type="button" onclick="askQuickPrompt('إيه الفرق المجهري بين True crystal sheath و Pseudo-crystal sheath في المنهج؟')"
+                        class="px-3 py-1.5 rounded-full bg-purple-50/70 hover:bg-[#5B2C82] hover:text-white text-[#5B2C82] border border-purple-200 text-[11px] font-bold transition-colors">
+                        True vs Pseudo-crystal sheath
+                    </button>
+                    <button type="button" onclick="askQuickPrompt('مريض بياخد وارفارين للسيولة وعنده حصوات مرارة، هل الزنجبيل آمن له؟')"
+                        class="px-3 py-1.5 rounded-full bg-red-50/70 hover:bg-red-800 hover:text-white text-red-900 border border-red-200 text-[11px] font-bold transition-colors">
+                        الزنجبيل مع الوارفارين والمرارة
+                    </button>
+                    <button type="button" onclick="askQuickPrompt('اعمل لي سؤال OSCE إكلينيكي سريع من منهج PG706 واختبرني فيه')"
+                        class="px-3 py-1.5 rounded-full bg-amber-50/80 hover:bg-[#B88A3B] hover:text-white text-amber-950 border border-amber-200 text-[11px] font-bold transition-colors">
+                        اختبرني بسؤال OSCE
+                    </button>
+                </div>
+
+                <!-- شريط إدخال السؤال والإملاء الصوتي -->
+                <div class="p-4 sm:p-5 bg-white border-t border-[#E6E4DC]">
+                    <div class="flex items-center gap-2">
+                        <div class="relative flex-1">
+                            <input type="text" id="ai-chat-input" autocomplete="off"
+                                placeholder="اسأل المساعد الإكلينيكي أي سؤال (مثال: عندي حموضة وقرحة معدة، أو قارن بين السنامكي والرواند، أو Vitali-Morin)..."
+                                class="w-full pr-4 pl-12 py-3.5 rounded-2xl bg-[#FBFBF8] border-2 border-[#E6E4DC] focus:bg-white focus:border-[#0D3B2E] focus:ring-4 focus:ring-[#0D3B2E]/10 focus:outline-none text-[#182220] placeholder-stone-400 font-semibold text-xs sm:text-sm transition-all">
+                            <button id="voice-search-btn" type="button" onclick="startVoiceSearch()" title="بحث وإملاء صوتي"
+                                class="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-xl bg-emerald-50 hover:bg-[#0D3B2E] text-[#0D3B2E] hover:text-white transition-colors">
+                                <i data-lucide="mic" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+
+                        <button id="ai-send-btn" type="button" onclick="sendAiMessage()"
+                            class="px-5 py-3.5 rounded-2xl bg-[#0D3B2E] hover:bg-[#182220] disabled:opacity-50 text-white font-bold text-xs sm:text-sm flex items-center gap-2 shadow-sm transition-all shrink-0">
+                            <span>إرسال</span>
+                            <i data-lucide="send-horizontal" class="w-4 h-4 text-[#E6C27A] rotate-180"></i>
+                        </button>
+                    </div>
+
+                    <!-- تنبيه صوتي هادئ عند الحاجة -->
+                    <div id="voice-helper-bar" class="hidden mt-2.5 px-3.5 py-2 rounded-xl bg-amber-50 border border-amber-200 text-amber-950 text-xs font-semibold flex items-center justify-between gap-2 animate-fade-in">
+                        <span id="voice-helper-msg"></span>
+                        <button type="button" onclick="document.getElementById('voice-helper-bar').classList.add('hidden')" class="text-amber-800 hover:underline font-bold shrink-0">إغلاق</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         القسم الثاني: موسوعة النباتات الطبية المقررة (9 نباتات)
+         ========================================================================= -->
+    <section id="monographs-section" class="py-14 border-b border-[#E6E4DC]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-8">
+                <div>
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-[#0D3B2E] border border-emerald-200 text-[11px] font-bold mb-2 font-en">
+                        <i data-lucide="leaf" class="w-3.5 h-3.5"></i>
+                        <span>PG706 Official Pharmacognosy Monographs</span>
+                    </div>
+                    <h2 class="font-heading text-2xl sm:text-3xl font-bold text-[#0D3B2E]">موسوعة النباتات الطبية المقررة</h2>
+                    <p class="text-xs sm:text-sm text-stone-500 mt-1">اضغط على أي نبات لاستعراض ملفه العلمي الكامل، اختباراته الكيميائية، وشرائحه المجهرية الأصلية.</p>
+                </div>
+
+                <!-- فلتر التصنيف النباتي -->
+                <div class="inline-flex items-center p-1 rounded-2xl bg-white border border-[#E6E4DC] shadow-2xs self-start md:self-auto">
+                    <button id="cat-btn-all" onclick="setPlantCategoryFilter('all')" class="px-4 py-2 rounded-xl text-xs font-bold bg-[#0D3B2E] text-white transition-all">الكل (9)</button>
+                    <button id="cat-btn-leaves" onclick="setPlantCategoryFilter('leaves')" class="px-4 py-2 rounded-xl text-xs font-semibold text-stone-700 hover:bg-[#FBFBF8] transition-all">الأوراق (6)</button>
+                    <button id="cat-btn-roots" onclick="setPlantCategoryFilter('roots')" class="px-4 py-2 rounded-xl text-xs font-semibold text-stone-700 hover:bg-[#FBFBF8] transition-all">الجذور والريزومات (3)</button>
+                </div>
+            </div>
+
+            <div id="monographs-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         القسم الثالث: فاحص التداخل والتوافق الدوائي (نباتان أو 3 نباتات + دواء/حالة)
+         ========================================================================= -->
+    <section id="interaction-checker" class="py-14 bg-white border-b border-[#E6E4DC]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-7">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-950 border border-amber-200 text-[11px] font-bold mb-2 font-en">
+                    <i data-lucide="flask-conical" class="w-3.5 h-3.5 text-[#B88A3B]"></i>
+                    <span>Clinical Compatibility &amp; Interaction Analyzer</span>
+                </div>
+                <h2 class="font-heading text-2xl sm:text-3xl font-bold text-[#0D3B2E]">فاحص التداخل والتوافق الدوائي والخلطات العلاجية</h2>
+                <p class="text-xs sm:text-sm text-stone-500 mt-1">اختر نباتين أو ثلاثة نباتات معاً (مع إمكانية إضافة دواء أو حالة مرضية) لتحليل التوافق الإكلينيكي، التأثير المشترك، ودور كل نبات.</p>
+            </div>
+
+            <!-- خلطات وحالات سريعة جاهزة -->
+            <div class="mb-6 flex flex-wrap items-center gap-2">
+                <span class="text-xs font-bold text-stone-500 ml-1">تركيبات وحالات مقررة:</span>
+                <button type="button" onclick="applyPreset('senna','rhubarb','','none')" class="px-3 py-1.5 rounded-full bg-[#FBFBF8] hover:bg-[#0D3B2E] hover:text-white border border-[#E6E4DC] text-xs font-bold transition-colors">Senna + Rhubarb</button>
+                <button type="button" onclick="applyPreset('liquorice','thyme','','none')" class="px-3 py-1.5 rounded-full bg-[#FBFBF8] hover:bg-[#0D3B2E] hover:text-white border border-[#E6E4DC] text-xs font-bold transition-colors">Liquorice + Thyme</button>
+                <button type="button" onclick="applyPreset('ginger','rosemary','','none')" class="px-3 py-1.5 rounded-full bg-[#FBFBF8] hover:bg-[#0D3B2E] hover:text-white border border-[#E6E4DC] text-xs font-bold transition-colors">Ginger + Rosemary</button>
+                <button type="button" onclick="applyPreset('guava','liquorice','thyme','none')" class="px-3 py-1.5 rounded-full bg-emerald-50 hover:bg-[#0D3B2E] hover:text-white text-[#0D3B2E] border border-emerald-200 text-xs font-bold transition-colors">Guava + Liquorice + Thyme</button>
+                <button type="button" onclick="applyPreset('liquorice','thyme','','digitalis')" class="px-3 py-1.5 rounded-full bg-red-50 hover:bg-red-800 hover:text-white text-red-900 border border-red-200 text-xs font-bold transition-colors">Liquorice + Digitalis</button>
+                <button type="button" onclick="applyPreset('ginger','rosemary','','warfarin')" class="px-3 py-1.5 rounded-full bg-red-50 hover:bg-red-800 hover:text-white text-red-900 border border-red-200 text-xs font-bold transition-colors">Ginger + Warfarin</button>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                <!-- لوحة الاختيارات -->
+                <div class="lg:col-span-5 bg-[#FBFBF8] p-5 sm:p-6 rounded-3xl border border-[#E6E4DC] space-y-4">
+                    <div>
+                        <label for="herb-select-1" class="block text-xs font-extrabold text-[#182220] mb-1.5">1. النبات الأول:</label>
+                        <select id="herb-select-1" onchange="analyzeCompatibility()" class="w-full p-3 rounded-xl bg-white border border-[#DCD9CE] focus:border-[#0D3B2E] focus:outline-none text-xs sm:text-sm font-bold text-[#182220]"></select>
+                    </div>
+                    <div>
+                        <label for="herb-select-2" class="block text-xs font-extrabold text-[#182220] mb-1.5">2. النبات الثاني:</label>
+                        <select id="herb-select-2" onchange="analyzeCompatibility()" class="w-full p-3 rounded-xl bg-white border border-[#DCD9CE] focus:border-[#0D3B2E] focus:outline-none text-xs sm:text-sm font-bold text-[#182220]"></select>
+                    </div>
+                    <div>
+                        <label for="herb-select-3" class="block text-xs font-extrabold text-[#182220] mb-1.5">3. النبات الثالث (اختياري لتركيبة ثلاثية):</label>
+                        <select id="herb-select-3" onchange="analyzeCompatibility()" class="w-full p-3 rounded-xl bg-white border border-[#DCD9CE] focus:border-[#0D3B2E] focus:outline-none text-xs sm:text-sm font-bold text-[#182220]"></select>
+                    </div>
+                    <div>
+                        <label for="clinical-cond-select" class="block text-xs font-extrabold text-[#182220] mb-1.5">4. الدواء أو الحالة الإكلينيكية (اختياري):</label>
+                        <select id="clinical-cond-select" onchange="analyzeCompatibility()" class="w-full p-3 rounded-xl bg-white border border-[#DCD9CE] focus:border-[#0D3B2E] focus:outline-none text-xs sm:text-sm font-bold text-[#182220]">
+                            <option value="none">— بدون دواء أو حالة محددة —</option>
+                            <option value="digitalis">Digitalis / Digoxin (أدوية القلب)</option>
+                            <option value="thiazide">Thiazide Diuretics (مدرات البول الثيازيدية)</option>
+                            <option value="spironolactone">Spironolactone &amp; K⁺-sparing Diuretics</option>
+                            <option value="warfarin">Warfarin &amp; Anticoagulants (أدوية السيولة)</option>
+                            <option value="diabetes">Diabetes Medications (أدوية السكري)</option>
+                            <option value="gallstones">Gallstones History (حصوات المرارة)</option>
+                            <option value="pregnancy">Pregnancy &amp; Lactation (الحمل والرضاعة)</option>
+                            <option value="cardiac">Cardiac Disorders &amp; Hypertension (أمراض القلب والضغط)</option>
+                            <option value="gi_inflam">GI Inflammation, Crohn's, Colitis &amp; Obstruction</option>
+                            <option value="glaucoma">Narrow-Angle Glaucoma / BPH (الجلوكوما وتضخم البروستاتا)</option>
+                            <option value="gerd">GERD &amp; Acid Reflux (ارتجاع المريء والحموضة)</option>
+                        </select>
+                    </div>
+
+                    <button type="button" onclick="analyzeCompatibility()" class="w-full py-3.5 rounded-2xl bg-[#0D3B2E] hover:bg-[#182220] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-sm transition-colors">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-[#E6C27A]"></i>
+                        <span>تحليل التوافق والتأثير المشترك</span>
+                    </button>
+                </div>
+
+                <!-- تقرير التحليل الإكلينيكي -->
+                <div id="compatibility-report" class="lg:col-span-7 bg-[#FBFBF8] p-5 sm:p-6 rounded-3xl border border-[#E6E4DC]"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         القسم الرابع: جدول المقارنة العملي التفاعلي (Active Recall)
+         ========================================================================= -->
+    <section id="practical-table" class="py-14 border-b border-[#E6E4DC]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl border border-[#E6E4DC] shadow-sm overflow-hidden">
+                <button type="button" onclick="toggleSectionAccordion('practical-table-body', 'practical-table-arrow')"
+                    class="w-full px-6 py-5 bg-gradient-to-l from-[#F7F9F8] to-white flex items-center justify-between gap-4 text-right hover:bg-stone-50/70 transition-colors">
+                    <div>
+                        <div class="text-[11px] font-bold text-[#5B2C82] font-en mb-1">Practical Lab &amp; Microscopy Active Recall</div>
+                        <h2 class="font-heading text-xl sm:text-2xl font-bold text-[#0D3B2E]">جدول المقارنة العملي الشامل (اضغط على أي خلية لاختبار ذاكرتك)</h2>
+                    </div>
+                    <div id="practical-table-arrow" class="w-9 h-9 rounded-xl bg-[#FBFBF8] border border-[#E6E4DC] flex items-center justify-center text-[#0D3B2E] transition-transform duration-300 shrink-0" style="transform: rotate(180deg);">
+                        <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                    </div>
+                </button>
+
+                <div id="practical-table-body" class="border-t border-[#E6E4DC]">
+                    <div class="px-6 py-3.5 bg-[#FBFBF8] border-b border-[#E6E4DC] flex flex-wrap items-center justify-between gap-2">
+                        <span class="text-xs font-semibold text-stone-600">الخلايا مموّهة للتدريب — اضغط على الخلية لكشفها أو تحكم في الجميع:</span>
+                        <div class="flex items-center gap-2">
+                            <button type="button" onclick="setAllRecallCells(true)" class="px-3.5 py-1.5 rounded-xl bg-[#0D3B2E] text-white text-xs font-bold hover:bg-[#182220] transition-colors">إظهار الكل</button>
+                            <button type="button" onclick="setAllRecallCells(false)" class="px-3.5 py-1.5 rounded-xl bg-white border border-[#DCD9CE] text-stone-700 text-xs font-bold hover:bg-stone-100 transition-colors">إخفاء الكل</button>
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-right border-collapse min-w-[820px]">
+                            <thead>
+                                <tr class="bg-[#0D3B2E] text-white text-xs">
+                                    <th class="p-3.5 font-bold">النبات</th>
+                                    <th class="p-3.5 font-bold">الجزء والعائلة</th>
+                                    <th class="p-3.5 font-bold">أهم المواد الفعالة</th>
+                                    <th class="p-3.5 font-bold">الاختبارات الكيميائية</th>
+                                    <th class="p-3.5 font-bold">العناصر المجهرية والشريحة</th>
+                                    <th class="p-3.5 font-bold">أبرز مانع استعمال</th>
+                                </tr>
+                            </thead>
+                            <tbody id="practical-tbody" class="divide-y divide-[#E6E4DC] text-xs sm:text-sm"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         القسم الخامس: ساحة المراجعة والامتحان (بطاقات 3D + 15 سؤالاً إكلينيكياً)
+         ========================================================================= -->
+    <section id="review-arena" class="py-14 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+                <div>
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 text-[#5B2C82] border border-purple-200 text-[11px] font-bold mb-2 font-en">
+                        <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>
+                        <span>Exam &amp; OSCE Readiness</span>
+                    </div>
+                    <h2 class="font-heading text-2xl sm:text-3xl font-bold text-[#0D3B2E]">ساحة المراجعة والامتحان التدريبي</h2>
+                </div>
+
+                <div class="inline-flex items-center p-1.5 rounded-2xl bg-[#FBFBF8] border border-[#E6E4DC] self-start sm:self-auto">
+                    <button id="rev-tab-fc" onclick="switchReviewTab('flashcards')" class="px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-[#0D3B2E] text-white transition-all flex items-center gap-2">
+                        <i data-lucide="layers" class="w-4 h-4"></i>
+                        <span>بطاقات المراجعة (12)</span>
+                    </button>
+                    <button id="rev-tab-quiz" onclick="switchReviewTab('quiz')" class="px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-[#182220] hover:bg-white transition-all flex items-center gap-2">
+                        <i data-lucide="clipboard-check" class="w-4 h-4"></i>
+                        <span>اختبار تدريبي (15)</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- بطاقات المراجعة ثلاثية الأبعاد -->
+            <div id="flashcards-pane" class="space-y-5">
+                <div class="flex items-center justify-between text-xs font-bold text-stone-500">
+                    <span id="fc-counter">بطاقة 1 من 12</span>
+                    <span id="fc-badge" class="px-3 py-1 rounded-full bg-emerald-50 text-[#0D3B2E] border border-emerald-200 font-en"></span>
+                </div>
+
+                <div class="flash-scene cursor-pointer" onclick="flipFlashcard()">
+                    <div id="fc-inner" class="flash-inner">
+                        <div class="flash-face bg-gradient-to-br from-[#0D3B2E] to-[#174E3E] text-white border-2 border-[#B88A3B]/70 shadow-xl">
+                            <span class="text-[11px] font-bold text-amber-200 mb-3">اضغط لقلب البطاقة وإظهار الإجابة</span>
+                            <h3 id="fc-front-q" class="font-heading text-xl sm:text-2xl font-bold leading-relaxed max-w-2xl"></h3>
+                        </div>
+                        <div class="flash-face flash-back bg-[#FBFBF8] text-[#182220] border-2 border-[#0D3B2E] shadow-xl">
+                            <span class="text-[11px] font-extrabold text-[#0D3B2E] mb-2">الإجابة العلمية المعتمدة</span>
+                            <p id="fc-back-a" class="text-sm sm:text-base font-bold text-[#182220] leading-relaxed max-w-2xl"></p>
+                            <p id="fc-back-note" class="mt-3 text-xs font-semibold text-[#5B2C82] bg-purple-50 px-3 py-1.5 rounded-xl border border-purple-200"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center gap-3">
+                    <button type="button" onclick="prevFlashcard()" class="px-4 py-2.5 rounded-xl bg-[#FBFBF8] hover:bg-stone-100 border border-[#DCD9CE] text-xs font-bold text-[#182220] flex items-center gap-1.5">
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        <span>السابقة</span>
+                    </button>
+                    <button type="button" onclick="flipFlashcard()" class="px-5 py-2.5 rounded-xl bg-[#0D3B2E] hover:bg-[#182220] text-white text-xs font-bold flex items-center gap-1.5">
+                        <i data-lucide="refresh-cw" class="w-4 h-4 text-[#E6C27A]"></i>
+                        <span>اقلب البطاقة</span>
+                    </button>
+                    <button type="button" onclick="nextFlashcard()" class="px-4 py-2.5 rounded-xl bg-[#FBFBF8] hover:bg-stone-100 border border-[#DCD9CE] text-xs font-bold text-[#182220] flex items-center gap-1.5">
+                        <span>التالية</span>
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- بنك الأسئلة التدريبي -->
+            <div id="quiz-pane" class="hidden">
+                <div id="quiz-question-box" class="bg-[#FBFBF8] p-5 sm:p-7 rounded-3xl border border-[#E6E4DC]">
+                    <div class="flex items-center justify-between gap-3 mb-3">
+                        <span id="quiz-counter" class="text-xs font-extrabold text-stone-500"></span>
+                        <span id="quiz-score-badge" class="px-3 py-1 rounded-full bg-emerald-50 text-[#0D3B2E] border border-emerald-200 text-xs font-extrabold"></span>
+                    </div>
+                    <div class="w-full h-2 rounded-full bg-stone-200 overflow-hidden mb-5">
+                        <div id="quiz-bar-fill" class="h-full bg-[#0D3B2E] transition-all duration-300" style="width: 0%;"></div>
+                    </div>
+
+                    <h3 id="quiz-q-text" class="font-heading text-lg sm:text-xl font-bold text-[#182220] mb-5 leading-relaxed"></h3>
+                    <div id="quiz-options-list" class="space-y-2.5"></div>
+                    <div id="quiz-exp-box" class="hidden"></div>
+
+                    <div class="mt-5 flex justify-end">
+                        <button id="quiz-next-btn" type="button" onclick="goNextQuiz()" class="hidden px-5 py-2.5 rounded-xl bg-[#0D3B2E] hover:bg-[#182220] text-white text-xs sm:text-sm font-bold flex items-center gap-2 transition-colors"></button>
+                    </div>
+                </div>
+
+                <div id="quiz-done-box" class="hidden bg-[#FBFBF8] p-8 rounded-3xl border border-[#E6E4DC] text-center space-y-4">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#0D3B2E]">
+                        <i data-lucide="trophy" class="w-8 h-8 text-[#B88A3B]"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-[#0D3B2E]">أتممت الاختبار التدريبي بنجاح</h3>
+                    <p id="quiz-final-text" class="text-base font-extrabold text-[#182220]"></p>
+                    <button type="button" onclick="restartQuiz()" class="px-6 py-3 rounded-2xl bg-[#0D3B2E] hover:bg-[#182220] text-white text-xs sm:text-sm font-bold transition-colors">إعادة الاختبار</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         التذييل المؤسسي الرسمي
+         ========================================================================= -->
+    <footer class="bg-[#0D3B2E] text-white border-t-4 border-[#B88A3B] py-9">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-full overflow-hidden bg-white border-2 border-[#B88A3B]/80 shrink-0">
+                        <img data-asset="mnu-logo" src="mnu-logo.jpg" alt="MNU Logo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-11 h-11 pharmacy-logo-ring border-2 border-[#B88A3B]/80 shrink-0">
+                        <img data-asset="pharmacy-logo" src="pharmacy-logo.jpg" alt="Faculty of Pharmacy Logo">
+                    </div>
+                    <div class="w-11 h-11 rounded-full overflow-hidden bg-white border-2 border-purple-300/80 shrink-0">
+                        <img data-asset="pharmacognosy-logo" src="Pharmacognosy Department.png" alt="Pharmacognosy Department Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="mr-2">
+                        <div class="font-heading font-bold text-lg text-white">المرجع الأكاديمي والإكلينيكي للعلاج بالنباتات الطبية</div>
+                        <div class="text-xs text-emerald-100/85 font-en">Phytotherapy (PG706) • Pharmacognosy Department, Faculty of Pharmacy, MNU</div>
+                    </div>
+                </div>
+
+                <div class="text-center md:text-left bg-white/[0.08] border border-[#B88A3B]/55 rounded-2xl px-5 py-3 text-xs space-y-1 font-en">
+                    <div class="text-amber-200 font-bold">Academic Supervision / الإشراف الأكاديمي:</div>
+                    <div class="text-white font-bold">Ass. Prof. Ahmed Elsaid Elbermawi &bull; Dr. Menna Elkenaouy</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================================================================
+         نافذة الملف العلمي الكامل للنبات (4 تبويبات نظيفة)
+         ========================================================================= -->
+    <div id="monograph-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5 bg-stone-950/75 backdrop-blur-xs overflow-y-auto">
+        <div class="bg-white w-full max-w-3xl rounded-3xl shadow-2xl border border-[#E6E4DC] overflow-hidden my-auto animate-fade-in" onclick="event.stopPropagation()">
+            <div class="bg-gradient-to-l from-[#0D3B2E] to-[#182220] p-5 sm:p-6 text-white relative border-b-2 border-[#B88A3B]">
+                <button onclick="closeMonograph()" aria-label="إغلاق" class="absolute top-4 left-4 w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 flex items-center justify-center text-white transition-colors">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+                <div class="flex items-center gap-4">
+                    <div id="modal-emoji" class="text-3xl sm:text-4xl w-14 h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0"></div>
+                    <div>
+                        <div class="flex flex-wrap items-center gap-1.5 mb-1">
+                            <span id="modal-cat-badge" class="px-2.5 py-0.5 rounded-full bg-white/15 text-amber-200 text-[11px] font-bold"></span>
+                            <span id="modal-fam-badge" class="px-2.5 py-0.5 rounded-full bg-emerald-400/20 text-emerald-100 text-[11px] font-bold font-en"></span>
+                        </div>
+                        <h3 id="modal-title" class="font-heading text-xl sm:text-2xl font-bold"></h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- التبويبات الأربعة -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 border-b border-[#E6E4DC] bg-[#FBFBF8] p-1.5 gap-1.5">
+                <button onclick="setMonographTab(1)" id="mtab-1" class="py-2.5 px-2 rounded-xl text-xs font-bold transition-all">البيانات والمواد الفعالة</button>
+                <button onclick="setMonographTab(2)" id="mtab-2" class="py-2.5 px-2 rounded-xl text-xs font-bold transition-all">الاستخدام وموانع الاستعمال</button>
+                <button onclick="setMonographTab(3)" id="mtab-3" class="py-2.5 px-2 rounded-xl text-xs font-bold transition-all">الاختبارات الكيميائية</button>
+                <button onclick="setMonographTab(4)" id="mtab-4" class="py-2.5 px-2 rounded-xl text-xs font-bold transition-all">العناصر المجهرية</button>
+            </div>
+
+            <div id="modal-content" class="p-5 sm:p-7 max-h-[68vh] overflow-y-auto"></div>
+
+            <div class="px-6 py-4 bg-[#FBFBF8] border-t border-[#E6E4DC] flex items-center justify-between gap-3">
+                <button onclick="closeMonograph()" class="px-4 py-2 rounded-xl bg-white border border-[#DCD9CE] hover:bg-stone-100 text-stone-700 font-bold text-xs sm:text-sm">إغلاق</button>
+                <button id="modal-to-checker-btn" class="px-4 py-2 rounded-xl bg-[#0D3B2E] hover:bg-[#182220] text-white font-bold text-xs sm:text-sm flex items-center gap-1.5">
+                    <i data-lucide="flask-conical" class="w-4 h-4 text-[#E6C27A]"></i>
+                    فحص التوافق في المحلل
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================================
+         نافذة تحميل الصور المحلية (Local Image Loader)
+         ========================================================================= -->
+    <div id="local-loader-modal" class="fixed inset-0 z-[65] hidden items-center justify-center p-4 bg-stone-950/75 backdrop-blur-xs" onclick="closeLocalLoaderModal()">
+        <div class="bg-white w-full max-w-2xl rounded-3xl shadow-2xl border border-[#E6E4DC] overflow-hidden animate-fade-in" onclick="event.stopPropagation()">
+            <div class="bg-[#0D3B2E] text-white px-6 py-4 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <i data-lucide="folder-open" class="w-5 h-5 text-[#E6C27A]"></i>
+                    <h3 class="font-heading font-bold text-lg">تحميل الصور المحلية (الشعارات والشرائح)</h3>
+                </div>
+                <button onclick="closeLocalLoaderModal()" class="w-8 h-8 rounded-full bg-white/15 hover:bg-white/25 flex items-center justify-center text-white">
+                    <i data-lucide="x" class="w-4 h-4"></i>
+                </button>
+            </div>
+            <div class="p-6 space-y-4">
+                <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                    حدد ملفات الشعارات وشرائح الميكروسكوب واختبار الرغوة من جهازك دفعة واحدة لمعاينتها فوراً، وسيقوم التطبيق بربطها تلقائياً حسب اسم الملف.
+                </p>
+
+                <label class="w-full py-6 px-4 rounded-2xl border-2 border-dashed border-[#0D3B2E]/40 hover:border-[#0D3B2E] bg-emerald-50/40 hover:bg-emerald-50 cursor-pointer flex flex-col items-center justify-center gap-2 transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-[#0D3B2E] text-white flex items-center justify-center">
+                        <i data-lucide="upload" class="w-6 h-6 text-[#E6C27A]"></i>
+                    </div>
+                    <span class="font-bold text-sm text-[#182220]">اضغط لاختيار الصور من جهازك (تحديد متعدد)</span>
+                    <span class="text-[11px] text-stone-500">يدعم JPG و PNG والأسماء العربية والإنجليزية</span>
+                    <input type="file" multiple accept="image/*" class="hidden" onchange="handleLocalImagesUpload(event)">
+                </label>
+
+                <div>
+                    <div class="text-xs font-bold text-stone-500 mb-2">حالة الربط:</div>
+                    <div id="loader-status-chips" class="flex flex-wrap gap-1.5 text-[11px]"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================================
+         نافذة إعدادات المساعد الذكي (مفتاح Gemini API اختياري للاستضافة الخارجية)
+         ========================================================================= -->
+    <div id="ai-settings-modal" class="fixed inset-0 z-[70] hidden items-center justify-center p-4 bg-stone-950/75 backdrop-blur-xs" onclick="closeAiSettingsModal()">
+        <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl border border-[#E6E4DC] overflow-hidden animate-fade-in" onclick="event.stopPropagation()">
+            <div class="bg-[#0D3B2E] text-white px-6 py-4 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <i data-lucide="key-round" class="w-5 h-5 text-[#E6C27A]"></i>
+                    <h3 class="font-heading font-bold text-lg">إعدادات المساعد الذكي (Gemini API)</h3>
+                </div>
+                <button onclick="closeAiSettingsModal()" class="w-8 h-8 rounded-full bg-white/15 hover:bg-white/25 flex items-center justify-center text-white">
+                    <i data-lucide="x" class="w-4 h-4"></i>
+                </button>
+            </div>
+            <div class="p-6 space-y-4">
+                <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                    يعمل المساعد الذكي تلقائياً في المعاينة المباشرة. أما عند استضافة الموقع خارجياً (مثل <strong>GitHub Pages</strong>)، يمكنك إدخال مفتاح <strong>Gemini API</strong> الخاص بك هنا ليُحفظ محلياً في متصفحك فقط، أو الاعتماد على المحرك الإكلينيكي المحلي المدمج بدون مفتاح.
+                </p>
+
+                <div>
+                    <label for="gemini-api-key-input" class="block text-xs font-extrabold text-[#182220] mb-1.5">مفتاح Gemini API (اختياري):</label>
+                    <input type="password" id="gemini-api-key-input" dir="ltr" placeholder="AIzaSy..."
+                        class="w-full px-4 py-3 rounded-xl bg-[#FBFBF8] border border-[#DCD9CE] focus:border-[#0D3B2E] focus:outline-none text-xs sm:text-sm font-en text-[#182220]">
+                </div>
+
+                <div class="flex items-center justify-between gap-2 pt-2">
+                    <button type="button" onclick="clearAiApiKey()" class="px-4 py-2 rounded-xl bg-red-50 hover:bg-red-100 text-red-800 border border-red-200 text-xs font-bold transition-colors">
+                        حذف المفتاح
+                    </button>
+                    <div class="flex items-center gap-2">
+                        <button type="button" onclick="closeAiSettingsModal()" class="px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 text-xs font-bold transition-colors">إلغاء</button>
+                        <button type="button" onclick="saveAiApiKey()" class="px-5 py-2 rounded-xl bg-[#0D3B2E] hover:bg-[#182220] text-white text-xs font-bold transition-colors">حفظ المفتاح</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================================
+         عارض التكبير بملء الشاشة (Lightbox Zoom)
+         ========================================================================= -->
+    <div id="lightbox-overlay" class="fixed inset-0 z-[80] hidden items-center justify-center p-4 bg-stone-950/90 backdrop-blur-xs" onclick="closeLightbox()">
+        <div class="bg-white rounded-3xl max-w-4xl w-full overflow-hidden shadow-2xl border border-[#B88A3B] animate-fade-in" onclick="event.stopPropagation()">
+            <div class="bg-[#0D3B2E] text-white px-5 py-3.5 flex items-center justify-between gap-3">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="zoom-in" class="w-4 h-4 text-[#E6C27A]"></i>
+                    <span id="lightbox-caption" class="text-xs sm:text-sm font-bold font-en"></span>
+                </div>
+                <button onclick="closeLightbox()" class="px-3 py-1 rounded-lg bg-white/15 hover:bg-white/25 text-xs font-bold">إغلاق ×</button>
+            </div>
+            <div class="p-4 bg-stone-100 flex items-center justify-center max-h-[82vh] overflow-auto">
+                <img id="lightbox-img" src="" alt="Slide Zoom" class="max-w-full max-h-[75vh] object-contain rounded-xl shadow-md bg-white">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // =========================================================================
+        // 1. الإشعارات وإدارة الشعارات والصور المحلية (Asset Manager)
+        // =========================================================================
+        let toastTimer = null;
+        function showToast(msg) {
+            const toast = document.getElementById('app-toast');
+            const txt = document.getElementById('app-toast-text');
+            if (!toast || !txt) return;
+            txt.textContent = msg;
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+            lucide.createIcons();
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+                toast.classList.add('hidden');
+                toast.classList.remove('flex');
+            }, 3400);
+        }
+
+        // شعارات احتياطية مدمجة (SVG) لضمان المظهر الرسمي حتى قبل تحميل الملفات المحلية
+        const FALLBACK_LOGOS = {
+            'mnu-logo': 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" fill="#0F2544" stroke="#C59B27" stroke-width="5"/><circle cx="60" cy="60" r="44" fill="none" stroke="#C59B27" stroke-width="2.5"/><text x="60" y="67" text-anchor="middle" fill="#FFFFFF" font-family="Arial,sans-serif" font-weight="bold" font-size="24">MNU</text></svg>`),
+            'pharmacy-logo': 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" fill="#FFFFFF" stroke="#0F2544" stroke-width="5"/><circle cx="60" cy="60" r="46" fill="none" stroke="#C59B27" stroke-width="2.5"/><path d="M40 54h40c-2 15-10 23-20 23s-18-8-20-23z" fill="#C59B27"/><rect x="57" y="76" width="6" height="14" fill="#C59B27"/><rect x="46" y="88" width="28" height="5" rx="2" fill="#C59B27"/><path d="M60 30c-9 0-12 10-4 16 7 5 9 11 4 17" fill="none" stroke="#0F2544" stroke-width="5" stroke-linecap="round"/></svg>`),
+            'pharmacognosy-logo': 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" fill="#FFFFFF" stroke="#5B2C82" stroke-width="5"/><circle cx="60" cy="60" r="46" fill="none" stroke="#5B2C82" stroke-width="2"/><path d="M42 62c0 16 10 25 22 25s22-9 22-25H42z" fill="#C59B27"/><path d="M66 44l10-10 5 5-10 10z" fill="#C59B27"/><path d="M44 74c-12-10-12-30 2-40 5-4 14-5 20-3-8 6-14 14-14 25 0 7 2 13 6 18z" fill="#2E9E47"/></svg>`)
+        };
+
+        const assetMap = {
+            'mnu-logo': { label: 'شعار جامعة المنصورة الأهلية', paths: ['mnu-logo.jpg', 'mnu-logo.png'], fallback: FALLBACK_LOGOS['mnu-logo'] },
+            'pharmacy-logo': { label: 'شعار كلية الصيدلة', paths: ['pharmacy-logo.jpg', 'pharmacy-logo.png'], fallback: FALLBACK_LOGOS['pharmacy-logo'] },
+            'pharmacognosy-logo': { label: 'شعار قسم العقاقير', paths: ['Pharmacognosy Department.png', 'Pharmacognosy Department.jpg', 'Screenshot 2026-11-20 001838.png'], fallback: FALLBACK_LOGOS['pharmacognosy-logo'] },
+            'senna-slide': { label: 'شريحة السنامكي', paths: ['senna.png', 'senna.jpg'] },
+            'guava-slide': { label: 'شريحة ورق الجوافة', paths: ['جوافه.png', 'جوافه.jpg'] },
+            'rosemary-slide-1': { label: 'شريحة الروزماري (1)', paths: ['روز ماري (1).png', 'روز  ماري (1).jpg', 'روز ماري (1).jpg'] },
+            'rosemary-slide-2': { label: 'شريحة الروزماري (2)', paths: ['روز ماري (2).png', 'روز  ماري (2).jpg', 'روز ماري (2).jpg'] },
+            'mentha-slide-1': { label: 'شريحة النعناع (1)', paths: ['نعناع (1).png', 'نعناع (1).jpg'] },
+            'mentha-slide-2': { label: 'شريحة النعناع (2)', paths: ['نعناع (2).png', 'نعناع (2).jpg'] },
+            'thyme-slide': { label: 'شريحة الزعتر', paths: ['زعتر.png', 'زعتر.jpg'] },
+            'hyoscyamus-slide': { label: 'شريحة السكران المصري', paths: ['سكران.png', 'سكران.jpg'] },
+            'liquorice-slide': { label: 'شريحة عرق السوس', paths: ['ليكوريش كي المنت.jpg', 'ليكوريش كي المنت.png'] },
+            'liquorice-test': { label: 'اختبار رغوة عرق السوس', paths: ['ليكورش تست.png', 'ليكورش تست.jpg'] },
+            'ginger-slide': { label: 'شريحة الزنجبيل', paths: ['جنجر كي المنت.jpg', 'جنجر كي المنت.png'] },
+            'rhubarb-slide': { label: 'شريحة الرواند', paths: ['روبارب كي المنت.jpg', 'روبارب كي المنت.png'] }
+        };
+
+        const localObjectUrls = {};
+
+        function getPrimarySrc(key) {
+            if (localObjectUrls[key]) return localObjectUrls[key];
+            const entry = assetMap[key];
+            if (!entry) return '';
+            return entry.paths[0] || entry.fallback || '';
+        }
+
+        function refreshAllAssetImages() {
+            document.querySelectorAll('img[data-asset]').forEach(img => {
+                const key = img.getAttribute('data-asset');
+                const entry = assetMap[key];
+                if (!entry) return;
+
+                const missingBox = img.parentElement ? img.parentElement.querySelector('.missing-slide-box') : null;
+                const candidates = [];
+                if (localObjectUrls[key]) candidates.push(localObjectUrls[key]);
+                entry.paths.forEach(p => candidates.push(p));
+                if (entry.fallback) candidates.push(entry.fallback);
+
+                let idx = 0;
+                img.classList.remove('hidden');
+                if (missingBox) missingBox.classList.add('hidden');
+
+                img.onerror = () => {
+                    idx++;
+                    if (idx < candidates.length) {
+                        img.src = candidates[idx];
+                    } else {
+                        img.onerror = null;
+                        img.classList.add('hidden');
+                        if (missingBox) missingBox.classList.remove('hidden');
+                    }
+                };
+                img.onload = () => {
+                    img.classList.remove('hidden');
+                    if (missingBox) missingBox.classList.add('hidden');
+                };
+                img.src = candidates[0] || '';
+            });
+            renderLoaderStatusChips();
+        }
+
+        function openLocalLoaderModal() {
+            renderLoaderStatusChips();
+            const m = document.getElementById('local-loader-modal');
+            if (!m) return;
+            m.classList.remove('hidden');
+            m.classList.add('flex');
+            lucide.createIcons();
+        }
+
+        function closeLocalLoaderModal() {
+            const m = document.getElementById('local-loader-modal');
+            if (!m) return;
+            m.classList.add('hidden');
+            m.classList.remove('flex');
+        }
+
+        function matchUploadedFileToAssetKey(fileName) {
+            const n = (fileName || '').toLowerCase();
+            if (n.includes('mnu')) return 'mnu-logo';
+            if (n.includes('pharmacy')) return 'pharmacy-logo';
+            if (n.includes('pharmacognosy') || n.includes('001838')) return 'pharmacognosy-logo';
+            if (n.includes('senna') || n.includes('سنا')) return 'senna-slide';
+            if (n.includes('جواف') || n.includes('guava')) return 'guava-slide';
+            if ((n.includes('روز') || n.includes('rosemary')) && n.includes('2')) return 'rosemary-slide-2';
+            if (n.includes('روز') || n.includes('rosemary')) return 'rosemary-slide-1';
+            if ((n.includes('نعناع') || n.includes('mentha')) && n.includes('2')) return 'mentha-slide-2';
+            if (n.includes('نعناع') || n.includes('mentha')) return 'mentha-slide-1';
+            if (n.includes('زعتر') || n.includes('thyme')) return 'thyme-slide';
+            if (n.includes('سكران') || n.includes('hyoscyamus')) return 'hyoscyamus-slide';
+            if (n.includes('ليكور') && (n.includes('تست') || n.includes('test') || n.includes('foam'))) return 'liquorice-test';
+            if (n.includes('ليكور') || n.includes('liquorice') || n.includes('licorice')) return 'liquorice-slide';
+            if (n.includes('جنجر') || n.includes('زنجبيل') || n.includes('ginger')) return 'ginger-slide';
+            if (n.includes('روبارب') || n.includes('رواند') || n.includes('rhubarb')) return 'rhubarb-slide';
+            return null;
+        }
+
+        function handleLocalImagesUpload(event) {
+            const files = Array.from(event.target.files || []);
+            if (!files.length) return;
+            let matched = 0;
+            files.forEach(file => {
+                const key = matchUploadedFileToAssetKey(file.name);
+                if (key) {
+                    if (localObjectUrls[key]) URL.revokeObjectURL(localObjectUrls[key]);
+                    localObjectUrls[key] = URL.createObjectURL(file);
+                    matched++;
+                }
+            });
+            refreshAllAssetImages();
+            showToast(matched > 0 ? `تم ربط وعرض ${matched} صورة بنجاح.` : 'لم تتطابق أسماء الملفات المحددة مع أسماء الشعارات أو الشرائح.');
+        }
+
+        function renderLoaderStatusChips() {
+            const box = document.getElementById('loader-status-chips');
+            if (!box) return;
+            box.innerHTML = Object.entries(assetMap).map(([key, item]) => {
+                const loaded = Boolean(localObjectUrls[key]);
+                return `<span class="px-2.5 py-1 rounded-full font-bold border ${loaded ? 'bg-emerald-50 text-[#0D3B2E] border-emerald-300' : 'bg-[#FBFBF8] text-stone-500 border-[#E6E4DC]'}">${loaded ? '✓ ' : ''}${item.label}</span>`;
+            }).join('');
+        }
+
+        // =========================================================================
+        // 2. قاعدة بيانات النباتات التسعة المقررة (PG706)
+        // =========================================================================
+        const plantsData = [
+            {
+                id: 'senna',
+                nameAr: 'السنامكي',
+                nameEn: 'Senna leaflets',
+                latin: 'Cassia acutifolia (Alexandrian) & C. angustifolia (Indian)',
+                family: 'Leguminosae',
+                category: 'leaves',
+                categoryAr: 'الأوراق (Leaflets)',
+                emoji: '🌿',
+                primaryRoleAr: 'ملين بجرعة صغيرة (Laxative) ومُسهل بجرعة كبيرة (Purgative) للإمساك الحاد.',
+                origin: 'The dried leaflets of Cassia acutifolia (Alexandrian Senna) and Cassia angustifolia (Indian Senna), Family Leguminosae.',
+                constituents: [
+                    'Anthraquinone glycosides (Sennosides A, B, C, D — active laxative principles)',
+                    'Flavonoids (Kaempferol derivatives)',
+                    'Mucilage & Calcium oxalate crystals'
+                ],
+                constituentsShort: 'Sennosides A, B, C, D (Anthraquinones), Flavonoids, Mucilage',
+                medicinalValue: [
+                    'ملين (Laxative) بالجرعة الصغيرة ومُسهل قوي (Purgative) بالجرعة الكبيرة في حالات الإمساك الحاد.',
+                    'يُدمج غالباً مع النعناع الفلفلي (Peppermint) أو الكراوية لتجنب المغص المعوي (Griping).',
+                    'يدخل في تركيبة Senna + Rhubarb المقررة كـ Purgative قوي.'
+                ],
+                contraindications: [
+                    'الحمل والرضاعة الطبيعية (Pregnancy & Lactation).',
+                    'انسداد الأمعاء والتهابات الجهاز الهضمي (Bowel obstruction, Crohn’s disease, Ulcerative colitis, Appendicitis).',
+                    'الإمساك المزمن (يسبب الاعتمادية وتصبغ القولون Melanosis coli) والأطفال أقل من 12 سنة.'
+                ],
+                majorContraShort: 'ممنوع في الحمل، انسداد والتهابات الأمعاء، والإمساك المزمن.',
+                chemicalTests: [
+                    { name: 'Modified Borntrager’s test', target: 'Test for Anthraquinone C/O-glycosides', color: 'Rose-red / Pink color in the aqueous ammonia layer (لون أحمر وردي في طبقة الأمونيا).', hex: '#E11D48', cls: 'bg-rose-50 border-rose-200 text-rose-950' },
+                    { name: 'KOH test', target: 'Test for Anthraquinones', color: 'Red color upon addition of KOH (لون أحمر).', hex: '#DC2626', cls: 'bg-red-50 border-red-200 text-red-950' }
+                ],
+                chemShort: 'Modified Borntrager’s (Rose-red / Pink) • KOH (Red)',
+                keyElements: ['True crystal sheath', 'Covering (non-glandular) unicellular trichomes with warty cuticle', 'Epidermis in surface view with paracytic stomata'],
+                slides: [{ key: 'senna-slide', caption: 'Senna: True crystal sheath, Warty trichomes & Paracytic stomata' }],
+                market: ['Senna-Lax / Sennosides tablets & tea', 'Eucarbon (Charcoal + Fennel + Peppermint + Rhubarb + Senna + Sulphur)'],
+                mixtureRole: { general: 'Laxative / Purgative — يحفز حركة الأمعاء.', laxative: 'Laxative / Purgative — ملين ومُسهل عبر Sennosides.' }
+            },
+            {
+                id: 'guava',
+                nameAr: 'أوراق الجوافة',
+                nameEn: 'Guava leaves',
+                latin: 'Psidium guajava',
+                family: 'Myrtaceae',
+                category: 'leaves',
+                categoryAr: 'الأوراق (Leaves)',
+                emoji: '🍃',
+                primaryRoleAr: 'مهدئ للسعال وملطف للشعب (Antitussive)، وقابض مضاد للإسهال والتقلصات.',
+                origin: 'The dried leaves of Psidium guajava, Family Myrtaceae.',
+                constituents: [
+                    'Tannins (astringent & antidiarrheal)',
+                    'Flavonoids (Quercetin — antispasmodic & antioxidant)',
+                    'Volatile oil (Eugenol, Cineole), Triterpenoids & Vitamin C'
+                ],
+                constituentsShort: 'Tannins, Flavonoids (Quercetin), Volatile oil (Eugenol, Cineole)',
+                medicinalValue: [
+                    'مهدئ للسعال (Antitussive) وملطف (Demulcent) في التهاب الشعب الهوائية ونزلات البرد.',
+                    'مضاد للإسهال (Antidiarrheal) ومضاد للتقلصات المعوية (Antispasmodic).',
+                    'مطهر للجهاز الهضمي والفم واللثة.'
+                ],
+                contraindications: [
+                    'الإمساك الشديد (بسبب ارتفاع محتواها من التانينات القابضة).',
+                    'يُستخدم بحذر مع مرضى أنيميا نقص الحديد لأن التانينات ترتبط بالحديد وتقلل امتصاصه.'
+                ],
+                majorContraShort: 'يُتجنب في الإمساك الشديد، وحذر في أنيميا نقص الحديد.',
+                chemicalTests: [
+                    { name: 'Ferric Chloride (FeCl₃) test', target: 'Test for Tannins', color: 'Bluish-black / Dark green color (لون أزرق مسود أو أخضر داكن).', hex: '#1E293B', cls: 'bg-slate-100 border-slate-300 text-slate-900' },
+                    { name: 'Gelatin / Lead Acetate test', target: 'Test for Tannins', color: 'White / creamy precipitate (راسب أبيض).', hex: '#E5E7EB', cls: 'bg-stone-50 border-stone-200 text-stone-900' }
+                ],
+                chemShort: 'FeCl₃ (Bluish-black / Dark green) • Gelatin (Precipitate)',
+                keyElements: ['Unicellular non-glandular trichome with warty cuticle at the base', 'Paracytic stomata'],
+                slides: [{ key: 'guava-slide', caption: 'Guava: Unicellular trichome with warty cuticle at the base & Paracytic stomata' }],
+                market: ['Guava Syrup (Guava Leaves + Tilia Flower + Fennel Oil + Liquorice)'],
+                mixtureRole: { general: 'Antitussive, Demulcent & Astringent.', respiratory: 'Antitussive & Demulcent — تهدئة السعال وتلطيف الشعب.' }
+            },
+            {
+                id: 'rosemary',
+                nameAr: 'الروزماري (إكليل الجبل)',
+                nameEn: 'Rosemary leaves',
+                latin: 'Rosmarinus officinalis (Salvia rosmarinus)',
+                family: 'Labiatae (Lamiaceae)',
+                category: 'leaves',
+                categoryAr: 'الأوراق (Leaves)',
+                emoji: '🌱',
+                primaryRoleAr: 'مضاد للتقلصات وطارد للغازات ومعزز للهضم، ومنشط للدورة الدموية والذاكرة.',
+                origin: 'The dried leaves of Rosmarinus officinalis (Salvia rosmarinus), Family Labiatae (Lamiaceae).',
+                constituents: [
+                    'Volatile oil (1,8-Cineole, Camphor, α-Pinene, Borneol)',
+                    'Phenolic acids (Rosmarinic acid — antioxidant & anti-inflammatory)',
+                    'Diterpenes (Carnosic acid) & Flavonoids (Diosmin)'
+                ],
+                constituentsShort: 'Volatile oil (Cineole, Camphor), Rosmarinic acid, Carnosic acid',
+                medicinalValue: [
+                    'مضاد للتقلصات (Antispasmodic)، طارد للغازات (Carminative)، ومدر للصفراء ومعزز للهضم.',
+                    'منشط للدورة الدموية وموضعي محمّر للجلد (Rubefacient) في آلام الروماتيزم والمفاصل.',
+                    'مضاد للأكسدة ومحفّز للتركيز والذاكرة.'
+                ],
+                contraindications: [
+                    'الجرعات العالية أثناء الحمل (Pregnancy).',
+                    'مرضى الصرع (Epilepsy) لاحتوائه على الكافور (Camphor).',
+                    'انسداد القنوات المرارية وحصوات المرارة، وارتفاع ضغط الدم (بالجرعات الكبيرة).'
+                ],
+                majorContraShort: 'الجرعات العالية في الحمل، الصرع (Camphor)، وحصوات المرارة.',
+                chemicalTests: [
+                    { name: 'Sudan III test', target: 'Test for Volatile oil', color: 'Red-stained oil globules (لون أحمر للزيت الطيار).', hex: '#DC2626', cls: 'bg-red-50 border-red-200 text-red-950' },
+                    { name: 'FeCl₃ test', target: 'Test for Phenolics / Rosmarinic acid', color: 'Greenish-blue color (لون أخضر مزرق).', hex: '#0F766E', cls: 'bg-teal-50 border-teal-200 text-teal-950' }
+                ],
+                chemShort: 'Sudan III (Red) • FeCl₃ (Greenish-blue)',
+                keyElements: ['Candelabra trichome', 'Labiaceous glandular trichome', 'Capitate glandular trichome'],
+                slides: [
+                    { key: 'rosemary-slide-1', caption: 'Rosemary (1): Candelabra trichome' },
+                    { key: 'rosemary-slide-2', caption: 'Rosemary (2): Labiaceous & Capitate trichomes' }
+                ],
+                market: ['Rosemary oil & Digestive / Hair tonic herbal formulations'],
+                mixtureRole: { general: 'Antispasmodic, Carminative & Antioxidant.', digestive: 'Antispasmodic & Carminative — يمنع التقلصات ويطرد الغازات.' }
+            },
+            {
+                id: 'mentha',
+                nameAr: 'النعناع الفلفلي',
+                nameEn: 'Peppermint (Mentha)',
+                latin: 'Mentha piperita',
+                family: 'Labiatae (Lamiaceae)',
+                category: 'leaves',
+                categoryAr: 'الأوراق (Leaves)',
+                emoji: '🌿',
+                primaryRoleAr: 'طارد للغازات ومضاد للتقلصات والقولون العصبي، ويمنع مغص السنامكي.',
+                origin: 'The dried leaves and flowering tops of Mentha piperita, Family Labiatae (Lamiaceae).',
+                constituents: [
+                    'Volatile oil (Menthol 30–55%, Menthone, Menthyl acetate)',
+                    'Flavonoids, Tannins & Rosmarinic acid'
+                ],
+                constituentsShort: 'Volatile oil (Menthol 30–55%, Menthone), Flavonoids, Tannins',
+                medicinalValue: [
+                    'طارد للغازات (Carminative) ومضاد للتقلصات (Antispasmodic) في المغص والقولون العصبي (IBS).',
+                    'يُضاف إلى السنامكي لمنع المغص (Griping)، كما يعمل كمضاد للغثيان.',
+                    'مبرد ومخدر موضعي خفيف للحكة ومزيل لاحتقان الأنف.'
+                ],
+                contraindications: [
+                    'ارتجاع المريء (GERD) وفتق الحجاب الحاجز لأنه يرخي الصمام السفلي للمريء (LES).',
+                    'يُمنع وضع زيت المنثول قرب وجه أو أنف الرضع والأطفال الصغار (خطر تشنج الحنجرة Laryngospasm).',
+                    'يُستخدم بحذر مع حصوات المرارة.'
+                ],
+                majorContraShort: 'ممنوع في ارتجاع المريء (GERD) وقرب أنف الرضع (Laryngospasm).',
+                chemicalTests: [
+                    { name: 'Vanillin / H₂SO₄ test', target: 'Test for Menthol', color: 'Purple / Violet color (لون بنفسجي للمنثول).', hex: '#7E22CE', cls: 'bg-purple-50 border-purple-200 text-purple-950' },
+                    { name: 'Sudan III test', target: 'Test for Volatile oil', color: 'Red oil globules (لون أحمر).', hex: '#DC2626', cls: 'bg-red-50 border-red-200 text-red-950' }
+                ],
+                chemShort: 'Vanillin/H₂SO₄ (Purple/Violet) • Sudan III (Red)',
+                keyElements: ['Multicellular uniseriate non-glandular trichome', 'Labiaceous trichome', 'Capitate trichome', 'Diacytic stomata'],
+                slides: [
+                    { key: 'mentha-slide-1', caption: 'Mentha (1): Multicellular uniseriate & Labiaceous trichomes' },
+                    { key: 'mentha-slide-2', caption: 'Mentha (2): Capitate trichome' }
+                ],
+                market: ['Coloverin / Peppermint enteric-coated capsules', 'Eucarbon & Digestive herbal syrups'],
+                mixtureRole: { general: 'Carminative & Antispasmodic.', digestive: 'Carminative & Antispasmodic — يطرد الغازات ويمنع التقلصات.', laxative: 'Anti-griping Carminative — يمنع مغص الملينات.' }
+            },
+            {
+                id: 'thyme',
+                nameAr: 'الزعتر',
+                nameEn: 'Thyme (Thymus)',
+                latin: 'Thymus vulgaris',
+                family: 'Labiatae (Lamiaceae)',
+                category: 'leaves',
+                categoryAr: 'الأوراق (Leaves)',
+                emoji: '🌿',
+                primaryRoleAr: 'طارد ومذيب للبلغم ومضاد لتشنج الشعب ومطهر قوي للجهاز التنفسي.',
+                origin: 'The dried leaves and flowering tops of Thymus vulgaris, Family Labiatae (Lamiaceae).',
+                constituents: [
+                    'Volatile oil (Thymol & Carvacrol — potent antiseptic & expectorant)',
+                    'Flavonoids, Tannins & Saponins'
+                ],
+                constituentsShort: 'Volatile oil (Thymol, Carvacrol), Flavonoids, Tannins, Saponins',
+                medicinalValue: [
+                    'طارد للبلغم (Expectorant)، مذيب للمخاط (Mucolytic)، وموسع ومهدئ للشعب الهوائية في السعال والتهاب الشعب والسعال الديكي.',
+                    'مطهر قوي (Antiseptic) ومضاد للبكتيريا والفطريات، وطارد للغازات.'
+                ],
+                contraindications: [
+                    'الحساسية لنباتات العائلة الشفوية (Lamiaceae).',
+                    'تجنّب الجرعات المركّزة من زيت الثيمول في الحمل أو قرحة المعدة الشديدة.'
+                ],
+                majorContraShort: 'حساسية العائلة الشفوية، والجرعات العالية من زيت الثيمول في الحمل.',
+                chemicalTests: [
+                    { name: 'Sudan III test', target: 'Test for Volatile oil', color: 'Red oil globules (لون أحمر).', hex: '#DC2626', cls: 'bg-red-50 border-red-200 text-red-950' },
+                    { name: 'Thymol color test', target: 'Test for Thymol', color: 'Bluish-green color (لون أخضر مزرق).', hex: '#0D9488', cls: 'bg-teal-50 border-teal-200 text-teal-950' }
+                ],
+                chemShort: 'Sudan III (Red) • Thymol test (Bluish-green)',
+                keyElements: ['Bent (knee-shaped) trichome', 'Diacytic stomata', 'Labiaceous trichome'],
+                slides: [{ key: 'thyme-slide', caption: 'Thyme: Bent trichome, Diacytic stomata & Labiaceous trichome' }],
+                market: ['Bronchicum / Thymus & Liquorice cough syrups'],
+                mixtureRole: { general: 'Expectorant, Mucolytic & Antiseptic.', respiratory: 'Expectorant & Antiseptic — طارد ومذيب للبلغم ومطهر للشعب.', digestive: 'Carminative & GIT Antiseptic.' }
+            },
+            {
+                id: 'hyoscyamus',
+                nameAr: 'السكران المصري',
+                nameEn: 'Egyptian Henbane',
+                latin: 'Hyoscyamus muticus',
+                family: 'Solanaceae',
+                category: 'leaves',
+                categoryAr: 'الأوراق (Leaves)',
+                emoji: '⚕️',
+                primaryRoleAr: 'مضاد للكولين (Hyoscyamine / Hyoscine): دوار السفر وترياق تسمم المبيدات (عالي السمية).',
+                origin: 'The dried leaves and flowering tops of Hyoscyamus muticus, Family Solanaceae.',
+                constituents: [
+                    'Tropane alkaloids: Hyoscyamine (converts to Atropine)',
+                    'Hyoscine (Scopolamine — CNS sedative & anti-motion sickness)'
+                ],
+                constituentsShort: 'Tropane alkaloids: Hyoscyamine (Atropine) & Hyoscine (Scopolamine)',
+                medicinalValue: [
+                    'مضاد للتقلصات (Parasympatholytic / Antispasmodic) في المغص الكلوي والمراري والمعوي.',
+                    'الوقاية من دوار السفر والبحر (Motion sickness) عبر Hyoscine.',
+                    'ترياق (Antidote) لتسمم المبيدات الحشرية الفسفورية (Organophosphates) عبر Hyoscyamine / Atropine، وموسع لحدقة العين.'
+                ],
+                contraindications: [
+                    'عالي السمية (High Toxicity — بوصفة طبية وإشراف طبي صارم فقط).',
+                    'الجلوكوما ضيقة الزاوية (Narrow-angle glaucoma) وتضخم البروستاتا واحتباس البول (BPH).',
+                    'تسارع ضربات القلب واضطراب النظم (Tachycardia / Arrhythmias)، الشلل المعوي (Paralytic ileus)، والوهن العضلي (Myasthenia gravis).'
+                ],
+                majorContraShort: 'عالي السمية؛ ممنوع في الجلوكوما، BPH، تسارع القلب، والوهن العضلي.',
+                chemicalTests: [
+                    { name: 'Vitali-Morin test', target: 'Specific test for Tropane alkaloids', color: 'Deep violet / Purple color (لون بنفسجي داكن مميز).', hex: '#6B21A8', cls: 'bg-purple-50 border-purple-200 text-purple-950' },
+                    { name: 'Mayer’s & Dragendorff’s tests', target: 'General alkaloid tests', color: 'Cream ppt (Mayer’s) / Orange-red ppt (Dragendorff’s).', hex: '#EA580C', cls: 'bg-orange-50 border-orange-200 text-orange-950' }
+                ],
+                chemShort: 'Vitali-Morin (Deep violet) • Dragendorff’s (Orange-red ppt)',
+                keyElements: ['Branched glandular trichome', 'Anisocytic stomata'],
+                slides: [{ key: 'hyoscyamus-slide', caption: 'Egyptian Henbane: Branched glandular trichome' }],
+                market: ['Buscopan (Hyoscine butylbromide) & Atropine clinical injections (Rx only)'],
+                mixtureRole: { general: 'Parasympatholytic (Rx only — لا يُدمج عشبياً لسميته العالية).' }
+            },
+            {
+                id: 'liquorice',
+                nameAr: 'عرق السوس',
+                nameEn: 'Liquorice',
+                latin: 'Glycyrrhiza glabra',
+                family: 'Leguminosae',
+                category: 'roots',
+                categoryAr: 'الجذور والريزومات (Roots & Rhizomes)',
+                emoji: '🪵',
+                primaryRoleAr: 'ملطف لالتهاب وقرحة المعدة والحموضة (Demulcent)، طارد للبلغم، ومضاد للالتهاب.',
+                origin: 'The dried peeled or unpeeled roots and rhizomes of Glycyrrhiza glabra, Family Leguminosae.',
+                constituents: [
+                    'Triterpene saponins: Glycyrrhizin (sweet taste — breaks down in the body to cortisone-like compound)',
+                    'Flavonoids, Free sugars & Starch',
+                    'Bitter principle: Glycyramarin (has bitter taste)'
+                ],
+                constituentsShort: 'Glycyrrhizin (Saponin), Flavonoids, Free sugars, Starch, Glycyramarin',
+                medicinalValue: [
+                    'ملطف (Demulcent) في الحالات الالتهابية للجهاز الهضمي (التهاب المعدة، قرحة المعدة، وزيادة الحموضة).',
+                    'طارد للبلغم (Expectorant) منفرداً أو في خلطات السعال مثل Liquorice + Thyme.',
+                    'علاج مساعد في التهاب الكبد المزمن (Chronic hepatitis).',
+                    'له تأثير إستروجيني (Estrogenic effect)، ومضاد لالتهاب المفاصل والالتهابات (Anti-arthritis & Anti-inflammatory).'
+                ],
+                contraindications: [
+                    'مرضى القلب (Cardiac disorders): يسبب احتباس الماء والتورم (Edema) مما يزيد العبء على القلب، ويعجّل بحدوث تسمم Digitalis.',
+                    'مدرات البول الثيازيدية (Thiazide diuretics): يسبب تأثيراً إضافياً لخفض البوتاسيوم (Additive hypokalemic effect).'
+                ],
+                safeNote: 'يمكن استخدام عرق السوس بأمان مع Spironolactone ومدرات البول الحافظة للبوتاسيوم (K⁺-sparing diuretics) لعدم حدوث نقص بالبوتاسيوم (No hypokalemia).',
+                majorContraShort: 'ممنوع لمرضى القلب وDigitalis وThiazides (آمن مع Spironolactone).',
+                chemicalTests: [
+                    {
+                        name: 'Foam test',
+                        target: 'Test for Saponins',
+                        color: 'Persistent froth upon shaking with water (رغوة كثيفة مستمرة عند الرج مع الماء).',
+                        hex: '#D6D3C4',
+                        cls: 'bg-amber-50 border-amber-200 text-amber-950',
+                        photoKey: 'liquorice-test',
+                        photoCaption: 'Liquorice Foam Test: Persistent froth for saponins',
+                        youtubeUrl: 'https://www.youtube.com/watch?v=s0FdnCCQzvg'
+                    },
+                    {
+                        name: '80% H₂SO₄ test',
+                        target: 'Test for Liquorice powder',
+                        color: 'Orange color upon addition of liquorice powder to 80% H₂SO₄ (لون برتقالي).',
+                        hex: '#EA580C',
+                        cls: 'bg-orange-50 border-orange-200 text-orange-950'
+                    }
+                ],
+                chemShort: 'Foam test (Persistent froth) • 80% H₂SO₄ (Orange color)',
+                keyElements: ['Pseudo-crystal sheath', 'Bordered pitted xylem vessel', 'Cork cells'],
+                slides: [{ key: 'liquorice-slide', caption: 'Liquorice: Pseudo-crystal sheath, Bordered pitted xylem vessel & Cork cells' }],
+                market: [
+                    'Guava Leaves + Tilia Flower + Fennel Oil + Liquorice (Cough Syrup)',
+                    'Collagen + Elastin + Honey + Chlorhexidine + Ascorbic Acid + Liquorice Extract + Caffeine + Dimethicone + Tocopherol + Zinc Oxide + Shea Butter'
+                ],
+                mixtureRole: { general: 'Demulcent, Expectorant & Anti-inflammatory.', respiratory: 'Expectorant & Demulcent — طارد للبلغم وملطف للشعب.' }
+            },
+            {
+                id: 'ginger',
+                nameAr: 'الزنجبيل',
+                nameEn: 'Ginger',
+                latin: 'Zingiber officinale',
+                family: 'Zingiberaceae',
+                category: 'roots',
+                categoryAr: 'الريزومات (Rhizomes)',
+                emoji: '🫚',
+                primaryRoleAr: 'مضاد للغثيان والقيء، معزز للهضم وطارد للغازات، ومنشط للدورة الدموية.',
+                origin: 'The dried rhizomes of Zingiber officinale, Family Zingiberaceae.',
+                constituents: [
+                    '1–3% Volatile oil, Mucilage & Starch',
+                    'Resin (causes pungency)',
+                    'Gingerol (oily phenolic — pungency is destroyed by boiling with 2% KOH)'
+                ],
+                constituentsShort: '1–3% V.O, Mucilage, Starch, Resin, Gingerol (destroyed by 2% KOH)',
+                medicinalValue: [
+                    'منكّه، طارد للغازات (Carminative)، ومُحسّن للطعام (Condiment).',
+                    'هاضم ومعزز للهضم (Digestive) ومضاد للغثيان والقيء (Antiemetic).',
+                    'مضاد للأكسدة ومطهر للجهاز الهضمي، يثبط السعال، ومنشط للدورة الدموية.'
+                ],
+                contraindications: [
+                    'له نشاط مضاد للتجلط (Anticoagulant activity) لذا يجب تجنّبه مع مرضى أدوية السيولة (Warfarin / Anticoagulants).',
+                    'قد يسبب حرقان المعدة وتهيج الجهاز الهضمي (Heartburn & GI irritation).',
+                    'له تأثير مدر للصفراء (Cholagogue) لذا يُمنع في المرضى ذوي التاريخ المرضي لحصوات المرارة.',
+                    'له نشاط خافض للسكر (Hypoglycemic) لذا يجب على مرضى السكري مراقبة مستوى سكر الدم جيداً.'
+                ],
+                majorContraShort: 'ممنوع مع Warfarin وحصوات المرارة؛ يسبب حرقاناً ومراقبة للسكري.',
+                chemicalTests: [
+                    { name: 'Sudan III test', target: 'Test for Volatile oil', color: 'Red color with Sudan III (لون أحمر مع Sudan III).', hex: '#DC2626', cls: 'bg-red-50 border-red-200 text-red-950' },
+                    { name: 'Boiling with 2% KOH', target: 'Test for Gingerol pungency', color: 'Destroys the pungency of gingerol (يختفي الطعم اللاذع لمركب Gingerol).', hex: '#CA8A04', cls: 'bg-amber-50 border-amber-200 text-amber-950' }
+                ],
+                chemShort: 'Sudan III (Red) • 2% KOH boiling (Destroys gingerol pungency)',
+                keyElements: ['Starch granules', 'Septate dentate fiber', 'Oleo-resin cell'],
+                slides: [{ key: 'ginger-slide', caption: 'Ginger: Starch granules, Septate dentate fiber & Oleo-resin cell' }],
+                market: [
+                    'Bromelain 50mg + Papain 50mg + Chamomile 150mg + Ginger Root 70mg + Peppermint Leaves 25mg + Anise Flavor',
+                    'Chamomile + Ginger + Anise + Bromelain + Fennel + Peppermint + Papain'
+                ],
+                mixtureRole: { general: 'Antiemetic, Digestive boosting & Carminative.', digestive: 'Anti-emetic & Digestive boosting agent — يوقف الغثيان ويعزز الهضم.', respiratory: 'Inhibits coughing & Circulatory stimulant.' }
+            },
+            {
+                id: 'rhubarb',
+                nameAr: 'الرواند',
+                nameEn: 'Rhubarb',
+                latin: 'Rheum palmatum, R. officinale (EXCEPT R. rhaponticum)',
+                family: 'Polygonaceae',
+                category: 'roots',
+                categoryAr: 'الريزومات والجذور (Rhizome & Big Roots)',
+                emoji: '🌿',
+                primaryRoleAr: 'مُسهل قوي بالجرعة العالية (Purgative) ومقوٍّ مرّ للمعدة وقابض بالجرعة الصغيرة.',
+                origin: 'The dried rhizome and big roots of Rheum palmatum and R. officinale (EXCEPT R. rhaponticum), Family Polygonaceae.',
+                constituents: [
+                    'Anthraquinones 3–5% (Rhein, Emodin, Aloe-emodin)',
+                    'Flavonoids, Tannins & Calcium oxalate'
+                ],
+                constituentsShort: 'Anthraquinones 3–5% (Rhein, Emodin, Aloe-emodin), Flavonoids, Tannins, Ca-oxalate',
+                medicinalValue: [
+                    'مقوٍّ مرّ للمعدة (Bitter stomachic) وقابض (Astringent) بالجرعات الصغيرة.',
+                    'مضاد للبكتيريا (Antibacterial).',
+                    'مُسهل (Purgative) بالجرعات الكبيرة — ولا يُستخدم في علاج الإمساك المزمن.'
+                ],
+                contraindications: [
+                    'الالتهابات المعوية وأمراض الجهاز الهضمي: انسداد الأمعاء (Bowel obstruction)، التهاب الزائدة (Appendicitis)، داء كرون (Crohn’s disease)، التهاب القولون (Colitis)، والقولون العصبي (IBS).',
+                    'لا يُستخدم لعلاج الإمساك المزمن.'
+                ],
+                majorContraShort: 'ممنوع في انسداد الأمعاء، الزائدة، كرون، Colitis، وIBS والإمساك المزمن.',
+                chemicalTests: [
+                    { name: 'KOH test', target: 'Test for Anthraquinones', color: 'The powder gives red color with KOH (لون أحمر مع KOH).', hex: '#DC2626', cls: 'bg-red-50 border-red-200 text-red-950' },
+                    { name: 'Microsublimation test', target: 'Sublimation of free anthraquinones', color: 'Condensed needles that give red color with KOH (بلورات إبرية تحمر مع KOH).', hex: '#B91C1C', cls: 'bg-rose-50 border-rose-200 text-rose-950' },
+                    { name: 'Borntrager’s test', target: 'Test for Anthraquinones', color: 'Rose-red / Pink color in ammonia layer (لون أحمر وردي).', hex: '#E11D48', cls: 'bg-pink-50 border-pink-200 text-pink-950' }
+                ],
+                chemShort: 'KOH (Red) • Microsublimation (Needles → Red with KOH) • Borntrager’s',
+                keyElements: ['Giant Ca-oxalate clusters', 'Reticulate xylem vessels'],
+                slides: [{ key: 'rhubarb-slide', caption: 'Rhubarb: Giant Ca-oxalate clusters & Reticulate xylem vessels' }],
+                market: [
+                    'Charcoal + Fennel Oil + Peppermint Oil + Rhubarb + Senna + Sulphur (Eucarbon)',
+                    'Glycerin + Polydocanol + Rhubarb + Salicylic Acid (Pyralvex)'
+                ],
+                mixtureRole: { general: 'Purgative (high dose) / Bitter stomachic & Astringent (low dose).', laxative: 'Purgative — يعزز التأثير المسهل بالأنثراكينونات.' }
+            }
+        ];
+
+        // =========================================================================
+        // 3. المساعد الذكي للبحث والاستشارة الإكلينيكية (Gemini API + Hybrid Fallback)
+        // =========================================================================
+        const PG706_SYSTEM_PROMPT = `أنت أستاذ عقاقير وصيدلي إكلينيكي خبير في قسم العقاقير بكلية الصيدلة – جامعة المنصورة الأهلية، وتعمل كمساعد أكاديمي وإكلينيكي رسمي لمقرر العلاج بالنباتات الطبية (Phytotherapy — PG706).
+
+قواعد الإجابة:
+1. أجب بنفس لغة ولهجة المستخدم (عامية مصرية مهذبة واضحة، أو عربية فصحى طبية، أو إنجليزية) بأسلوب علمي دقيق ومرتب ومختصر وعملي.
+2. التزم بدقة تامة بمعلومات منهج PG706 للنباتات التسعة المقررة أدناه، وإذا سُئلت عن حالة إكلينيكية عامة أو سؤال صيدلي خارج النباتات التسعة أجب عليه بمهنية طبية مع الإشارة بلطف لما يخص المنهج.
+3. استخدم التنسيق الواضح (عناوين قصيرة، نقاط، و**خط عريض** للمصطلحات العلمية والألوان والعناصر المجهرية وموانع الاستعمال).
+4. لا تذكر أي أسماء طلاب إطلاقاً. الإشراف الأكاديمي للمقرر: Ass. Prof. Ahmed Elsaid Elbermawi و Dr. Menna Elkenaouy.
+
+قاعدة بيانات منهج PG706 الكاملة (9 نباتات):
+1) Senna leaflets (السنامكي) — Cassia acutifolia / C. angustifolia (Leguminosae).
+- Active: Anthraquinone glycosides (Sennosides A, B, C, D), Flavonoids (kaempferol), Mucilage, Ca-oxalate.
+- Uses: Laxative (small dose), Purgative (large dose) for acute constipation. Often combined with Peppermint to prevent griping.
+- Contraindications: Pregnancy, lactation, bowel obstruction, Crohn's disease, ulcerative colitis, appendicitis, chronic constipation (melanosis coli/dependence), children <12.
+- Tests: Modified Borntrager's test (rose-red/pink in ammonia layer), KOH (red).
+- Key elements: True crystal sheath, Covering (non-glandular) unicellular trichomes with warty cuticle, Epidermis with paracytic stomata.
+
+2) Guajava leaves (ورق الجوافة) — Psidium guajava (Myrtaceae).
+- Active: Tannins (astringent), Flavonoids (quercetin), Volatile oil (eugenol, cineole), Triterpenoids, Vitamin C.
+- Uses: Antitussive & demulcent (cough/bronchitis), Antidiarrheal & antispasmodic, GIT/oral antiseptic.
+- Contraindications: Severe constipation (tannins), caution in iron deficiency anemia (chelates iron).
+- Tests: FeCl3 (bluish-black / dark green), Gelatin/Lead acetate (precipitate).
+- Key elements: Unicellular non-glandular trichome with warty cuticle AT THE BASE, Paracytic stomata.
+
+3) Rosemary leaves (الروزماري) — Rosmarinus officinalis / Salvia rosmarinus (Labiatae/Lamiaceae).
+- Active: Volatile oil (1,8-cineole, camphor, α-pinene, borneol), Rosmarinic acid, Carnosic acid, Flavonoids (diosmin).
+- Uses: Antispasmodic, Carminative, Choleretic/digestive boosting, Circulatory stimulant & topical rubefacient (rheumatism), Memory enhancer, Antioxidant.
+- Contraindications: Pregnancy (high doses), Epilepsy (camphor), Gallstones/bile duct obstruction, Hypertension (large doses).
+- Tests: Sudan III (red oil globules), FeCl3 (greenish-blue).
+- Key elements: Candelabra trichome, Labiaceous glandular trichome, Capitate glandular trichome.
+
+4) Peppermint / Mentha (النعناع الفلفلي) — Mentha piperita (Labiatae/Lamiaceae).
+- Active: Volatile oil (Menthol 30–55%, Menthone), Flavonoids, Tannins, Rosmarinic acid.
+- Uses: Carminative, Antispasmodic (IBS, colic, flatulence, prevents Senna griping), Antiemetic, Local anesthetic/cooling antipruritic, Nasal decongestant.
+- Contraindications: GERD / hiatal hernia (relaxes LES), Infants near face/nose (laryngospasm), Gallstones.
+- Tests: Sudan III (red), Vanillin/H2SO4 (purple/violet for menthol).
+- Key elements: Multicellular uniseriate non-glandular trichome, Labiaceous trichome, Capitate trichome, Diacytic stomata.
+
+5) Thyme (الزعتر) — Thymus vulgaris (Labiatae/Lamiaceae).
+- Active: Volatile oil (Thymol, Carvacrol), Flavonoids, Tannins, Saponins.
+- Uses: Expectorant, Mucolytic, Bronchospasmolytic (productive cough, bronchitis, whooping cough), Antiseptic, Carminative.
+- Contraindications: Allergy to Lamiaceae, high-dose thymol oil in pregnancy or severe peptic ulcer.
+- Tests: Sudan III (red), Thymol test (bluish-green).
+- Key elements: Bent (knee-shaped) trichome, Diacytic stomata, Labiaceous trichome.
+
+6) Egyptian Henbane (السكران المصري) — Hyoscyamus muticus (Solanaceae).
+- Active: Tropane alkaloids: Hyoscyamine (converts to Atropine), Hyoscine (Scopolamine).
+- Uses: Parasympatholytic/antispasmodic (GIT, renal, biliary colic), Motion sickness (Hyoscine), Antidote for organophosphate/insecticide poisoning (Hyoscyamine/Atropine), Mydriatic, Pre-anesthetic.
+- Contraindications: HIGH TOXICITY (Rx only), Narrow-angle glaucoma, BPH/urinary retention, Tachycardia/arrhythmias, Paralytic ileus, Myasthenia gravis.
+- Tests: Vitali-Morin test (deep violet/purple), Mayer's (cream ppt), Dragendorff's (orange-red ppt).
+- Key elements: Branched glandular trichome, Anisocytic stomata.
+
+7) Liquorice (عرق السوس) — Glycyrrhiza glabra (Leguminosae), dried peeled or unpeeled roots & rhizomes.
+- Active: Triterpene saponins (Glycyrrhizin - sweet taste, breaks down in body to cortisone-like compound), Flavonoids, Free sugars, Starch, Bitter principle (Glycyramarin - bitter taste).
+- Uses: Demulcent in GIT inflammation (gastritis, peptic ulcer, excessive acid), Expectorant (alone or in cough mixtures), Chronic hepatitis, Estrogenic effect, Anti-arthritis & anti-inflammatory.
+- Contraindications: 1) Cardiac disorders (water retention -> edema -> increases heart load; precipitates Digitalis toxicity); 2) Thiazide diuretics (additive hypokalemic effect). SAFE WITH Spironolactone & K-sparing diuretics (no hypokalemia).
+- Tests: Foam test for saponins (persistent froth upon shaking with water), 80% H2SO4 test (orange color).
+- Key elements: Pseudo-crystal sheath, Bordered pitted xylem vessel, Cork cells.
+- Egyptian Market: (1) Guava Leaves + Tilia Flower + Fennel Oil + Liquorice; (2) Collagen + Elastin + Honey + Chlorhexidine + Ascorbic Acid + Liquorice Extract + Caffeine + Dimethicone + Tocopherol + Zinc Oxide + Shea Butter.
+
+8) Ginger (الزنجبيل) — Zingiber officinale (Zingiberaceae), dried rhizomes.
+- Active: 1–3% Volatile oil, Mucilage, Starch, Resin (pungency), Gingerol (oily phenolic; pungency destroyed by boiling with 2% KOH).
+- Uses: Flavoring, Carminative, Condiment, Digestive, Antiemetic, Antioxidant, GIT antiseptic, Inhibits coughing, Circulatory stimulant.
+- Contraindications: Anticoagulant activity (avoid with Warfarin/anticoagulants), Heartburn & GI irritation, Cholagogue action (contraindicated in gallstones history), Hypoglycemic activity (diabetics must monitor blood sugar closely).
+- Tests: Sudan III (red for volatile oil), Boiling with 2% KOH destroys gingerol pungency.
+- Key elements: Starch granules, Septate dentate fiber, Oleo-resin cell.
+- Egyptian Market: (1) Bromelain 50mg + Papain 50mg + Chamomile 150mg + Ginger Root 70mg + Peppermint Leaves 25mg + Anise Flavor; (2) Chamomile + Ginger + Anise + Bromelain + Fennel + Peppermint + Papain.
+
+9) Rhubarb (الرواند) — Rheum palmatum, R. officinale EXCEPT R. rhaponticum (Polygonaceae), dried rhizome & big roots.
+- Active: Anthraquinones 3–5% (Rhein, Emodin, Aloe-emodin), Flavonoids, Tannin, Calcium oxalate.
+- Uses: Bitter stomachic & astringent (small dose), Antibacterial, Purgative (large dose — NOT used in chronic constipation).
+- Contraindications: GI/intestinal inflammatory conditions: bowel obstruction, appendicitis, Crohn's disease, colitis, IBS.
+- Tests: KOH (red), Microsublimation (condensed needles giving red color with KOH), Borntrager's test (rose-red/pink).
+- Key elements: Giant Ca-oxalate clusters, Reticulate xylem vessels.
+- Egyptian Market: (1) Charcoal + Fennel Oil + Peppermint Oil + Rhubarb + Senna + Sulphur (Eucarbon); (2) Glycerin + Polydocanol + Rhubarb + Salicylic Acid (Pyralvex).
+
+الخلطات المقررة:
+- Senna + Rhubarb: General use: Purgative (Senna: laxative/purgative; Rhubarb: purgative).
+- Liquorice + Thyme: General use: Cough (both: expectorant).
+- Ginger + Rosemary: General use: Digestion boosting (Ginger: anti-emetic & digestive boosting; Rosemary: anti-spasmodic & carminative).`;
+
+        const AI_KEY_STORAGE = 'pg706_gemini_api_key';
+        let aiChatHistory = [];
+        let isAiBusy = false;
+
+        function getSavedApiKey() {
+            try { return (localStorage.getItem(AI_KEY_STORAGE) || '').trim(); } catch (_) { return ''; }
+        }
+
+        function openAiSettingsModal() {
+            const inp = document.getElementById('gemini-api-key-input');
+            if (inp) inp.value = getSavedApiKey();
+            const m = document.getElementById('ai-settings-modal');
+            m.classList.remove('hidden');
+            m.classList.add('flex');
+            lucide.createIcons();
+        }
+
+        function closeAiSettingsModal() {
+            const m = document.getElementById('ai-settings-modal');
+            m.classList.add('hidden');
+            m.classList.remove('flex');
+        }
+
+        function saveAiApiKey() {
+            const val = (document.getElementById('gemini-api-key-input').value || '').trim();
+            try {
+                if (val) localStorage.setItem(AI_KEY_STORAGE, val);
+                else localStorage.removeItem(AI_KEY_STORAGE);
+            } catch (_) {}
+            closeAiSettingsModal();
+            updateAiModeBadge('gemini');
+            showToast(val ? 'تم حفظ مفتاح Gemini API محلياً بنجاح.' : 'تم مسح المفتاح والعودة للوضع التلقائي.');
+        }
+
+        function clearAiApiKey() {
+            try { localStorage.removeItem(AI_KEY_STORAGE); } catch (_) {}
+            const inp = document.getElementById('gemini-api-key-input');
+            if (inp) inp.value = '';
+            closeAiSettingsModal();
+            showToast('تم حذف المفتاح المحفوظ.');
+        }
+
+        function updateAiModeBadge(mode) {
+            const badge = document.getElementById('ai-mode-badge');
+            if (!badge) return;
+            if (mode === 'gemini') {
+                badge.className = 'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 text-[#0D3B2E] border border-emerald-200 text-[11px] font-bold';
+                badge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span><span>Gemini AI متصل</span>';
+            } else if (mode === 'local') {
+                badge.className = 'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-950 border border-amber-200 text-[11px] font-bold';
+                badge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-[#B88A3B]"></span><span>المحرك الإكلينيكي الذكي</span>';
+            }
+        }
+
+        function normalizeArabic(str) {
+            return (str || '')
+                .toLowerCase()
+                .replace(/[\u064B-\u065F\u0670]/g, '')
+                .replace(/[أإآٱ]/g, 'ا')
+                .replace(/ة/g, 'ه')
+                .replace(/ى/g, 'ي')
+                .replace(/ؤ/g, 'و')
+                .replace(/ئ/g, 'ي')
+                .replace(/[؟?!.,،؛:()'"\/\\+\-–—]/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim();
+        }
+
+        function escapeHtmlSafe(str) {
+            return String(str || '')
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;');
+        }
+
+        function renderMarkdownToSafeHtml(mdText) {
+            const lines = escapeHtmlSafe(mdText).split('\n');
+            let html = '';
+            let inUl = false;
+            let inOl = false;
+
+            const closeLists = () => {
+                if (inUl) { html += '</ul>'; inUl = false; }
+                if (inOl) { html += '</ol>'; inOl = false; }
+            };
+
+            const fmtInline = (t) => t
+                .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+                .replace(/`([^`]+)`/g, '<code class="px-1.5 py-0.5 rounded bg-emerald-50 text-[#0D3B2E] font-en text-[11px] font-bold">$1</code>');
+
+            lines.forEach(rawLine => {
+                const line = rawLine.trim();
+                if (!line) {
+                    closeLists();
+                    return;
+                }
+                if (/^#{1,4}\s+/.test(line)) {
+                    closeLists();
+                    html += `<h4>${fmtInline(line.replace(/^#{1,4}\s+/, ''))}</h4>`;
+                } else if (/^[-*•]\s+/.test(line)) {
+                    if (inOl) { html += '</ol>'; inOl = false; }
+                    if (!inUl) { html += '<ul>'; inUl = true; }
+                    html += `<li>${fmtInline(line.replace(/^[-*•]\s+/, ''))}</li>`;
+                } else if (/^\d+[\.\)]\s+/.test(line)) {
+                    if (inUl) { html += '</ul>'; inUl = false; }
+                    if (!inOl) { html += '<ol>'; inOl = true; }
+                    html += `<li>${fmtInline(line.replace(/^\d+[\.\)]\s+/, ''))}</li>`;
+                } else {
+                    closeLists();
+                    html += `<p>${fmtInline(line)}</p>`;
+                }
+            });
+            closeLists();
+            return html;
+        }
+
+        function detectMentionedPlants(text) {
+            const norm = normalizeArabic(text);
+            const plantAliases = {
+                senna: ['سنامكي', 'السنامكي', 'سنا', 'senna', 'cassia', 'sennoside'],
+                guava: ['جوافه', 'الجوافه', 'guava', 'guajava', 'psidium'],
+                rosemary: ['روزماري', 'اكليل الجبل', 'rosemary', 'rosmarinus', 'candelabra'],
+                mentha: ['نعناع', 'النعناع', 'mentha', 'peppermint', 'menthol'],
+                thyme: ['زعتر', 'الزعتر', 'thyme', 'thymus', 'thymol'],
+                hyoscyamus: ['سكران', 'السكران', 'hyoscyamus', 'henbane', 'hyoscine', 'hyoscyamine', 'vitali'],
+                liquorice: ['عرق السوس', 'عرقسوس', 'العرقسوس', 'liquorice', 'licorice', 'glycyrrhiza', 'glycyrrhizin'],
+                ginger: ['زنجبيل', 'الزنجبيل', 'جنزبيل', 'ginger', 'zingiber', 'gingerol'],
+                rhubarb: ['رواند', 'الرواند', 'rhubarb', 'rheum', 'microsublimation']
+            };
+
+            const suggestedTab = /مجهري|ميكروسكوب|شعير|شريح|crystal|trichome|stomata|xylem|fiber|clusters|oleo/.test(norm) ? 4
+                : /اختبار|كيميائي|لون|borntrager|vitali|foam|h2so4|sudan|fecl3|koh|microsublimation/.test(norm) ? 3
+                : /مانع|تداخل|استخدام|علاج|قرحه|كحه|امساك|غثيان|مغص|ديجيتاليس|وارفارين|ثيازيد|مراره|حمل/.test(norm) ? 2 : 1;
+
+            return plantsData
+                .filter(p => (plantAliases[p.id] || []).some(alias => norm.includes(normalizeArabic(alias))))
+                .map(p => ({ plant: p, tab: suggestedTab }));
+        }
+
+        async function callGeminiWithBackoff(historyContents) {
+            const apiKey = getSavedApiKey(); // Empty string "" in Canvas allows runtime auto-injection
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${encodeURIComponent(apiKey)}`;
+
+            const payload = {
+                contents: historyContents,
+                systemInstruction: {
+                    parts: [{ text: PG706_SYSTEM_PROMPT }]
+                },
+                generationConfig: {
+                    temperature: 0.35,
+                    maxOutputTokens: 900
+                }
+            };
+
+            const delays = [1000, 2000, 4000];
+            for (let attempt = 0; attempt <= delays.length; attempt++) {
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+                        if (reply && reply.trim()) return reply.trim();
+                    }
+
+                    if ((response.status === 429 || response.status >= 500) && attempt < delays.length) {
+                        await new Promise(r => setTimeout(r, delays[attempt]));
+                        continue;
+                    }
+                    return null;
+                } catch (_) {
+                    if (attempt < delays.length) {
+                        await new Promise(r => setTimeout(r, delays[attempt]));
+                        continue;
+                    }
+                    return null;
+                }
+            }
+            return null;
+        }
+
+        // محرك الذكاء الإكلينيكي المحلي الهجين (يعمل تلقائياً عند غياب API Key أو انقطاع الاتصال)
+        function generateLocalClinicalAIResponse(userQuery) {
+            const q = normalizeArabic(userQuery);
+
+            // 1. أسئلة المقارنة السريعة والـ OSCE
+            if (q.includes('osce') || q.includes('اختبرني') || q.includes('سؤال')) {
+                const sample = clinicalQuiz[Math.floor(Math.random() * clinicalQuiz.length)];
+                return `### سؤال تدريب إكلينيكي (OSCE / PG706)\n**${sample.q}**\n- ${sample.opts.join('\n- ')}\n\nاكتب إجابتك هنا أو اسألني عن **التفسير العلمي** وسأوضح لك السبب فوراً!`;
+            }
+
+            if (q.includes('crystal sheath') || (q.includes('pseudo') && q.includes('true'))) {
+                return `### المقارنة المجهرية: True vs Pseudo-crystal sheath\n- **السنامكي (Senna leaflets):** يحتوي على **True crystal sheath** (ألياف محاطة بخلايا تحتوي على منشورات Ca-oxalate)، بالإضافة إلى **Covering warty trichomes** و **Paracytic stomata**.\n- **عرق السوس (Liquorice):** يحتوي على **Pseudo-crystal sheath**، بالإضافة إلى **Bordered pitted xylem vessel** و **Cork cells**.`;
+            }
+
+            // 2. أسئلة التداخلات الدوائية الحرجة
+            if (q.includes('ديجيتاليس') || q.includes('digitalis') || q.includes('ثيازيد') || q.includes('thiazide') || q.includes('سبيرونولاكتون') || q.includes('spironolactone') || (q.includes('قلب') && q.includes('سوس'))) {
+                return `### الاستشارة الإكلينيكية: عرق السوس مع أدوية القلب والمدرات\n- **الحكم الإكلينيكي:** **ممنوع (Contraindicated)** استخدام **عرق السوس (Liquorice)** لمرضى القلب أو مع **Digitalis** أو **Thiazide diuretics**.\n- **السبب العلمي:**\n  1. يسبب احتباس الماء والتورم (**Edema**) مما يزيد العبء على القلب.\n  2. يسبب نقص البوتاسيوم (**Hypokalemia**) مما يعجّل بحدوث **Digitalis toxicity** ويحدث تآزراً ضاراً مع **Thiazides**.\n- **البديل / المدر الآمن:** يمكن استخدام عرق السوس بأمان مع **Spironolactone** ومدرات البول الحافظة للبوتاسيوم (**K⁺-sparing diuretics**) لعدم حدوث نقص بالبوتاسيوم.`;
+            }
+
+            if (q.includes('وارفارين') || q.includes('warfarin') || q.includes('سيوله') || q.includes('مراره') || q.includes('حصوات')) {
+                return `### الاستشارة الإكلينيكية: الزنجبيل مع السيولة وحصوات المرارة\n- **مع أدوية السيولة (Warfarin / Anticoagulants):** يجب **تجنب الزنجبيل (Ginger)** لأن له نشاطاً مضاداً للتجلط (**Anticoagulant activity**) مما يرفع خطر النزيف.\n- **مع حصوات المرارة (Gallstones):** يُمنع **الزنجبيل** تماماً لكونه مدراً للصفراء (**Cholagogue**)، كما يُستخدم **الروزماري** و**النعناع** بحذر.\n- **ملاحظة لمرضى السكري:** للزنجبيل تأثير خافض للسكر (**Hypoglycemic**) فيجب مراقبة سكر الدم بانتظام.`;
+            }
+
+            // 3. استشارات الأعراض بالعامية المصرية والفصحى
+            if (q.includes('كحه') || q.includes('سعال') || q.includes('بلغم') || q.includes('صدر') || q.includes('شعب')) {
+                return `### خيارات العلاج بالنباتات الطبية للسعال والبلغم\n- **الزعتر (Thyme):** الخيار الأقوى للكحة المصحوبة ببلغم والتهاب الشعب (**Expectorant, Mucolytic & Antiseptic**).\n- **عرق السوس (Liquorice):** طارد فعال للبلغم (**Expectorant**) وملطف للحلق — ويشكل مع الزعتر خلطة **Liquorice + Thyme** المقررة للسعال.\n- **أوراق الجوافة (Guava leaves):** مهدئة للسعال وملطفة للشعب (**Antitussive & Demulcent**).\n- **الزنجبيل (Ginger):** يساعد في تثبيط السعال وتنشيط الدورة الدموية.\n- **تنبيه سلامة:** تأكد من عدم وجود أمراض قلب أو ضغط أو تناول **Digitalis / Thiazides** قبل وصف عرق السوس.`;
+            }
+
+            if (q.includes('امساك') || q.includes('مكتومه') || q.includes('ملين') || q.includes('مسهل')) {
+                return `### خيارات العلاج للإمساك الحاد (PG706)\n- **السنامكي (Senna leaflets):** ملين (**Laxative**) بجرعة صغيرة ومُسهل (**Purgative**) بجرعة كبيرة. يسبب مغصاً (**Griping**) لذا يُنصح بدمجه مع **النعناع الفلفلي (Peppermint)** كطارد للغازات ومضاد للتقلصات.\n- **الرواند (Rhubarb):** مُسهل قوي (**Purgative**) بالجرعة العالية، وتُستخدم خلطة **Senna + Rhubarb** كمسهل قوي.\n- **تحذيرات هامة:** كلاهما **ممنوع في الإمساك المزمن** (لتجنب الاعتمادية وMelanosis coli)، وممنوع في **الحمل** و**انسداد والتهابات الأمعاء** (Crohn's, Colitis, Appendicitis, IBS).`;
+            }
+
+            if (q.includes('قرحه') || q.includes('حموضه') || q.includes('حرقان') || q.includes('ارتجاع') || q.includes('gerd')) {
+                return `### الاستشارة الإكلينيكية لقرحة المعدة والحموضة والارتجاع\n- **الخيار الملطف الأنسب:** **عرق السوس (Liquorice)** يعمل كـ **Demulcent** ممتاز في التهابات المعدة وقرحة المعدة والحموضة الزائدة (مع مراعاة عدم وجود أمراض قلب أو ضغط).\n- **ما يجب تجنّبه:**\n  - **النعناع الفلفلي (Peppermint):** ممنوع في **ارتجاع المريء (GERD)** لأنه يرخي الصمام السفلي للمريء.\n  - **الزنجبيل (Ginger):** قد يسبب حرقان المعدة وتهيج الجهاز الهضمي (**Heartburn & GI irritation**).`;
+            }
+
+            if (q.includes('غثيان') || q.includes('قيء') || q.includes('ترجيع') || q.includes('دوار') || q.includes('سفر')) {
+                return `### خيارات الغثيان ودوار السفر\n- **الزنجبيل (Ginger):** الخيار العشبي الأول كمضاد للغثيان والقيء (**Antiemetic**) ومعزز للهضم (ويتآزر مع **الروزماري** في خلطة **Ginger + Rosemary**).\n- **السكران المصري (Egyptian Henbane):** مصدر قلويد **Hyoscine (Scopolamine)** للوقاية من دوار السفر — **تحت إشراف طبي صارم فقط** لسميته العالية وموانعه (الجلوكوما وBPH).\n- **النعناع الفلفلي (Peppermint):** يساعد في تهدئة الغثيان والمغص.`;
+            }
+
+            if (q.includes('مغص') || q.includes('انتفاخ') || q.includes('غازات') || q.includes('قولون') || q.includes('هضم')) {
+                return `### خيارات المغص والانتفاخ وعسر الهضم\n- **النعناع الفلفلي (Peppermint):** طارد للغازات ومضاد للتقلصات والقولون العصبي (**IBS**) ويمنع مغص السنامكي.\n- **الروزماري (Rosemary) + الزنجبيل (Ginger):** خلطة **Ginger + Rosemary** المقررة لتعزيز الهضم (**Digestion boosting**) حيث يوقف الزنجبيل الغثيان وينشط الهضم، ويمنع الروزماري التقلصات والغازات.\n- **أوراق الجوافة والزعتر:** مضادة للتقلصات ومطهرة للجهاز الهضمي.\n- **تنبيه:** يُمنع **الرواند (Rhubarb)** تماماً في مرضى القولون العصبي (**IBS**) والتهابات الأمعاء.`;
+            }
+
+            if (q.includes('تسمم') || q.includes('مبيد') || q.includes('ترياق') || q.includes('vitali')) {
+                return `### السكران المصري (Hyoscyamus muticus — Solanaceae)\n- **الاستخدام الطارئ:** مصدر **Hyoscyamine / Atropine** المُستخدم كترياق (**Antidote**) لتسمم المبيدات الحشرية الفسفورية، و**Hyoscine** لدوار السفر.\n- **الاختبار الكيميائي:** **Vitali-Morin test** يعطي لوناً **بنفسجياً داكناً (Deep violet)**.\n- **الميكروسكوب:** **Branched glandular trichome** و **Anisocytic stomata**.\n- **موانع الاستعمال:** الجلوكوما ضيقة الزاوية، تضخم البروستاتا (**BPH**)، تسارع القلب، والوهن العضلي.`;
+            }
+
+            // 4. البحث المباشر في النباتات التسعة عن أي تطابق (اسم، مادة فعالة، اختبار، عنصر مجهري)
+            const matchedPlants = detectMentionedPlants(userQuery);
+            const deepMatches = plantsData.filter(p => {
+                const blob = normalizeArabic(`${p.nameAr} ${p.nameEn} ${p.latin} ${p.family} ${p.constituents.join(' ')} ${p.medicinalValue.join(' ')} ${p.chemicalTests.map(t => t.name + ' ' + t.color).join(' ')} ${p.keyElements.join(' ')} ${p.contraindications.join(' ')}`);
+                const toks = q.split(' ').filter(t => t.length >= 3);
+                return toks.length > 0 && toks.some(t => blob.includes(t));
+            });
+
+            const combined = matchedPlants.length ? matchedPlants.map(m => m.plant) : deepMatches.slice(0, 3);
+            if (combined.length > 0) {
+                return combined.map(p => (
+                    `#### ${p.emoji} ${p.nameAr} (${p.nameEn} — ${p.family})\n` +
+                    `- **الأصل والمواد الفعالة:** ${p.constituentsShort}.\n` +
+                    `- **الاستخدام الإكلينيكي:** ${p.primaryRoleAr}.\n` +
+                    `- **الاختبارات الكيميائية:** ${p.chemShort}.\n` +
+                    `- **العناصر المجهرية:** ${p.keyElements.join(' • ')}.\n` +
+                    `- **أبرز موانع الاستعمال:** ${p.majorContraShort}.`
+                )).join('\n\n');
+            }
+
+            return `يمكنني مساعدتك بدقة في كل ما يخص **العلاج بالنباتات الطبية (PG706)**؛ جرّب أن تسألني عن:\n- **حالة مرضية أو عرض:** مثل *"عندي إمساك حاد"*، *"كحة ببلغم"*، *"قرحة وحموضة معدة"*، أو *"غثيان ودوار سفر"*.\n- **تداخل دوائي:** مثل *"عرق السوس مع Digitalis أو Spironolactone"* أو *"الزنجبيل مع Warfarin"*.\n- **مقارنة عملية أو مجهرية:** مثل *"الفرق بين True و Pseudo-crystal sheath"* أو *"اختبار 80% H₂SO₄ و Microsublimation"*.`;
+        }
+
+        function appendChatBubble(role, text, isHtml = false) {
+            const box = document.getElementById('ai-chat-messages');
+            const wrapper = document.createElement('div');
+            wrapper.className = `flex ${role === 'user' ? 'justify-start' : 'justify-end'} animate-fade-in`;
+
+            if (role === 'user') {
+                wrapper.innerHTML = `
+                    <div class="max-w-[85%] sm:max-w-[75%] rounded-2xl rounded-tr-sm bg-[#0D3B2E] text-white px-4 py-3 text-xs sm:text-sm font-semibold leading-relaxed shadow-sm">
+                        ${escapeHtmlSafe(text)}
+                    </div>
+                `;
+            } else {
+                const mentioned = detectMentionedPlants(text).slice(0, 4);
+                const chipsHtml = mentioned.length ? `
+                    <div class="mt-3 pt-2.5 border-t border-[#E6E4DC] flex flex-wrap items-center gap-1.5">
+                        <span class="text-[10px] font-bold text-stone-400">ملفات ذات صلة:</span>
+                        ${mentioned.map(m => `
+                            <button type="button" onclick="openMonograph('${m.plant.id}', ${m.tab})"
+                                class="px-2.5 py-1 rounded-lg bg-[#FBFBF8] hover:bg-[#0D3B2E] text-[#0D3B2E] hover:text-white border border-[#DCD9CE] hover:border-[#0D3B2E] text-[11px] font-bold transition-colors flex items-center gap-1">
+                                <span>${m.plant.emoji}</span>
+                                <span>${m.plant.nameAr}</span>
+                            </button>
+                        `).join('')}
+                    </div>
+                ` : '';
+
+                wrapper.innerHTML = `
+                    <div class="max-w-[92%] sm:max-w-[84%] rounded-2xl rounded-tl-sm bg-white border border-[#E6E4DC] px-4 sm:px-5 py-3.5 text-xs sm:text-sm text-[#182220] shadow-2xs">
+                        <div class="flex items-center gap-2 mb-2 pb-1.5 border-b border-[#F2F0E8]">
+                            <span class="w-6 h-6 rounded-lg bg-emerald-50 border border-emerald-200 text-[#0D3B2E] flex items-center justify-center">
+                                <i data-lucide="stethoscope" class="w-3.5 h-3.5"></i>
+                            </span>
+                            <span class="text-[11px] font-extrabold text-[#0D3B2E]">المساعد الإكلينيكي • PG706</span>
+                        </div>
+                        <div class="ai-prose">${isHtml ? text : renderMarkdownToSafeHtml(text)}</div>
+                        ${chipsHtml}
+                    </div>
+                `;
+            }
+
+            box.appendChild(wrapper);
+            box.scrollTop = box.scrollHeight;
+            lucide.createIcons();
+        }
+
+        function appendTypingIndicator() {
+            const box = document.getElementById('ai-chat-messages');
+            const el = document.createElement('div');
+            el.id = 'ai-typing-row';
+            el.className = 'flex justify-end animate-fade-in';
+            el.innerHTML = `
+                <div class="rounded-2xl rounded-tl-sm bg-white border border-[#E6E4DC] px-4 py-3 flex items-center gap-2.5 shadow-2xs">
+                    <span class="text-xs font-bold text-stone-500">جاري تحليل الاستشارة الإكلينيكية</span>
+                    <span class="flex items-center gap-1"><span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span></span>
+                </div>
+            `;
+            box.appendChild(el);
+            box.scrollTop = box.scrollHeight;
+        }
+
+        function removeTypingIndicator() {
+            const el = document.getElementById('ai-typing-row');
+            if (el) el.remove();
+        }
+
+        function initAiChatWelcome() {
+            aiChatHistory = [];
+            const box = document.getElementById('ai-chat-messages');
+            if (!box) return;
+            box.innerHTML = '';
+            const welcomeText = `مرحباً بك في **المساعد الذكي لمقرر العلاج بالنباتات الطبية (PG706)**.\nيمكنك طرح أي سؤال إكلينيكي أو عقاقيري بحرية تامة (بالعامية المصرية، الفصحى، أو الإنجليزية)، وسأجيبك بدقة مع ربط الإجابة بملفات النباتات التسعة المقررة وشرائحها المجهرية واختباراتها الكيميائية.`;
+            appendChatBubble('model', welcomeText);
+        }
+
+        function resetAiChat() {
+            initAiChatWelcome();
+            const inp = document.getElementById('ai-chat-input');
+            if (inp) { inp.value = ''; inp.focus(); }
+            showToast('تم بدء محادثة إكلينيكية جديدة.');
+        }
+
+        function askQuickPrompt(promptText) {
+            const inp = document.getElementById('ai-chat-input');
+            if (inp) inp.value = promptText;
+            sendAiMessage();
+        }
+
+        async function sendAiMessage() {
+            if (isAiBusy) return;
+            const inp = document.getElementById('ai-chat-input');
+            const sendBtn = document.getElementById('ai-send-btn');
+            const userText = (inp.value || '').trim();
+            if (!userText) return;
+
+            inp.value = '';
+            isAiBusy = true;
+            sendBtn.disabled = true;
+
+            appendChatBubble('user', userText);
+            aiChatHistory.push({ role: 'user', parts: [{ text: userText }] });
+            if (aiChatHistory.length > 16) aiChatHistory = aiChatHistory.slice(-16);
+
+            appendTypingIndicator();
+
+            let reply = await callGeminiWithBackoff(aiChatHistory);
+            if (reply) {
+                updateAiModeBadge('gemini');
+            } else {
+                updateAiModeBadge('local');
+                reply = generateLocalClinicalAIResponse(userText);
+            }
+
+            removeTypingIndicator();
+            aiChatHistory.push({ role: 'model', parts: [{ text: reply }] });
+            appendChatBubble('model', reply);
+
+            isAiBusy = false;
+            sendBtn.disabled = false;
+            inp.focus();
+        }
+
+        // البحث والإملاء الصوتي المرن
+        let activeRecognition = null;
+        function startVoiceSearch(fallbackLang = null) {
+            const btn = document.getElementById('voice-search-btn');
+            const helper = document.getElementById('voice-helper-bar');
+            const helperMsg = document.getElementById('voice-helper-msg');
+
+            if (activeRecognition && !fallbackLang) {
+                try { activeRecognition.stop(); } catch (_) {}
+                activeRecognition = null;
+                btn.classList.remove('bg-red-700', 'text-white', 'animate-pulse');
+                btn.classList.add('bg-emerald-50', 'text-[#0D3B2E]');
+                return;
+            }
+
+            const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if (!SR || (!window.isSecureContext && location.hostname !== 'localhost')) {
+                helperMsg.textContent = 'الإملاء الصوتي المباشر يعمل على Chrome و Safari عبر HTTPS — يمكنك استخدام إملاء لوحة المفاتيح (Win + H أو 🎙️).';
+                helper.classList.remove('hidden');
+                return;
+            }
+
+            try {
+                const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+                const rec = new SR();
+                rec.lang = fallbackLang || 'ar-EG';
+                rec.continuous = false;
+                rec.interimResults = !isIOS;
+                activeRecognition = rec;
+
+                btn.classList.remove('bg-emerald-50', 'text-[#0D3B2E]');
+                btn.classList.add('bg-red-700', 'text-white', 'animate-pulse');
+                helper.classList.add('hidden');
+
+                rec.onresult = (e) => {
+                    let transcript = '';
+                    for (let i = 0; i < e.results.length; i++) transcript += e.results[i][0].transcript;
+                    if (transcript.trim()) {
+                        const inp = document.getElementById('ai-chat-input');
+                        inp.value = transcript.trim();
+                    }
+                };
+                rec.onerror = (e) => {
+                    if (e.error === 'language-not-supported' && !fallbackLang) {
+                        activeRecognition = null;
+                        startVoiceSearch('ar');
+                        return;
+                    }
+                    helperMsg.textContent = 'تعذر الاتصال بخدمة الصوت في هذا المتصفح — جرّب Chrome/Safari أو استخدم الإملاء الصوتي للنظام (Win + H أو 🎙️).';
+                    helper.classList.remove('hidden');
+                    activeRecognition = null;
+                    btn.classList.remove('bg-red-700', 'text-white', 'animate-pulse');
+                    btn.classList.add('bg-emerald-50', 'text-[#0D3B2E]');
+                };
+                rec.onend = () => {
+                    activeRecognition = null;
+                    btn.classList.remove('bg-red-700', 'text-white', 'animate-pulse');
+                    btn.classList.add('bg-emerald-50', 'text-[#0D3B2E]');
+                };
+                rec.start();
+            } catch (_) {
+                helperMsg.textContent = 'استخدم إملاء النظام (Win + H على ويندوز أو 🎙️ على الموبايل) داخل خانة السؤال.';
+                helper.classList.remove('hidden');
+            }
+        }
+
+        // =========================================================================
+        // 4. موسوعة النباتات التسعة + نافذة التفاصيل
+        // =========================================================================
+        let activeCatFilter = 'all';
+
+        function setPlantCategoryFilter(cat) {
+            activeCatFilter = cat;
+            ['all', 'leaves', 'roots'].forEach(c => {
+                const btn = document.getElementById('cat-btn-' + c);
+                if (!btn) return;
+                btn.className = c === cat
+                    ? 'px-4 py-2 rounded-xl text-xs font-bold bg-[#0D3B2E] text-white transition-all'
+                    : 'px-4 py-2 rounded-xl text-xs font-semibold text-stone-700 hover:bg-[#FBFBF8] transition-all';
+            });
+            renderMonographCards();
+        }
+
+        function renderMonographCards() {
+            const grid = document.getElementById('monographs-grid');
+            const list = activeCatFilter === 'all' ? plantsData : plantsData.filter(p => p.category === activeCatFilter);
+
+            grid.innerHTML = list.map(p => {
+                const isToxic = p.id === 'hyoscyamus';
+                return `
+                    <article onclick="openMonograph('${p.id}', 1)"
+                        class="editorial-card rounded-3xl p-5 sm:p-6 cursor-pointer flex flex-col justify-between gap-4 relative">
+                        ${isToxic ? '<span class="absolute top-4 left-4 px-2.5 py-0.5 rounded-full bg-red-50 text-red-800 border border-red-200 text-[10px] font-extrabold">إشراف طبي صارم</span>' : ''}
+
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-12 h-12 rounded-2xl ${isToxic ? 'bg-red-50 border-red-200' : 'bg-emerald-50 border-emerald-200/70'} border flex items-center justify-center text-2xl shrink-0">
+                                    ${p.emoji}
+                                </div>
+                                <div class="min-w-0">
+                                    <h3 class="font-heading text-lg font-bold text-[#182220] leading-snug">${p.nameAr}</h3>
+                                    <div class="font-en text-xs font-bold text-[#0D3B2E] truncate">${p.nameEn}</div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap items-center gap-1.5">
+                                <span class="px-2.5 py-1 rounded-lg bg-[#FBFBF8] border border-[#E6E4DC] text-[#182220] text-[11px] font-bold">${p.categoryAr}</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-purple-50 text-[#5B2C82] border border-purple-200/70 text-[11px] font-bold font-en">${p.family}</span>
+                            </div>
+
+                            <p class="text-xs font-semibold text-stone-700 leading-relaxed">${p.primaryRoleAr}</p>
+                            <p class="text-[11px] text-stone-500 font-en italic leading-relaxed line-clamp-2">${p.latin}</p>
+                        </div>
+
+                        <div class="pt-3 border-t border-[#F0EEE7] flex items-center justify-between gap-2">
+                            <span class="text-[11px] font-semibold text-stone-500 font-en truncate max-w-[65%]">${p.keyElements[0]}</span>
+                            <span class="text-xs font-extrabold text-[#0D3B2E] flex items-center gap-1 shrink-0">
+                                استعراض الملف
+                                <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+                            </span>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+
+            lucide.createIcons();
+        }
+
+        let currentPlant = null;
+        let currentModalTab = 1;
+
+        function openMonograph(plantId, tab = 1) {
+            const p = plantsData.find(x => x.id === plantId);
+            if (!p) return;
+            currentPlant = p;
+
+            document.getElementById('modal-emoji').textContent = p.emoji;
+            document.getElementById('modal-cat-badge').textContent = p.categoryAr;
+            document.getElementById('modal-fam-badge').textContent = `Family: ${p.family}`;
+            document.getElementById('modal-title').innerHTML = `${p.nameAr} <span class="font-en text-sm sm:text-base font-bold text-[#E6C27A] block sm:inline">(${p.nameEn})</span>`;
+
+            document.getElementById('modal-to-checker-btn').onclick = () => {
+                closeMonograph();
+                document.getElementById('herb-select-1').value = p.id;
+                analyzeCompatibility();
+                document.getElementById('interaction-checker').scrollIntoView({ behavior: 'smooth' });
+            };
+
+            const modal = document.getElementById('monograph-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+
+            setMonographTab(tab);
+        }
+
+        function closeMonograph() {
+            const modal = document.getElementById('monograph-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        function setMonographTab(tab) {
+            if (!currentPlant) return;
+            currentModalTab = tab;
+            const p = currentPlant;
+
+            for (let i = 1; i <= 4; i++) {
+                const btn = document.getElementById('mtab-' + i);
+                if (!btn) continue;
+                btn.className = i === tab
+                    ? 'py-2.5 px-2 rounded-xl text-xs font-bold bg-[#0D3B2E] text-white shadow-2xs transition-all'
+                    : 'py-2.5 px-2 rounded-xl text-xs font-bold text-stone-600 hover:bg-white hover:text-[#182220] transition-all';
+            }
+
+            const body = document.getElementById('modal-content');
+
+            if (tab === 1) {
+                body.innerHTML = `
+                    <div class="space-y-4 animate-fade-in">
+                        <div class="p-4 rounded-2xl bg-[#FBFBF8] border border-[#E6E4DC]">
+                            <div class="text-xs font-extrabold text-[#0D3B2E] mb-1.5">الأصل النباتي (<span class="font-en">Botanical Origin</span>)</div>
+                            <p class="text-xs sm:text-sm font-semibold text-[#182220] font-en leading-relaxed">${p.origin}</p>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-emerald-50/45 border border-emerald-200/80">
+                            <div class="text-xs font-extrabold text-[#0D3B2E] mb-2">المواد الفعالة (<span class="font-en">Active Constituents</span>)</div>
+                            <ul class="space-y-1.5 text-xs sm:text-sm text-[#182220] font-semibold font-en">
+                                ${p.constituents.map(c => `<li class="flex items-start gap-2"><span class="text-[#0D3B2E]">•</span><span>${c}</span></li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-amber-50/55 border border-amber-200/80">
+                            <div class="text-xs font-extrabold text-amber-950 mb-2">المستحضرات في السوق المصري (<span class="font-en">Egyptian Market</span>)</div>
+                            <ul class="space-y-1.5 text-xs sm:text-sm text-amber-950 font-semibold font-en leading-relaxed">
+                                ${p.market.map(m => `<li class="flex items-start gap-2"><span class="text-[#B88A3B]">•</span><span>${m}</span></li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            } else if (tab === 2) {
+                body.innerHTML = `
+                    <div class="space-y-4 animate-fade-in">
+                        <div class="p-4 rounded-2xl bg-white border border-[#E6E4DC]">
+                            <div class="text-xs font-extrabold text-[#0D3B2E] mb-2">الاستخدام الإكلينيكي والقيمة الطبية (<span class="font-en">Medicinal Value</span>)</div>
+                            <ul class="space-y-2 text-xs sm:text-sm text-stone-700 leading-relaxed">
+                                ${p.medicinalValue.map(v => `<li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#B88A3B] mt-2 shrink-0"></span><span>${v}</span></li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-red-50/75 border border-red-200">
+                            <div class="text-xs font-extrabold text-red-900 mb-2">موانع الاستعمال والتنبيهات (<span class="font-en">Contraindications & Warnings</span>)</div>
+                            <ul class="space-y-2 text-xs sm:text-sm text-red-950 font-semibold leading-relaxed">
+                                ${p.contraindications.map(c => `<li class="flex items-start gap-2"><span class="text-red-600">⚠️</span><span>${c}</span></li>`).join('')}
+                            </ul>
+                        </div>
+
+                        ${p.safeNote ? `
+                            <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-300 text-[#0D3B2E] text-xs sm:text-sm font-bold leading-relaxed flex items-start gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-700 shrink-0 mt-0.5"></i>
+                                <span>${p.safeNote}</span>
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            } else if (tab === 3) {
+                body.innerHTML = `
+                    <div class="space-y-4 animate-fade-in">
+                        <p class="text-xs font-semibold text-stone-500">اضغط على زر <strong>"إظهار نتيجة الاختبار"</strong> لمراجعة التفاعل واللون المميز:</p>
+                        ${p.chemicalTests.map((t, i) => `
+                            <div class="p-4 rounded-2xl bg-[#FBFBF8] border border-[#E6E4DC] space-y-3">
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                                    <div>
+                                        <div class="font-en font-extrabold text-sm text-[#182220]">${t.name}</div>
+                                        <div class="text-[11px] font-bold text-stone-500 font-en">${t.target}</div>
+                                    </div>
+                                    <button onclick="toggleRevealElement('chem-box-${p.id}-${i}', this, 'إظهار نتيجة الاختبار', 'إخفاء النتيجة')"
+                                        class="px-3.5 py-2 rounded-xl bg-[#0D3B2E] hover:bg-[#182220] text-white text-xs font-bold flex items-center gap-1.5 self-start sm:self-auto transition-colors">
+                                        <i data-lucide="eye" class="w-3.5 h-3.5 text-[#E6C27A]"></i>
+                                        <span>إظهار نتيجة الاختبار</span>
+                                    </button>
+                                </div>
+
+                                <div id="chem-box-${p.id}-${i}" class="hidden space-y-3 animate-fade-in">
+                                    <div class="p-3.5 rounded-xl border ${t.cls} flex items-center gap-3.5">
+                                        <span class="w-8 h-8 rounded-full border-2 border-white shadow-sm shrink-0" style="background:${t.hex};"></span>
+                                        <div class="text-xs sm:text-sm font-bold leading-relaxed">${t.color}</div>
+                                    </div>
+
+                                    ${t.photoKey ? `
+                                        <div class="rounded-2xl border border-[#E6E4DC] bg-white p-3.5 flex flex-col sm:flex-row items-center gap-4">
+                                            <div class="w-28 h-40 rounded-xl overflow-hidden bg-stone-50 border border-stone-200 flex items-center justify-center shrink-0">
+                                                <img data-asset="${t.photoKey}" src="${getPrimarySrc(t.photoKey)}" alt="${t.photoCaption}"
+                                                    onclick="openLightbox(this.src, '${t.photoCaption.replace(/'/g, "\\'")}')"
+                                                    class="w-full h-full object-contain cursor-zoom-in">
+                                                <div class="missing-slide-box hidden text-center p-2 text-[10px] font-bold text-stone-500">
+                                                    اضغط تحميل الصور المحلية لعرض الصورة
+                                                </div>
+                                            </div>
+                                            <div class="space-y-2 text-center sm:text-right">
+                                                <div class="text-xs font-extrabold text-[#182220]">صورة أنبوب الاختبار الحقيقية (Foam Test)</div>
+                                                <p class="text-xs text-stone-600">اضغط على الصورة لتكبيرها ومعاينة الرغوة الكثيفة المستمرة للسابونينات.</p>
+                                                ${t.youtubeUrl ? `
+                                                    <a href="${t.youtubeUrl}" target="_blank" rel="noopener noreferrer"
+                                                        class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold transition-colors">
+                                                        <i data-lucide="play" class="w-3.5 h-3.5"></i>
+                                                        مشاهدة تجربة Foam Test على يوتيوب
+                                                    </a>
+                                                ` : ''}
+                                            </div>
+                                        </div>
+                                    ` : ''}
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                refreshAllAssetImages();
+            } else if (tab === 4) {
+                body.innerHTML = `
+                    <div class="space-y-4 animate-fade-in">
+                        <div class="p-4 rounded-2xl bg-purple-50/50 border border-purple-200/80">
+                            <div class="text-xs font-extrabold text-[#5B2C82] mb-2">العناصر المجهرية التشخيصية (<span class="font-en">Key Elements</span>)</div>
+                            <ul class="space-y-1.5 text-xs sm:text-sm font-bold text-[#182220] font-en">
+                                ${p.keyElements.map(k => `<li class="flex items-start gap-2"><span class="text-[#5B2C82]">✓</span><span>${k}</span></li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <span class="text-xs font-bold text-stone-500">شرائح المحاضرة الأصلية:</span>
+                            <button onclick="toggleRevealElement('slides-wrap-${p.id}', this, 'إظهار الشرائح المجهرية', 'إخفاء الشرائح المجهرية')"
+                                class="px-4 py-2 rounded-xl bg-[#5B2C82] hover:bg-[#182220] text-white text-xs font-bold flex items-center gap-1.5 transition-colors">
+                                <i data-lucide="image" class="w-3.5 h-3.5 text-[#E6C27A]"></i>
+                                <span>إظهار الشرائح المجهرية</span>
+                            </button>
+                        </div>
+
+                        <div id="slides-wrap-${p.id}" class="hidden grid grid-cols-1 ${p.slides.length > 1 ? 'sm:grid-cols-2' : ''} gap-4 animate-fade-in">
+                            ${p.slides.map(s => `
+                                <div class="rounded-2xl border border-[#E6E4DC] bg-[#FBFBF8] overflow-hidden flex flex-col">
+                                    <div class="relative bg-white p-2 flex items-center justify-center min-h-[195px]">
+                                        <img data-asset="${s.key}" src="${getPrimarySrc(s.key)}" alt="${s.caption}"
+                                            onclick="openLightbox(this.src, '${s.caption.replace(/'/g, "\\'")}')"
+                                            class="max-h-64 w-full object-contain rounded-xl cursor-zoom-in">
+                                        <div class="missing-slide-box hidden text-center p-5 space-y-2">
+                                            <div class="text-xs font-bold text-[#182220]">ملف الشريحة غير محمّل في هذه الجلسة</div>
+                                            <div class="text-[11px] text-stone-500 font-en">${assetMap[s.key] ? assetMap[s.key].paths[0] : ''}</div>
+                                            <button onclick="openLocalLoaderModal()" class="px-3 py-1.5 rounded-xl bg-[#0D3B2E] text-white text-[11px] font-bold">تحميل الصور المحلية</button>
+                                        </div>
+                                    </div>
+                                    <div class="px-3.5 py-2.5 bg-white border-t border-[#E6E4DC] flex items-center justify-between gap-2">
+                                        <span class="text-[11px] font-bold text-stone-700 font-en">${s.caption}</span>
+                                        <span class="text-[10px] font-bold text-[#0D3B2E] shrink-0">تكبير 🔍</span>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+                refreshAllAssetImages();
+            }
+
+            lucide.createIcons();
+        }
+
+        function toggleRevealElement(id, btn, showText, hideText) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const isHidden = el.classList.contains('hidden');
+            el.classList.toggle('hidden');
+            const sp = btn.querySelector('span');
+            if (sp) sp.textContent = isHidden ? hideText : showText;
+            if (isHidden) refreshAllAssetImages();
+        }
+
+        function openLightbox(src, caption) {
+            if (!src) return;
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').textContent = caption || '';
+            const lb = document.getElementById('lightbox-overlay');
+            lb.classList.remove('hidden');
+            lb.classList.add('flex');
+            lucide.createIcons();
+        }
+
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox-overlay');
+            lb.classList.add('hidden');
+            lb.classList.remove('flex');
+        }
+
+        // =========================================================================
+        // 5. فاحص التداخل والتوافق الدوائي (2 أو 3 نباتات + دواء/حالة إكلينيكية)
+        // =========================================================================
+        function initCompatibilitySelectors() {
+            const s1 = document.getElementById('herb-select-1');
+            const s2 = document.getElementById('herb-select-2');
+            const s3 = document.getElementById('herb-select-3');
+            const opts = plantsData.map(p => `<option value="${p.id}">${p.emoji} ${p.nameAr} (${p.nameEn})</option>`).join('');
+
+            s1.innerHTML = opts;
+            s2.innerHTML = opts;
+            s3.innerHTML = `<option value="">— بدون نبات ثالث (تركيبة ثنائية) —</option>${opts}`;
+
+            s1.value = 'ginger';
+            s2.value = 'rosemary';
+            s3.value = '';
+            analyzeCompatibility();
+        }
+
+        function applyPreset(h1, h2, h3, cond) {
+            document.getElementById('herb-select-1').value = h1;
+            document.getElementById('herb-select-2').value = h2;
+            document.getElementById('herb-select-3').value = h3 || '';
+            document.getElementById('clinical-cond-select').value = cond || 'none';
+            analyzeCompatibility();
+            document.getElementById('compatibility-report').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function analyzeCompatibility() {
+            const rawIds = [
+                document.getElementById('herb-select-1').value,
+                document.getElementById('herb-select-2').value,
+                document.getElementById('herb-select-3').value
+            ].filter(Boolean);
+            const cond = document.getElementById('clinical-cond-select').value;
+
+            const uniqueIds = Array.from(new Set(rawIds));
+            const selectedPlants = uniqueIds.map(id => plantsData.find(p => p.id === id)).filter(Boolean);
+
+            if (selectedPlants.length < 2) {
+                document.getElementById('compatibility-report').innerHTML = `
+                    <div class="p-6 rounded-2xl bg-amber-50 border border-amber-200 text-amber-950 text-sm font-bold text-center">
+                        يرجى اختيار نباتين مختلفين على الأقل (أو ثلاثة نباتات مختلفة) لإجراء التحليل الإكلينيكي.
+                    </div>
+                `;
+                return;
+            }
+
+            const has = (id) => uniqueIds.includes(id);
+            let verdict = 'synergy'; // 'synergy' | 'caution' | 'incompatible'
+            const escalate = (lvl) => {
+                const rank = { synergy: 0, caution: 1, incompatible: 2 };
+                if (rank[lvl] > rank[verdict]) verdict = lvl;
+            };
+
+            let generalUse = '';
+            const roles = [];
+            const safetyAlerts = [];
+            const safeNotes = [];
+
+            // --- أ) تحليل التأثير المشترك ودور كل نبات ---
+            const keySet = [...uniqueIds].sort().join('+');
+
+            // 1. التركيبات القياسية الثنائية والثلاثية
+            if (keySet === 'rhubarb+senna') {
+                generalUse = 'تركيبة مُسهلة قوية للإمساك الحاد (Purgative Mixture)';
+                roles.push({ plant: 'السنامكي (Senna)', role: 'Laxative / Purgative — يحفّز حركة الأمعاء عبر Sennosides.' });
+                roles.push({ plant: 'الرواند (Rhubarb)', role: 'Purgative — يعزز التأثير المسهل بالأنثراكينونات (3–5%).' });
+                safetyAlerts.push('الاستخدام للإمساك الحاد فقط؛ لا تُستخدم هذه الخلطة لعلاج الإمساك المزمن وممنوعة في التهابات أو انسداد الأمعاء.');
+            } else if (keySet === 'liquorice+thyme') {
+                generalUse = 'تركيبة فعّالة لعلاج السعال وطرد البلغم (Expectorant Cough Mixture)';
+                roles.push({ plant: 'عرق السوس (Liquorice)', role: 'Expectorant & Demulcent — طارد للبلغم وملطف للشعب الهوائية.' });
+                roles.push({ plant: 'الزعتر (Thyme)', role: 'Expectorant & Antiseptic — طارد ومذيب للبلغم ومطهر للشعب الهوائية.' });
+            } else if (keySet === 'ginger+rosemary') {
+                generalUse = 'تركيبة متآزرة لتعزيز الهضم (Digestion Boosting Mixture)';
+                roles.push({ plant: 'الزنجبيل (Ginger)', role: 'Anti-emetic & Digestive boosting agent — مضاد للغثيان ومنشط للهضم.' });
+                roles.push({ plant: 'الروزماري (Rosemary)', role: 'Anti-spasmodic & Carminative — مضاد للتقلصات وطارد للغازات.' });
+            } else if (keySet === 'guava+liquorice+thyme') {
+                generalUse = 'تركيبة ثلاثية متآزرة للجهاز التنفسي والسعال المصحوب ببلغم (Triple Respiratory Synergy)';
+                roles.push({ plant: 'أوراق الجوافة (Guava)', role: 'Antitussive & Demulcent — تهدئ السعال وتلطف الشعب الهوائية.' });
+                roles.push({ plant: 'عرق السوس (Liquorice)', role: 'Expectorant & Anti-inflammatory — يطرد البلغم ويخفف الالتهاب.' });
+                roles.push({ plant: 'الزعتر (Thyme)', role: 'Expectorant, Mucolytic & Antiseptic — يذيب البلغم ويطهر الجهاز التنفسي.' });
+            } else if (keySet === 'mentha+rhubarb+senna') {
+                generalUse = 'تركيبة ثلاثية مُسهلة ومضادة للمغص (Purgative + Anti-Griping — مثل مبدأ Eucarbon)';
+                roles.push({ plant: 'السنامكي (Senna)', role: 'Laxative / Purgative — ملين ومُسهل فعال.' });
+                roles.push({ plant: 'الرواند (Rhubarb)', role: 'Purgative — يعزز التفريغ المعوي.' });
+                roles.push({ plant: 'النعناع الفلفلي (Peppermint)', role: 'Carminative & Antispasmodic — يمنع المغص (Griping) والغازات الناتجة عن الملينات.' });
+                safetyAlerts.push('ممنوعة في الإمساك المزمن، انسداد الأمعاء، كرون، التهاب القولون، الزائدة، وارتجاع المريء (لوجود النعناع).');
+            } else if (keySet === 'ginger+mentha+rosemary') {
+                generalUse = 'تركيبة ثلاثية شاملة لتحسين الهضم، طرد الغازات، وتهدئة الغثيان والتقلصات (Triple Digestive Synergy)';
+                roles.push({ plant: 'الزنجبيل (Ginger)', role: 'Anti-emetic & Digestive boosting — يوقف الغثيان وينشط الهضم.' });
+                roles.push({ plant: 'الروزماري (Rosemary)', role: 'Antispasmodic, Carminative & Choleretic — يطرد الغازات ويحفّز الهضم.' });
+                roles.push({ plant: 'النعناع الفلفلي (Peppermint)', role: 'Antispasmodic & Carminative — يرخي عضلات القولون ويخفف الانتفاخ.' });
+            } else {
+                // محرك ديناميكي ذكي لأي تركيبة ثنائية أو ثلاثية أخرى
+                const respCount = ['thyme', 'liquorice', 'guava', 'ginger'].filter(has).length;
+                const digCount = ['mentha', 'rosemary', 'ginger', 'thyme'].filter(has).length;
+                const laxCount = ['senna', 'rhubarb'].filter(has).length;
+
+                if (has('hyoscyamus')) {
+                    generalUse = 'تركيبة تحتوي على السكران المصري (قلويدات التروبان عالية السمية) — لا يُنصح بالدمج العشبي غير المراقب';
+                } else if (laxCount > 0 && has('guava')) {
+                    generalUse = 'تعارض فارماكولوجي بين ملين أنثراكينوني ونبات قابض غني بالتانينات (Antagonistic Effect)';
+                } else if (laxCount > 0 && (has('mentha') || has('rosemary') || has('ginger'))) {
+                    generalUse = 'تركيبة مُلينة معزّزة بمضادات التقلص والغازات لتقليل المغص (Laxative + Anti-Griping)';
+                } else if (respCount >= 2 && laxCount === 0) {
+                    generalUse = 'تركيبة متآزرة لدعم الجهاز التنفسي وتهدئة السعال وطرد البلغم (Respiratory Support)';
+                } else if (digCount >= 2) {
+                    generalUse = 'تركيبة متآزرة لتحسين الهضم، طرد الغازات، وتهدئة التقلصات المعوية (GIT Digestive & Carminative)';
+                } else {
+                    generalUse = 'تركيبة عشبية متعددة التأثير (Multi-action Herbal Combination)';
+                }
+
+                selectedPlants.forEach(p => {
+                    let rText = p.mixtureRole.general;
+                    if (respCount >= 2 && p.mixtureRole.respiratory) rText = p.mixtureRole.respiratory;
+                    else if (digCount >= 2 && p.mixtureRole.digestive) rText = p.mixtureRole.digestive;
+                    else if (laxCount > 0 && p.mixtureRole.laxative) rText = p.mixtureRole.laxative;
+                    roles.push({ plant: `${p.nameAr} (${p.nameEn})`, role: rText });
+                });
+            }
+
+            // --- ب) فحص التداخلات بين النباتات وبعضها ---
+            if (has('hyoscyamus')) {
+                escalate('incompatible');
+                safetyAlerts.push('السكران المصري (Hyoscyamus muticus) عالي السمية (Tropane alkaloids) ولا يجوز دمجه في خلطات عشبية منزلية؛ كما يعاكس تأثير الملينات (السنامكي/الرواند) لأنه يثبط حركة الأمعاء.');
+            }
+            if ((has('senna') || has('rhubarb')) && has('guava')) {
+                escalate('incompatible');
+                safetyAlerts.push('تعارض علاجي (Pharmacological Antagonism): ورق الجوافة غني بالتانينات القابضة المضادة للإسهال، مما يعاكس التأثير الملين/المسهل للسنامكي أو الرواند.');
+            }
+            if (has('liquorice') && (has('senna') || has('rhubarb'))) {
+                escalate('caution');
+                safetyAlerts.push('تنبيه بوتاسيوم (Hypokalemia Risk): الجمع المطوّل بين عرق السوس والملينات الأنثراكينونية (السنامكي/الرواند) يضاعف خطر نقص البوتاسيوم في الدم.');
+            }
+            if (has('ginger') && has('rosemary') && has('mentha')) {
+                safetyAlerts.push('ملاحظة: تركيبة قوية للهضم ولكن يُراعى الحذر مع مرضى حصوات المرارة وارتجاع المريء.');
+            }
+
+            // --- ج) فحص تداخل كل نبات مختار مع الدواء / الحالة الإكلينيكية ---
+            if (cond !== 'none') {
+                if (cond === 'digitalis') {
+                    if (has('liquorice')) {
+                        escalate('incompatible');
+                        safetyAlerts.push('تداخل خطير مع Digitalis: عرق السوس يسبب احتباس الماء (Edema) ونقص البوتاسيوم (Hypokalemia) مما يعجّل بحدوث تسمم Digitalis.');
+                    }
+                    if (has('senna') || has('rhubarb')) {
+                        escalate('caution');
+                        safetyAlerts.push('تحذير مع Digitalis: الإفراط في الملينات الأنثراكينونية (السنامكي/الرواند) يؤدي لنقص البوتاسيوم ويزيد سمية Digitalis.');
+                    }
+                } else if (cond === 'thiazide') {
+                    if (has('liquorice')) {
+                        escalate('incompatible');
+                        safetyAlerts.push('ممنوع مع Thiazide Diuretics: عرق السوس يسبب تأثيراً إضافياً لخفض البوتاسيوم (Additive hypokalemic effect).');
+                    }
+                    if (has('senna') || has('rhubarb')) {
+                        escalate('caution');
+                        safetyAlerts.push('تحذير مع Thiazides: يزداد خطر نقص البوتاسيوم مع السنامكي أو الرواند.');
+                    }
+                } else if (cond === 'spironolactone') {
+                    if (has('liquorice')) {
+                        safeNotes.push('توافق آمن مع Spironolactone: يمكن استخدام عرق السوس بأمان مع Spironolactone ومدرات K⁺-sparing لعدم حدوث نقص بالبوتاسيوم (No hypokalemia).');
+                    }
+                } else if (cond === 'warfarin') {
+                    if (has('ginger')) {
+                        escalate('incompatible');
+                        safetyAlerts.push('ممنوع مع Warfarin وأدوية السيولة: الزنجبيل له نشاط مضاد للتجلط (Anticoagulant activity) مما يرفع خطر النزيف.');
+                    }
+                } else if (cond === 'diabetes') {
+                    if (has('ginger')) {
+                        escalate('caution');
+                        safetyAlerts.push('مراقبة سكر الدم: للزنجبيل نشاط خافض للسكر (Hypoglycemic activity)، لذا يجب على مرضى السكري مراقبة الجلوكوز بدقة.');
+                    }
+                } else if (cond === 'gallstones') {
+                    if (has('ginger')) {
+                        escalate('incompatible');
+                        safetyAlerts.push('ممنوع مع حصوات المرارة: الزنجبيل له تأثير مدر للصفراء (Cholagogue action).');
+                    }
+                    if (has('rosemary') || has('mentha')) {
+                        escalate('caution');
+                        safetyAlerts.push('حذر مع حصوات المرارة: الروزماري (Choleretic) والنعناع يُستخدمان بحذر مع مرضى حصوات المرارة.');
+                    }
+                } else if (cond === 'pregnancy') {
+                    if (has('senna') || has('rhubarb') || has('hyoscyamus')) {
+                        escalate('incompatible');
+                        safetyAlerts.push('ممنوع أثناء الحمل والرضاعة: الملينات الأنثراكينونية (السنامكي/الرواند) والسكران المصري ممنوعة تماماً.');
+                    }
+                    if (has('rosemary') || has('thyme') || has('liquorice')) {
+                        escalate('caution');
+                        safetyAlerts.push('حذر أثناء الحمل: تُتجنب الجرعات العالية من الروزماري وزيت الزعتر وعرق السوس (لتأثيره الإستروجيني واحتباس السوائل).');
+                    }
+                } else if (cond === 'cardiac') {
+                    if (has('liquorice')) {
+                        escalate('incompatible');
+                        safetyAlerts.push('ممنوع لمرضى القلب والضغط: عرق السوس يسبب احتباس الماء والتورم (Edema) ويزيد العبء على القلب.');
+                    }
+                    if (has('hyoscyamus')) {
+                        escalate('incompatible');
+                        safetyAlerts.push('ممنوع لمرضى القلب: السكران المصري يسبب تسارع ضربات القلب واضطراب النظم (Tachycardia / Arrhythmias).');
+                    }
+                    if (has('rosemary')) {
+                        escalate('caution');
+                        safetyAlerts.push('حذر مع ارتفاع الضغط: تُتجنب الجرعات الكبيرة من الروزماري.');
+                    }
+                } else if (cond === 'gi_inflam') {
+                    if (has('rhubarb') || has('senna')) {
+                        escalate('incompatible');
+                        safetyAlerts.push('ممنوع تماماً: الرواند والسنامكي ممنوعان في انسداد الأمعاء، التهاب الزائدة، داء كرون، التهاب القولون، وIBS.');
+                    }
+                } else if (cond === 'glaucoma') {
+                    if (has('hyoscyamus')) {
+                        escalate('incompatible');
+                        safetyAlerts.push('ممنوع تماماً: السكران المصري مضاد للكولين يرفع ضغط العين في الجلوكوما ضيقة الزاوية ويسبب احتباساً حاداً للبول في تضخم البروستاتا (BPH).');
+                    }
+                } else if (cond === 'gerd') {
+                    if (has('mentha')) {
+                        escalate('incompatible');
+                        safetyAlerts.push('ممنوع مع GERD: المنثول في النعناع يرخي الصمام السفلي للمريء (LES) فيزيد الارتجاع.');
+                    }
+                    if (has('ginger')) {
+                        escalate('caution');
+                        safetyAlerts.push('حذر مع الحموضة: الزنجبيل قد يسبب حرقان المعدة وتهيج الغشاء المخاطي (Heartburn & GI irritation).');
+                    }
+                    if (has('liquorice')) {
+                        safeNotes.push('فائدة إكلينيكية: عرق السوس يعمل كملطف ممتاز (Demulcent) في التهابات وقرحة المعدة والحموضة.');
+                    }
+                }
+            }
+
+            // تنسيق بطاقة التقرير
+            const verdictConfig = {
+                synergy: {
+                    title: 'متوافق وتآزري (Compatible & Synergistic)',
+                    cls: 'bg-emerald-50 border-emerald-400 text-[#0D3B2E]',
+                    pill: 'bg-[#0D3B2E] text-white',
+                    icon: 'check-circle-2'
+                },
+                caution: {
+                    title: 'متوافق مع تنبيه إكلينيكي (Compatible with Clinical Caution)',
+                    cls: 'bg-amber-50 border-amber-400 text-amber-950',
+                    pill: 'bg-amber-700 text-white',
+                    icon: 'alert-triangle'
+                },
+                incompatible: {
+                    title: 'غير متوافق / تحذير إكلينيكي (Incompatible / Contraindicated)',
+                    cls: 'bg-red-50 border-red-400 text-red-950',
+                    pill: 'bg-red-700 text-white',
+                    icon: 'octagon-alert'
+                }
+            };
+            const vc = verdictConfig[verdict];
+
+            const condLabel = document.getElementById('clinical-cond-select').selectedOptions[0].textContent;
+            const comboHeader = selectedPlants.map(p => `${p.emoji} ${p.nameAr}`).join(' + ') + (cond !== 'none' ? ` + ⚕️ ${condLabel}` : '');
+
+            document.getElementById('compatibility-report').innerHTML = `
+                <div class="animate-fade-in space-y-4">
+                    <div class="text-xs sm:text-sm font-extrabold text-[#182220] pb-2.5 border-b border-[#E6E4DC]">
+                        التركيبة المفحوصة: <span class="text-[#0D3B2E]">${comboHeader}</span>
+                    </div>
+
+                    <!-- 1. الحكم الإكلينيكي -->
+                    <div class="p-4 rounded-2xl border-2 ${vc.cls} flex items-center justify-between gap-3 flex-wrap">
+                        <div class="flex items-center gap-2.5">
+                            <i data-lucide="${vc.icon}" class="w-5 h-5 shrink-0"></i>
+                            <span class="font-extrabold text-xs sm:text-sm">الحكم الإكلينيكي للتوافق</span>
+                        </div>
+                        <span class="px-3 py-1 rounded-full text-[11px] font-bold ${vc.pill}">${vc.title}</span>
+                    </div>
+
+                    <!-- 2. التأثير المشترك معاً ودور كل نبات -->
+                    <div class="p-4 rounded-2xl bg-white border border-[#E6E4DC] space-y-3">
+                        <div class="text-xs font-extrabold text-[#0D3B2E] flex items-center gap-1.5">
+                            <i data-lucide="git-merge" class="w-4 h-4 text-[#B88A3B]"></i>
+                            التأثير المشترك معاً (Combined Therapeutic Effect)
+                        </div>
+                        <p class="text-xs sm:text-sm font-bold text-[#182220] bg-[#FBFBF8] p-3 rounded-xl border border-[#F0EEE7]">
+                            الاستخدام العام: ${generalUse}
+                        </p>
+                        <ul class="space-y-1.5 text-xs sm:text-sm text-stone-700">
+                            ${roles.map(r => `<li class="flex items-start gap-2"><span class="text-[#0D3B2E] font-bold">•</span><span><strong class="text-[#182220]">${r.plant}:</strong> ${r.role}</span></li>`).join('')}
+                        </ul>
+                    </div>
+
+                    <!-- 3. التنبيهات وموانع الاستعمال المشتركة -->
+                    <div class="p-4 rounded-2xl bg-white border border-[#E6E4DC] space-y-2.5">
+                        <div class="text-xs font-extrabold text-[#182220] flex items-center gap-1.5">
+                            <i data-lucide="shield-alert" class="w-4 h-4 text-[#B88A3B]"></i>
+                            التنبيهات وموانع الاستعمال المشتركة (Safety & Interactions)
+                        </div>
+                        ${safeNotes.map(n => `<div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-[#0D3B2E] text-xs font-bold leading-relaxed">✅ ${n}</div>`).join('')}
+                        ${safetyAlerts.length > 0
+                            ? safetyAlerts.map(a => `<div class="p-3 rounded-xl bg-red-50/75 border border-red-200 text-red-950 text-xs font-semibold leading-relaxed">⚠️ ${a}</div>`).join('')
+                            : `<div class="p-3 rounded-xl bg-emerald-50/60 border border-emerald-200 text-[#0D3B2E] text-xs font-semibold">لا يوجد تداخل دوائي أو عشبي خطر مسجل بين العناصر المختارة عند الالتزام بالجرعات العلاجية المعتمدة.</div>`
+                        }
+                    </div>
+                </div>
+            `;
+            lucide.createIcons();
+        }
+
+        // =========================================================================
+        // 6. جدول المقارنة العملي (Active Recall)
+        // =========================================================================
+        function toggleSectionAccordion(bodyId, arrowId) {
+            const body = document.getElementById(bodyId);
+            const arrow = document.getElementById(arrowId);
+            if (!body) return;
+            const isHidden = body.classList.contains('hidden');
+            body.classList.toggle('hidden');
+            if (arrow) arrow.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+            lucide.createIcons();
+        }
+
+        function renderPracticalTable() {
+            const tbody = document.getElementById('practical-tbody');
+            tbody.innerHTML = plantsData.map(p => {
+                const firstSlide = p.slides[0];
+                return `
+                    <tr class="hover:bg-[#FBFBF8] transition-colors">
+                        <td class="p-3.5 font-bold text-[#182220]">
+                            <button onclick="openMonograph('${p.id}', 1)" class="text-right hover:text-[#0D3B2E] transition-colors">
+                                <div>${p.emoji} ${p.nameAr}</div>
+                                <div class="text-[11px] font-en text-[#0D3B2E]">${p.nameEn}</div>
+                            </button>
+                        </td>
+                        <td class="p-3.5 cursor-pointer" onclick="toggleSingleRecall(this)">
+                            <div class="recall-item recall-hidden">
+                                <div class="font-bold text-[#182220]">${p.categoryAr}</div>
+                                <div class="text-[11px] font-en text-stone-600">${p.family}</div>
+                            </div>
+                        </td>
+                        <td class="p-3.5 cursor-pointer" onclick="toggleSingleRecall(this)">
+                            <div class="recall-item recall-hidden font-en text-xs text-stone-700 leading-relaxed">${p.constituentsShort}</div>
+                        </td>
+                        <td class="p-3.5 cursor-pointer" onclick="toggleSingleRecall(this)">
+                            <div class="recall-item recall-hidden font-en text-xs font-semibold text-[#0D3B2E] leading-relaxed">${p.chemShort}</div>
+                        </td>
+                        <td class="p-3.5">
+                            <div class="cursor-pointer mb-2" onclick="toggleSingleRecall(this)">
+                                <div class="recall-item recall-hidden font-en text-xs font-semibold text-[#182220] leading-relaxed">${p.keyElements.join(' • ')}</div>
+                            </div>
+                            <button onclick="openSlideDirectly('${firstSlide.key}', '${firstSlide.caption.replace(/'/g, "\\'")}')"
+                                class="px-2.5 py-1 rounded-lg bg-purple-50 hover:bg-[#5B2C82] text-[#5B2C82] hover:text-white border border-purple-200 text-[11px] font-bold transition-colors inline-flex items-center gap-1">
+                                <i data-lucide="microscope" class="w-3 h-3"></i>
+                                معاينة الشريحة
+                            </button>
+                        </td>
+                        <td class="p-3.5 cursor-pointer" onclick="toggleSingleRecall(this)">
+                            <div class="recall-item recall-hidden text-xs font-semibold text-red-900 leading-relaxed">${p.majorContraShort}</div>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function openSlideDirectly(assetKey, caption) {
+            const src = getPrimarySrc(assetKey);
+            if (src) openLightbox(src, caption);
+            else openLocalLoaderModal();
+        }
+
+        function toggleSingleRecall(td) {
+            const item = td.querySelector('.recall-item');
+            if (!item) return;
+            item.classList.toggle('recall-hidden');
+            item.classList.toggle('recall-visible');
+        }
+
+        function setAllRecallCells(show) {
+            document.querySelectorAll('.recall-item').forEach(el => {
+                el.classList.toggle('recall-hidden', !show);
+                el.classList.toggle('recall-visible', show);
+            });
+        }
+
+        // =========================================================================
+        // 7. ساحة المراجعة والامتحان (12 بطاقة 3D + 15 سؤالاً إكلينيكياً)
+        // =========================================================================
+        const flashcardDeck = [
+            { tag: 'Microscopy Comparison', q: 'ما الفرق المجهري بين Crystal sheath في السنامكي وعرق السوس؟', a: 'السنامكي: True crystal sheath | عرق السوس: Pseudo-crystal sheath (مع Bordered pitted xylem vessel و Cork cells).', note: 'من أهم أسئلة المقارنة العملية.' },
+            { tag: 'Liquorice • Drug Safety', q: 'لماذا يُمنع عرق السوس مع Digitalis و Thiazide diuretics، وما المدر الآمن معه؟', a: 'يسبب احتباس الماء (Edema) ونقص البوتاسيوم مما يعجّل بسمية Digitalis ويضاعف Hypokalemia مع Thiazides — لكنه آمن مع Spironolactone ومدرات K⁺-sparing.', note: 'Glycyrrhiza glabra — Leguminosae.' },
+            { tag: 'Liquorice • Chemical Tests', q: 'ما نتيجة اختبار Foam test واختبار 80% H₂SO₄ مع مسحوق عرق السوس؟', a: 'Foam test: رغوة مستمرة (Persistent froth) للسابونينات | 80% H₂SO₄: لون برتقالي (Orange color).', note: 'Glycyrrhizin حلو المذاق وGlycyramarin مُرّ المذاق.' },
+            { tag: 'Ginger • Chemistry', q: 'ماذا يحدث لطعم Gingerol اللاذع عند غلي الزنجبيل مع 2% KOH؟', a: 'يدمّر ويختفي الطعم اللاذع (Pungency of gingerol is destroyed by boiling with 2% KOH).', note: 'ويعطي لوناً أحمر مع Sudan III للزيت الطيار.' },
+            { tag: 'Ginger • Contraindications', q: 'اذكر موانع الاستعمال الرئيسية للزنجبيل (Ginger):', a: '1) ممنوع مع أدوية السيولة (Warfarin) لنشاطه المضاد للتجلط | 2) ممنوع مع حصوات المرارة (Cholagogue) | 3) يسبب حرقان المعدة | 4) مراقبة سكر الدم لمرضى السكري.', note: 'العناصر المجهرية: Starch granules، Septate dentate fiber، Oleo-resin cell.' },
+            { tag: 'Rhubarb • Botanical Origin', q: 'ما هو الأصل النباتي للرواند (Rhubarb) وما النوع المستثنى منه؟', a: 'Dried rhizome & big roots of Rheum palmatum & R. officinale — باستثناء (EXCEPT) Rheum rhaponticum، العائلة Polygonaceae.', note: 'لا يُستخدم الرواند لعلاج الإمساك المزمن.' },
+            { tag: 'Rhubarb • Tests & Microscopy', q: 'ما هي اختبارات الرواند الكيميائية وعناصره المجهرية؟', a: 'الاختبارات: KOH (أحمر)، Microsublimation (بلورات إبرية تحمر مع KOH)، Borntrager’s (أحمر وردي) | الميكروسكوب: Giant Ca-oxalate clusters و Reticulate xylem vessels.', note: 'ممنوع في Bowel obstruction وAppendicitis وCrohn’s وColitis وIBS.' },
+            { tag: 'Trichomes Comparison', q: 'قارن بين الشعيرات التشخيصية لكل من: الروزماري، السكران المصري، الزعتر، والنعناع:', a: 'الروزماري: Candelabra | السكران المصري: Branched glandular | الزعتر: Bent (knee-shaped) | النعناع: Multicellular uniseriate.', note: 'وورق الجوافة: Unicellular with warty cuticle AT THE BASE.' },
+            { tag: 'Therapeutic Mixtures', q: 'ما الاستخدام العام ودور كل نبات في (Ginger + Rosemary) و (Liquorice + Thyme)؟', a: 'Ginger+Rosemary: تعزيز الهضم (الزنجبيل Anti-emetic/Digestive والروزماري Antispasmodic/Carminative) | Liquorice+Thyme: للسعال (كلاهما Expectorant).', note: 'وSenna+Rhubarb: Purgative.' },
+            { tag: 'Peppermint • Safety', q: 'لماذا يُمنع النعناع الفلفلي مع ارتجاع المريء (GERD) والرضع؟', a: 'يرخي الصمام السفلي للمريء (LES) فيفاقم الارتجاع، وتطبيقه قرب أنف الرضع قد يسبب تشنج الحنجرة (Laryngospasm).', note: 'يعطي المنثول لوناً بنفسجياً مع Vanillin / H₂SO₄.' },
+            { tag: 'Guava Leaves • Chemistry', q: 'لماذا يُمنع ورق الجوافة في الإمساك الشديد وما اختباره الكيميائي المميز؟', a: 'لغناه بالتانينات القابضة (التي تسبب الإمساك وتقلل امتصاص الحديد) — ويعطي مع FeCl₃ لوناً أزرق مسوداً / أخضر داكناً.', note: 'Psidium guajava — Myrtaceae.' },
+            { tag: 'Egyptian Henbane • Clinical', q: 'ما الاختبار النوعي للسكران المصري وأبرز استخداميه الإكلينيكيين؟', a: 'Vitali-Morin test (لون بنفسجي داكن) | الاستخدامات: دوار السفر (Hyoscine) وترياق تسمم المبيدات الفسفورية (Hyoscyamine / Atropine).', note: 'ممنوع مع الجلوكوما، BPH، تسارع القلب، والوهن العضلي.' }
+        ];
+
+        const clinicalQuiz = [
+            { q: '1. ما هو اللون الناتج عند إضافة مسحوق عرق السوس إلى 80% H₂SO₄؟', opts: ['لون برتقالي (Orange color)', 'لون بنفسجي داكن (Deep violet)', 'لون أزرق مسود (Bluish-black)', 'لون أخضر مزرق'], ans: 0, exp: 'مسحوق عرق السوس يعطي لوناً برتقالياً مميزاً مع 80% H₂SO₄، بينما يعطي Foam test رغوة مستمرة.' },
+            { q: '2. أي من مدرات البول التالية آمن للاستخدام مع عرق السوس دون التسبب في نقص البوتاسيوم؟', opts: ['Spironolactone و K⁺-sparing diuretics', 'Thiazide diuretics', 'مدرات البول مع Digitalis', 'لا يوجد مدر بول آمن'], ans: 0, exp: 'عرق السوس يتعارض مع Thiazides لحدوث Additive hypokalemia، لكنه آمن مع Spironolactone ومدرات K⁺-sparing.' },
+            { q: '3. أي مجموعة عناصر مجهرية تميّز عرق السوس (Glycyrrhiza glabra)؟', opts: ['Pseudo-crystal sheath + Bordered pitted xylem vessel + Cork cells', 'True crystal sheath + Warty trichomes + Paracytic stomata', 'Giant Ca-oxalate clusters + Reticulate xylem vessels', 'Starch granules + Septate dentate fiber + Oleo-resin cell'], ans: 0, exp: 'يتميز عرق السوس بـ Pseudo-crystal sheath و Bordered pitted xylem vessel و Cork cells.' },
+            { q: '4. ماذا يحدث عند غلي الزنجبيل (Ginger) مع 2% KOH؟', opts: ['يدمّر الطعم اللاذع (Pungency) لمركب Gingerol', 'يتحول إلى لون وردي في طبقة الأمونيا', 'تتكون بلورات إبرية متكثفة', 'يتكون راسب أزرق مسود'], ans: 0, exp: 'الغليان مع 2% KOH يدمّر الطعم اللاذع لمركب Gingerol، ويعطي Sudan III لوناً أحمر للزيت الطيار.' },
+            { q: '5. مريض يتناول Warfarin ولديه تاريخ لحصوات المرارة — أي نبات يجب تجنّبه تماماً؟', opts: ['الزنجبيل (Ginger)', 'أوراق الجوافة (Guava leaves)', 'أوراق الزعتر (Thyme)', 'أوراق السنامكي (Senna)'], ans: 0, exp: 'الزنجبيل له نشاط مضاد للتجلط (يرفع خطر النزيف مع Warfarin) ونشاط مدر للصفراء (ممنوع مع حصوات المرارة).' },
+            { q: '6. أي عنصر مجهري يُعد علامة تشخيصية للزنجبيل (Zingiber officinale)؟', opts: ['Septate dentate fiber + Starch granules + Oleo-resin cell', 'Candelabra trichome', 'Branched glandular trichome', 'Bent knee-shaped trichome'], ans: 0, exp: 'العناصر الثلاثة المميزة للزنجبيل هي: Starch granules و Septate dentate fiber و Oleo-resin cell.' },
+            { q: '7. أي نوع من جنس Rheum يُستثنى (EXCEPT) من الأصل النباتي المعتمد للرواند؟', opts: ['Rheum rhaponticum', 'Rheum palmatum', 'Rheum officinale', 'Psidium guajava'], ans: 0, exp: 'الأصل النباتي للرواند هو R. palmatum و R. officinale مع استثناء R. rhaponticum.' },
+            { q: '8. في اختبار Microsublimation للرواند (Rhubarb)، ما النتيجة المميزة؟', opts: ['بلورات إبرية متكثفة (Condensed needles) تتحول للأحمر مع KOH', 'رغوة كثيفة مستمرة مع الماء', 'لون برتقالي مع حمض الكبريتيك', 'لون بنفسجي مع Vanillin'], ans: 0, exp: 'اختبار Microsublimation للرواند يعطي بلورات إبرية متكثفة تعطي لوناً أحمر عند إضافة KOH.' },
+            { q: '9. ما العناصر المجهرية التشخيصية لنبات الرواند (Rhubarb)؟', opts: ['Giant Ca-oxalate clusters & Reticulate xylem vessels', 'True crystal sheath & Paracytic stomata', 'Pseudo-crystal sheath & Cork cells', 'Multicellular uniseriate trichome'], ans: 0, exp: 'يتميز الرواند بـ Giant Ca-oxalate clusters و Reticulate xylem vessels.' },
+            { q: '10. في خلطة (Ginger + Rosemary) لتعزيز الهضم، ما دور كل منهما؟', opts: ['Ginger: Anti-emetic & Digestive boosting | Rosemary: Antispasmodic & Carminative', 'كلاهما Purgative', 'كلاهما Expectorant للسعال', 'Ginger: Astringent | Rosemary: Antidote'], ans: 0, exp: 'الزنجبيل يعمل كمضاد للغثيان ومعزز للهضم، بينما الروزماري يعمل كمضاد للتقلصات وطارد للغازات.' },
+            { q: '11. ما الاستخدام العام ودور كل نبات في خلطة (Liquorice + Thyme)؟', opts: ['علاج السعال — وكلاهما يعمل كطارد للبلغم (Expectorant)', 'علاج الإمساك — وكلاهما Purgative', 'علاج الإسهال — وكلاهما قابض', 'الوقاية من دوار السفر'], ans: 0, exp: 'تُستخدم خلطة Liquorice + Thyme لعلاج السعال حيث يعمل كل من عرق السوس والزعتر كـ Expectorant.' },
+            { q: '12. أي نباتين يتعارضان فارماكولوجياً عند دمجهما بسبب التانينات القابضة مقابل الملينات؟', opts: ['السنامكي (Senna) + أوراق الجوافة (Guava leaves)', 'عرق السوس + الزعتر', 'الزنجبيل + الروزماري', 'السنامكي + النعناع'], ans: 0, exp: 'أوراق الجوافة غنية بالتانينات القابضة المضادة للإسهال فتعاكس التأثير الملين للسنامكي.' },
+            { q: '13. أي نبات يتميز بـ True crystal sheath و Modified Borntrager’s test (أحمر وردي)؟', opts: ['أوراق السنامكي (Senna leaflets)', 'عرق السوس (Liquorice)', 'أوراق الروزماري (Rosemary)', 'أوراق الزعتر (Thyme)'], ans: 0, exp: 'السنامكي يحتوي على True crystal sheath ويعطي لوناً أحمر وردياً في طبقة الأمونيا مع Modified Borntrager’s test.' },
+            { q: '14. ما الشعيرة التشخيصية لورق الجوافة (Psidium guajava) تحت الميكروسكوب؟', opts: ['Unicellular non-glandular trichome with warty cuticle at the base', 'Candelabra trichome', 'Branched glandular trichome', 'Bent trichome'], ans: 0, exp: 'تتميز أوراق الجوافة بوجود Unicellular non-glandular trichome with warty cuticle at the base و Paracytic stomata.' },
+            { q: '15. ما الاختبار الكيميائي المميز لقلويدات السكران المصري (Hyoscyamus muticus)؟', opts: ['Vitali-Morin test (لون بنفسجي داكن)', '80% H₂SO₄ test (لون برتقالي)', 'FeCl₃ test (لون أزرق مسود)', 'Foam test (رغوة مستمرة)'], ans: 0, exp: 'اختبار Vitali-Morin يعطي لوناً بنفسجياً داكناً مميزاً لقلويدات التروبان في السكران المصري.' }
+        ];
+
+        let fcPos = 0, qPos = 0, qPts = 0, qLocked = false;
+
+        function switchReviewTab(mode) {
+            const isFc = mode === 'flashcards';
+            document.getElementById('flashcards-pane').classList.toggle('hidden', !isFc);
+            document.getElementById('quiz-pane').classList.toggle('hidden', isFc);
+            document.getElementById('rev-tab-fc').className = isFc
+                ? 'px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-[#0D3B2E] text-white transition-all flex items-center gap-2'
+                : 'px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-[#182220] hover:bg-white transition-all flex items-center gap-2';
+            document.getElementById('rev-tab-quiz').className = !isFc
+                ? 'px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-[#0D3B2E] text-white transition-all flex items-center gap-2'
+                : 'px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-[#182220] hover:bg-white transition-all flex items-center gap-2';
+            lucide.createIcons();
+        }
+
+        function renderFlashcard() {
+            const c = flashcardDeck[fcPos];
+            document.getElementById('fc-inner').classList.remove('flipped');
+            document.getElementById('fc-counter').textContent = `بطاقة ${fcPos + 1} من ${flashcardDeck.length}`;
+            document.getElementById('fc-badge').textContent = c.tag;
+            document.getElementById('fc-front-q').textContent = c.q;
+            document.getElementById('fc-back-a').textContent = c.a;
+            document.getElementById('fc-back-note').textContent = c.note;
+        }
+        function flipFlashcard() { document.getElementById('fc-inner').classList.toggle('flipped'); }
+        function nextFlashcard() { fcPos = (fcPos + 1) % flashcardDeck.length; renderFlashcard(); }
+        function prevFlashcard() { fcPos = (fcPos - 1 + flashcardDeck.length) % flashcardDeck.length; renderFlashcard(); }
+
+        function renderQuizQuestion() {
+            const item = clinicalQuiz[qPos];
+            qLocked = false;
+            document.getElementById('quiz-question-box').classList.remove('hidden');
+            document.getElementById('quiz-done-box').classList.add('hidden');
+            document.getElementById('quiz-counter').textContent = `السؤال ${qPos + 1} من ${clinicalQuiz.length}`;
+            document.getElementById('quiz-score-badge').textContent = `النتيجة: ${qPts} / ${clinicalQuiz.length}`;
+            document.getElementById('quiz-bar-fill').style.width = `${((qPos + 1) / clinicalQuiz.length) * 100}%`;
+            document.getElementById('quiz-q-text').textContent = item.q;
+            document.getElementById('quiz-exp-box').classList.add('hidden');
+            document.getElementById('quiz-next-btn').classList.add('hidden');
+
+            document.getElementById('quiz-options-list').innerHTML = item.opts.map((opt, idx) => `
+                <button onclick="answerQuiz(${idx})" id="qopt-${idx}"
+                    class="w-full p-3.5 rounded-2xl bg-[#FBFBF8] hover:bg-emerald-50 border-2 border-[#E6E4DC] hover:border-[#0D3B2E] text-right text-xs sm:text-sm font-bold text-[#182220] transition-all">
+                    ${opt}
+                </button>
+            `).join('');
+        }
+
+        function answerQuiz(idx) {
+            if (qLocked) return;
+            qLocked = true;
+            const item = clinicalQuiz[qPos];
+            const ok = idx === item.ans;
+            if (ok) qPts++;
+
+            item.opts.forEach((_, i) => {
+                const b = document.getElementById('qopt-' + i);
+                b.disabled = true;
+                if (i === item.ans) b.className = 'w-full p-3.5 rounded-2xl bg-emerald-50 border-2 border-emerald-500 text-right text-xs sm:text-sm font-extrabold text-emerald-950';
+                else if (i === idx && !ok) b.className = 'w-full p-3.5 rounded-2xl bg-red-50 border-2 border-red-400 text-right text-xs sm:text-sm font-bold text-red-900';
+                else b.className = 'w-full p-3.5 rounded-2xl bg-stone-50 border-2 border-stone-200 text-right text-xs sm:text-sm font-semibold text-stone-400';
+            });
+
+            document.getElementById('quiz-score-badge').textContent = `النتيجة: ${qPts} / ${clinicalQuiz.length}`;
+            const exp = document.getElementById('quiz-exp-box');
+            exp.className = `mt-4 p-4 rounded-2xl text-xs sm:text-sm leading-relaxed border ${ok ? 'bg-emerald-50 border-emerald-300 text-emerald-950' : 'bg-red-50 border-red-300 text-red-950'}`;
+            exp.innerHTML = `<strong>${ok ? 'إجابة صحيحة:' : 'إجابة غير دقيقة:'}</strong> ${item.exp}`;
+            exp.classList.remove('hidden');
+
+            const nextBtn = document.getElementById('quiz-next-btn');
+            nextBtn.innerHTML = qPos + 1 < clinicalQuiz.length
+                ? 'السؤال التالي <i data-lucide="arrow-left" class="w-4 h-4"></i>'
+                : 'عرض النتيجة النهائية <i data-lucide="trophy" class="w-4 h-4"></i>';
+            nextBtn.classList.remove('hidden');
+            lucide.createIcons();
+        }
+
+        function goNextQuiz() {
+            if (qPos + 1 < clinicalQuiz.length) { qPos++; renderQuizQuestion(); }
+            else {
+                document.getElementById('quiz-question-box').classList.add('hidden');
+                document.getElementById('quiz-done-box').classList.remove('hidden');
+                const pct = Math.round((qPts / clinicalQuiz.length) * 100);
+                document.getElementById('quiz-final-text').textContent = `حصلت على ${qPts} من ${clinicalQuiz.length} (${pct}%)`;
+                lucide.createIcons();
+            }
+        }
+
+        function restartQuiz() { qPos = 0; qPts = 0; renderQuizQuestion(); }
+
+        // =========================================================================
+        // 8. تهيئة التطبيق عند التحميل
+        // =========================================================================
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            refreshAllAssetImages();
+            initAiChatWelcome();
+            renderMonographCards();
+            initCompatibilitySelectors();
+            renderPracticalTable();
+            renderFlashcard();
+            renderQuizQuestion();
+
+            // قائمة الموبايل
+            const mobBtn = document.getElementById('mobile-menu-toggle');
+            const mobDrawer = document.getElementById('mobile-menu-drawer');
+            mobBtn.addEventListener('click', () => mobDrawer.classList.toggle('hidden'));
+            mobDrawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobDrawer.classList.add('hidden')));
+
+            // أحداث المساعد الذكي (إرسال عبر زر Enter)
+            const aiInp = document.getElementById('ai-chat-input');
+            if (aiInp) {
+                aiInp.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
+                        sendAiMessage();
+                    }
+                });
+            }
+
+            // إغلاق النوافذ
+            document.getElementById('monograph-modal').addEventListener('click', closeMonograph);
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                    closeLocalLoaderModal();
+                    closeAiSettingsModal();
+                    closeMonograph();
+                }
+            });
+
+            // زر العودة للأعلى
+            const topBtn = document.getElementById('scroll-top-btn');
+            window.addEventListener('scroll', () => {
+                const show = window.scrollY > 320;
+                topBtn.classList.toggle('opacity-0', !show);
+                topBtn.classList.toggle('pointer-events-none', !show);
+                topBtn.classList.toggle('translate-y-3', !show);
+            }, { passive: true });
+        });
+    </script>
+</body>
+</html>
