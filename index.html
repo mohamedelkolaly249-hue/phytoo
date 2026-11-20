@@ -233,13 +233,13 @@
                 <div class="flex items-center gap-3 sm:gap-4 min-w-0">
                     <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
                         <div class="w-11 h-11 sm:w-12 sm:h-12 logo-ring border-2 border-[#064E3B]/25 shadow-sm" title="جامعة المنصورة الأهلية">
-                            <img data-asset="mnu-logo" src="mnu-logo.jpg" alt="شعار جامعة المنصورة الأهلية" class="w-full h-full object-cover">
+                            <img data-asset="mnu-logo" src="mnu-logo.jpg" loading="lazy" decoding="async" alt="شعار جامعة المنصورة الأهلية" class="w-full h-full object-cover">
                         </div>
                         <div class="w-11 h-11 sm:w-12 sm:h-12 logo-ring logo-ring-crop border-2 border-[#D97706]/80 shadow-sm" title="كلية الصيدلة – جامعة المنصورة الأهلية">
-                            <img data-asset="pharmacy-logo" src="pharmacy-logo.jpg" alt="شعار كلية الصيدلة">
+                            <img data-asset="pharmacy-logo" src="pharmacy-logo.jpg" loading="lazy" decoding="async" alt="شعار كلية الصيدلة">
                         </div>
                         <div class="w-11 h-11 sm:w-12 sm:h-12 logo-ring border-2 border-[#059669]/45 shadow-sm p-0.5" title="قسم العقاقير — Pharmacognosy Department">
-                            <img data-asset="pharmacognosy-logo" src="Pharmacognosy Department.png" alt="شعار قسم العقاقير" class="w-full h-full object-contain rounded-full">
+                            <img data-asset="pharmacognosy-logo" src="Pharmacognosy Department.png" loading="lazy" decoding="async" alt="شعار قسم العقاقير" class="w-full h-full object-contain rounded-full">
                         </div>
                     </div>
 
@@ -361,7 +361,7 @@
                                 </span>
                             </div>
                             <p class="text-xs text-slate-600 mt-0.5">
-                                استجابة فورية بأي لغة (العربية، العامية المصرية، English، Français...) للإجابة على أسئلة منهج PG706 وأي استفسار إكلينيكي أو علمي.
+                                استجابة فورية بأي لغة (العربية، العامية المصرية، English، Français...) للإجابة على أسئلة منهج PG706 وأي استفسار إكلينيكي أو علمي أو عام.
                             </p>
                         </div>
                     </div>
@@ -379,8 +379,6 @@
                             <i data-lucide="rotate-ccw" class="w-3.5 h-3.5 text-[#064E3B]"></i>
                             <span>محادثة جديدة</span>
                         </button>
-
-
                     </div>
                 </div>
 
@@ -410,12 +408,29 @@
                     </button>
                 </div>
 
-                <!-- شريط الإدخال والميكروفون والإرسال / الإيقاف -->
+                <!-- شريط أوضاع الرد + الإدخال والميكروفون والإرسال / الإيقاف -->
                 <div class="p-4 sm:p-5 bg-white border-t border-slate-200 space-y-2.5">
+                    <!-- أزرار أوضاع الذكاء الاصطناعي -->
+                    <div id="ai-mode-bar" class="flex flex-wrap items-center gap-2">
+                        <span class="text-[11px] font-extrabold text-slate-400 ml-1">أسلوب الرد:</span>
+                        <button type="button" id="ai-mode-fast" onclick="setAiResponseMode('fast')"
+                            class="px-3 py-1 rounded-full text-[11px] font-bold bg-[#064E3B] text-white border border-[#064E3B] transition-all">
+                            ⚡ إجابة سريعة
+                        </button>
+                        <button type="button" id="ai-mode-detailed" onclick="setAiResponseMode('detailed')"
+                            class="px-3 py-1 rounded-full text-[11px] font-bold bg-white text-[#064E3B] border border-slate-200 hover:bg-emerald-50 transition-all">
+                            📚 شرح مفصّل
+                        </button>
+                        <button type="button" id="ai-mode-exam" onclick="setAiResponseMode('exam')"
+                            class="px-3 py-1 rounded-full text-[11px] font-bold bg-white text-[#064E3B] border border-slate-200 hover:bg-emerald-50 transition-all">
+                            🎯 سؤال امتحان OSCE
+                        </button>
+                    </div>
+
                     <div class="flex items-center gap-2">
                         <div class="relative flex-1">
                             <input type="text" id="ai-chat-input" dir="auto" autocomplete="off"
-                                placeholder="اسأل أي سؤال إكلينيكي أو علمي بأي لغة..."
+                                placeholder="اسأل أي سؤال إكلينيكي أو علمي أو عام بأي لغة..."
                                 class="w-full pr-4 pl-12 py-3.5 rounded-2xl bg-slate-50 border-2 border-slate-200 focus:bg-white focus:border-[#059669] focus:ring-4 focus:ring-emerald-600/10 focus:outline-none text-[#0F172A] placeholder-slate-400 font-semibold text-xs sm:text-sm transition-all">
                             <button id="voice-search-btn" type="button" onclick="startVoiceSearch()" title="الإملاء الصوتي"
                                 class="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-xl bg-emerald-50 hover:bg-[#059669] text-[#064E3B] hover:text-white transition-colors">
@@ -785,13 +800,13 @@
                 <div class="flex items-center gap-3 text-center md:text-right">
                     <div class="flex items-center gap-1.5 shrink-0">
                         <div class="w-10 h-10 logo-ring border border-white/30">
-                            <img data-asset="mnu-logo" src="mnu-logo.jpg" alt="جامعة المنصورة الأهلية" class="w-full h-full object-cover">
+                            <img data-asset="mnu-logo" src="mnu-logo.jpg" loading="lazy" decoding="async" alt="جامعة المنصورة الأهلية" class="w-full h-full object-cover">
                         </div>
                         <div class="w-10 h-10 logo-ring logo-ring-crop border border-amber-300">
-                            <img data-asset="pharmacy-logo" src="pharmacy-logo.jpg" alt="كلية الصيدلة">
+                            <img data-asset="pharmacy-logo" src="pharmacy-logo.jpg" loading="lazy" decoding="async" alt="كلية الصيدلة">
                         </div>
                         <div class="w-10 h-10 logo-ring border border-emerald-300/70 p-0.5">
-                            <img data-asset="pharmacognosy-logo" src="Pharmacognosy Department.png" alt="قسم العقاقير" class="w-full h-full object-contain rounded-full">
+                            <img data-asset="pharmacognosy-logo" src="Pharmacognosy Department.png" loading="lazy" decoding="async" alt="قسم العقاقير" class="w-full h-full object-contain rounded-full">
                         </div>
                     </div>
                     <div>
@@ -1010,6 +1025,8 @@
 
         function hydrateAllImages(root = document) {
             (root || document).querySelectorAll('img[data-asset]').forEach(img => {
+                if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+                if (!img.hasAttribute('decoding')) img.setAttribute('decoding', 'async');
                 const key = img.getAttribute('data-asset');
                 const entry = assetRegistry[key];
                 if (!entry) return;
@@ -1592,12 +1609,24 @@
         ];
 
         // =========================================================================
-        // 3. المساعد الذكي الإكلينيكي (Cloudflare Worker v2 + SSE Streaming + Citation Chips)
+        // 3. المساعد الذكي الإكلينيكي (Cloudflare Worker v2 + SSE Streaming + Modes)
         // =========================================================================
         let aiChatHistory = [];
         let isAiStreaming = false;
         let webSearchEnabled = false;
+        let aiResponseMode = 'fast'; // fast | detailed | exam
         let activeAbortController = null;
+
+        function setAiResponseMode(mode) {
+            aiResponseMode = mode;
+            ['fast', 'detailed', 'exam'].forEach(m => {
+                const btn = document.getElementById('ai-mode-' + m);
+                if (!btn) return;
+                btn.className = m === mode
+                    ? 'px-3 py-1 rounded-full text-[11px] font-bold bg-[#064E3B] text-white border border-[#064E3B] transition-all'
+                    : 'px-3 py-1 rounded-full text-[11px] font-bold bg-white text-[#064E3B] border border-slate-200 hover:bg-emerald-50 transition-all';
+            });
+        }
 
         function getActiveWorkerUrl() {
             try {
@@ -1675,47 +1704,11 @@
             }
         }
 
-        function openAiSettingsModal() {
-            const proxyInp = document.getElementById('ai-proxy-url-input');
-            const keyInp = document.getElementById('gemini-api-key-input');
-            if (proxyInp) proxyInp.value = getActiveWorkerUrl();
-            if (keyInp) keyInp.value = getDirectApiKey();
-            const m = document.getElementById('ai-settings-modal');
-            if (!m) return;
-            m.classList.remove('hidden');
-            m.classList.add('flex');
-            if (window.lucide) lucide.createIcons();
-        }
-
         function closeAiSettingsModal() {
             const m = document.getElementById('ai-settings-modal');
             if (!m) return;
             m.classList.add('hidden');
             m.classList.remove('flex');
-        }
-
-        function saveAiSettings() {
-            const proxyVal = (document.getElementById('ai-proxy-url-input')?.value || '').trim();
-            const keyVal = (document.getElementById('gemini-api-key-input')?.value || '').trim();
-            try {
-                if (proxyVal && proxyVal !== DEFAULT_AI_PROXY_URL) localStorage.setItem(STORAGE_PROXY_KEY, proxyVal);
-                else localStorage.removeItem(STORAGE_PROXY_KEY);
-                if (keyVal) localStorage.setItem(STORAGE_API_KEY, keyVal);
-                else localStorage.removeItem(STORAGE_API_KEY);
-            } catch (_) {}
-            closeAiSettingsModal();
-            checkWorkerHealth();
-            showToast('تم حفظ إعدادات الربط بنجاح.');
-        }
-
-        function resetAiSettings() {
-            try {
-                localStorage.removeItem(STORAGE_PROXY_KEY);
-                localStorage.removeItem(STORAGE_API_KEY);
-            } catch (_) {}
-            closeAiSettingsModal();
-            checkWorkerHealth();
-            showToast('تمت استعادة الإعدادات الافتراضية.');
         }
 
         function normalizeArabic(str) {
@@ -1900,7 +1893,7 @@
                     </div>
                     <div id="prose-${id}" dir="rtl" class="ai-prose text-right">
                         <div class="flex items-center gap-2 text-xs text-slate-500 font-semibold py-1">
-                            <span>جاري تجهيز الإجابة الإكلينيكية</span>
+                            <span>جاري تجهيز الإجابة</span>
                             <span class="flex items-center gap-1"><span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span></span>
                         </div>
                     </div>
@@ -1936,14 +1929,12 @@
             if (!shell) return;
             updateAiBubbleStreaming(shell, finalText, false);
 
-            // زر النسخ
             if (shell.copyBtn && finalText) {
                 shell.copyBtn.classList.remove('hidden');
                 shell.copyBtn.classList.add('inline-flex');
                 shell.copyBtn.onclick = () => copyTextReliable(finalText, 'تم نسخ إجابة المساعد الإكلينيكي.');
             }
 
-            // أزرار النباتات المذكورة تلقائياً
             const mentioned = detectMentionedPlants(finalText).slice(0, 5);
             if (shell.plantsEl && mentioned.length) {
                 shell.plantsEl.innerHTML = `
@@ -1960,7 +1951,6 @@
                 shell.plantsEl.classList.add('flex');
             }
 
-            // شرائح مصادر البحث على الويب إن وجدت
             if (shell.sourcesEl && sources.length) {
                 shell.sourcesEl.innerHTML = `
                     <span class="text-[10px] font-bold text-slate-400 inline-flex items-center gap-1 ml-1">
@@ -2032,7 +2022,6 @@ You specialize in the 9 official medicinal plants of PG706:
 Official Mixtures: Senna+Rhubarb (Purgative), Liquorice+Thyme (In cough, both expectorant), Ginger+Rosemary (Digestion boosting).
 Answer clearly, accurately, and concisely in the user's language (Arabic, Egyptian dialect, or English). Always highlight key clinical contraindications.`;
 
-        // محرك محلي ذكي متطور يفهم العامية المصرية والفصحى والإنجليزية والأعراض والاختبارات
         function buildLocalFallbackResponse(query, errorReason = '') {
             const q = normalizeArabic(query);
             const hasAny = (words) => words.some(w => q.includes(normalizeArabic(w)));
@@ -2040,7 +2029,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
                 ? `\n\n> **ملاحظة تقنية:** تم الرد عبر المحرك المرجعي المحلي لمقرر **PG706** لتعذر الاتصال بخادم الذكاء الاصطناعي حالياً (${errorReason}).`
                 : '';
 
-            // 1. المقارنات المجهرية المحددة
             if (q.includes('crystal sheath') || (hasAny(['سنامكي', 'senna']) && hasAny(['عرق', 'سوس', 'liquorice']) && hasAny(['ميكروسكوب', 'مجهري', 'قارن', 'فرق', 'مقارنه']))) {
                 return `### مقارنة مجهرية: السنامكي مقابل عرق السوس
 | النبات | العنصر المميز (Crystal Sheath) | عناصر مجهرية مرافقة |
@@ -2067,7 +2055,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
                 }
             }
 
-            // 2. التداخلات الدوائية الحرجة
             if (hasAny(['digitalis', 'digoxin', 'ديجيتاليس', 'ديجوكسين', 'thiazide', 'ثيازيد', 'spironolactone', 'سبيرونولاكتون']) || (hasAny(['قلب', 'القلب', 'تورم']) && hasAny(['سوس', 'عرقسوس', 'liquorice']))) {
                 return `### الحكم الإكلينيكي: عرق السوس مع أدوية القلب ومدرات البول
 - **الحكم:** **ممنوع (Contraindicated)** استخدام **عرق السوس (Liquorice)** لمرضى القلب أو مع **Digitalis / Digoxin** أو **Thiazide diuretics**.
@@ -2085,7 +2072,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
 - **النعناع والروزماري:** يُستخدمان بحذر أيضاً في مرضى حصوات المرارة.` + notice;
             }
 
-            // 3. أعراض الجهاز الهضمي: وجع البطن، المغص، الانتفاخ، القولون، عسر الهضم
             if (hasAny(['وجع البطن', 'الم البطن', 'بطني', 'بطن', 'مغص', 'تقلصات', 'انتفاخ', 'غازات', 'قولون', 'القولون', 'عسر هضم', 'الهضم', 'هضم', 'تلبك', 'مغص البطن', 'stomach ache', 'abdominal pain', 'colic', 'bloating', 'ibs', 'indigestion', 'digestion'])) {
                 return `### الأعشاب المقررة لوجع البطن والمغص والانتفاخ وتحسين الهضم (PG706)
 تعتمد الخيارات الإكلينيكية من المنهج على سبب ألم البطن:
@@ -2104,7 +2090,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
 > **تنبيه إكلينيكي:** إذا كان وجع البطن مصحوباً بـ **حموضة أو قرحة معدة** فالأفضل **عرق السوس (Liquorice)** كملطف (Demulcent) وتجنّب النعناع. أما إذا كان هناك اشتباه في **انسداد معوي أو التهاب زائدة أو IBD** فيُمنع تماماً استخدام السنامكي والرواند.` + notice;
             }
 
-            // 4. الحموضة، حرقان المعدة، القرحة، ارتجاع المريء
             if (hasAny(['حموضه', 'الحموضه', 'حرقان', 'قرحه', 'القرحه', 'المعده', 'معدتي', 'ارتجاع', 'المريء', 'gerd', 'ulcer', 'gastritis', 'heartburn', 'acidity'])) {
                 return `### الأعشاب المقررة للحموضة وقرحة المعدة وارتجاع المريء (PG706)
 - **الخيار الأنسب — عرق السوس (Liquorice — *Glycyrrhiza glabra*):**
@@ -2115,7 +2100,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
   - **الزنجبيل (Ginger) وزيت الزعتر المركز:** قد يسببان حرقان المعدة وتهيج الغشاء المخاطي.` + notice;
             }
 
-            // 5. الكحة، السعال، البلغم، البرد، الصدر، الحلق
             if (hasAny(['كحه', 'الكحه', 'سعال', 'السعال', 'بلغم', 'البلغم', 'صدري', 'صدر', 'زور', 'حلق', 'شعب', 'برد', 'cough', 'phlegm', 'expectorant'])) {
                 return `### الأعشاب والخلطات المقررة للكحة والبلغم (PG706)
 - **الخلطة المقررة رسمياً للسعال (In Cough):** **Liquorice + Thyme**
@@ -2127,7 +2111,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
 > **تنبيه أمان:** تجنّب **عرق السوس** تماماً إذا كان المريض يعاني من اضطرابات قلبية أو يتناول **Digitalis** أو **Thiazides**.` + notice;
             }
 
-            // 6. الإمساك والملينات
             if (hasAny(['امساك', 'الامساك', 'بطني مقفوله', 'ملين', 'مسهل', 'constipation', 'laxative', 'purgative'])) {
                 return `### الأعشاب المقررة للإمساك الحاد (PG706)
 - **الخلطة المقررة (Purgative):** **Senna + Rhubarb**
@@ -2139,7 +2122,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
   - كلاهما ممنوع تماماً في: انسداد الأمعاء (**Bowel obstruction**)، التهاب الزائدة الدودية، داء كرون والتهاب القولون (**IBD**)، القولون العصبي (**IBS**)، والحمل.` + notice;
             }
 
-            // 7. الإسهال
             if (hasAny(['اسهال', 'الاسهال', 'بطني ماشيه', 'نزله معويه', 'diarrhea', 'antidiarrheal'])) {
                 return `### الأعشاب المقررة للإسهال (PG706)
 - **أوراق الجوافة (Guajava Leaves — *Psidium guajava*):**
@@ -2148,7 +2130,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
 - **الرواند (Rhubarb) بالجرعات الصغيرة فقط:** له تأثير قابض ومقوٍ مُرّ للمعدة (**Astringent & Bitter stomachic**) بسبب محتواه من التانينات (بينما الجرعة الكبيرة منه مسهلة).` + notice;
             }
 
-            // 8. الغثيان، القيء، دوار السفر
             if (hasAny(['غثيان', 'ترجيع', 'قيء', 'دوخه', 'دوار', 'سفر', 'مواصلات', 'نفسه غامه', 'nausea', 'vomiting', 'motion sickness'])) {
                 return `### الأعشاب المقررة للغثيان والقيء ودوار السفر (PG706)
 - **الزنجبيل (Ginger — *Zingiber officinale*):**
@@ -2158,7 +2139,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
   - يحتوي على **Hyoscine / Scopolamine** المستخدم للوقاية من دوار السفر (**Motion sickness**)، لكنه **مقيّد بوصفة طبية فقط** وممنوع في الجلوكوما وتضخم البروستاتا وتسارع ضربات القلب.` + notice;
             }
 
-            // 9. الخلطات المقررة عامة
             if (hasAny(['خلطه', 'خلطات', 'تركيبات', 'تركيبه', 'mixture', 'combination'])) {
                 return `### الخلطات العلاجية الثلاث المقررة في منهج PG706
 1. **للسعال (In Cough):** **Liquorice + Thyme** — يعمل كل منهما كطارد للبلغم (**Expectorant**).
@@ -2166,7 +2146,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
 3. **كمسهل للإمساك الحاد (Purgative):** **Senna + Rhubarb** — السنامكي (**Laxative/Purgative**) والرواند (**Purgative**).` + notice;
             }
 
-            // 10. الاختبارات الكيميائية للنباتات المذكورة أو عامة
             if (hasAny(['اختبار', 'اختبارات', 'تست', 'كيميائي', 'chemical test', 'borntrager', 'vitali', 'foam', 'h2so4', 'sudan', 'fecl3', 'microsublimation', 'koh'])) {
                 const mentionedForChem = detectMentionedPlants(query);
                 if (mentionedForChem.length) {
@@ -2187,7 +2166,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
 | **الرواند (Rhubarb)** | **KOH:** أحمر • **Microsublimation:** إبر تحمر مع KOH • **Borntrager's** |` + notice;
             }
 
-            // 11. البحث عن نبات محدد من الـ 9 نباتات
             const matched = detectMentionedPlants(query);
             if (matched.length) {
                 return matched.slice(0, 3).map(({ plant: p }) => (
@@ -2201,7 +2179,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
                 )).join('\n\n') + notice;
             }
 
-            // 12. رسالة توجيهية واضحة عند عدم تطابق السؤال في الوضع المحلي
             return `تعذر الاتصال مؤقتاً بخادم الذكاء الاصطناعي${errorReason ? ` (${errorReason})` : ''}، لكن **المحرك المرجعي المحلي لمقرر PG706** جاهز لمساعدتك فوراً. جرّب السؤال عن:
 - **الأعراض:** وجع البطن والمغص، الحموضة والارتجاع، الكحة والبلغم، الإمساك، الإسهال، الغثيان ودوار السفر.
 - **النباتات التسعة:** السنامكي، الجوافة، الروزماري، النعناع، الزعتر، السكران المصري، عرق السوس، الزنجبيل، الرواند.
@@ -2230,7 +2207,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
 
             const contentType = (response.headers.get('content-type') || '').toLowerCase();
 
-            // 1) معالجة البث المباشر SSE كلمة بكلمة
             if (contentType.includes('text/event-stream') && response.body) {
                 const reader = response.body.getReader();
                 const decoder = new TextDecoder('utf-8');
@@ -2284,7 +2260,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
                     }
                 }
             } else {
-                // 2) معالجة الاستجابة القياسية application/json بسلاسة
                 const data = await response.json();
                 const candidate = data?.candidates?.[0];
                 if (candidate) {
@@ -2318,11 +2293,11 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
                 return await executeFetchToAI(endpoint, payload, shell, signal, streamState);
             }
 
-            // محاولة 1: البث المباشر عبر Cloudflare Worker
+            // محاولة 1: البث المباشر عبر Cloudflare Worker مع تمرير mode
             try {
                 const res = await executeFetchToAI(
                     workerUrl,
-                    { contents: historyContents, stream: true, useSearch: webSearchEnabled },
+                    { contents: historyContents, stream: true, useSearch: webSearchEnabled, mode: aiResponseMode },
                     shell,
                     signal,
                     streamState
@@ -2330,11 +2305,10 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
                 if (res.text) return res;
             } catch (streamErr) {
                 if (streamErr && streamErr.name === 'AbortError') throw streamErr;
-                // محاولة 2 تلقائية: طلب JSON قياسي بدون stream إذا لم يدعم الـ Worker البث
                 if (!streamState.text) {
                     return await executeFetchToAI(
                         workerUrl,
-                        { contents: historyContents, stream: false, useSearch: webSearchEnabled },
+                        { contents: historyContents, stream: false, useSearch: webSearchEnabled, mode: aiResponseMode },
                         shell,
                         signal,
                         streamState
@@ -2343,10 +2317,9 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
                 throw streamErr;
             }
 
-            // إذا رجع البث فارغاً بدون خطأ صريح، جرّب بدون stream
             return await executeFetchToAI(
                 workerUrl,
-                { contents: historyContents, stream: false, useSearch: webSearchEnabled },
+                { contents: historyContents, stream: false, useSearch: webSearchEnabled, mode: aiResponseMode },
                 shell,
                 signal,
                 streamState
@@ -2361,7 +2334,7 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
             const shell = createAiBubbleShell();
             finalizeAiBubble(
                 shell,
-                'مرحباً بك في **المساعد الإكلينيكي الذكي لمقرر Phytotherapy (PG706)**.\nاسألني أي سؤال بأي لغة حول النباتات التسعة المقررة، الأعراض الشائعة، المقارنات المجهرية، الاختبارات الكيميائية، التداخلات الدوائية، أو أي استفسار صيدلي وعلمي عام.'
+                'مرحباً بك في **المساعد الإكلينيكي الذكي لمقرر Phytotherapy (PG706)**.\nاسألني أي سؤال بأي لغة حول النباتات التسعة المقررة، الأعراض الشائعة، المقارنات المجهرية، الاختبارات الكيميائية، التداخلات الدوائية، أو أي استفسار صيدلي وعلمي وعام.'
             );
         }
 
@@ -2672,7 +2645,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
             } else if (tab === 3) {
                 body.innerHTML = `
                     <div class="space-y-5 animate-fade-up">
-                        <!-- الاختبارات الكيميائية -->
                         <div class="space-y-3">
                             <div class="text-xs font-extrabold text-[#064E3B]">الاختبارات الكيميائية (<span class="font-en">Chemical Tests</span>)</div>
                             ${p.chemicalTests.map(t => `
@@ -2688,7 +2660,7 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
                                     ${t.photoKey ? `
                                         <div class="rounded-2xl border border-slate-200 bg-white p-3.5 flex flex-col sm:flex-row items-center gap-4">
                                             <div class="w-28 h-40 rounded-xl overflow-hidden bg-slate-50 border border-slate-200 flex items-center justify-center shrink-0">
-                                                <img data-asset="${t.photoKey}" src="${getEncodedPath(t.photoKey)}" alt="${escapeHtml(t.photoCaption)}"
+                                                <img data-asset="${t.photoKey}" src="${getEncodedPath(t.photoKey)}" loading="lazy" decoding="async" alt="${escapeHtml(t.photoCaption)}"
                                                     onclick="openLightbox(this.src, '${escapeHtml(t.photoCaption)}')"
                                                     class="w-full h-full object-contain cursor-zoom-in">
                                                 <div class="slide-fallback-box hidden text-center p-2 space-y-2">
@@ -2717,7 +2689,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
                             `).join('')}
                         </div>
 
-                        <!-- العناصر المجهرية والشرائح -->
                         <div class="space-y-3 pt-2 border-t border-slate-200">
                             <div class="p-4 rounded-2xl bg-emerald-50/50 border border-emerald-200">
                                 <div class="text-xs font-extrabold text-[#064E3B] mb-2">العناصر المجهرية التشخيصية (<span class="font-en">Key Elements</span>)</div>
@@ -2730,7 +2701,7 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
                                 ${p.slides.map(s => `
                                     <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden flex flex-col">
                                         <div class="relative bg-white p-2 flex items-center justify-center min-h-[195px]">
-                                            <img data-asset="${s.key}" src="${getEncodedPath(s.key)}" alt="${escapeHtml(s.caption)}"
+                                            <img data-asset="${s.key}" src="${getEncodedPath(s.key)}" loading="lazy" decoding="async" alt="${escapeHtml(s.caption)}"
                                                 onclick="openLightbox(this.src, '${escapeHtml(s.caption)}')"
                                                 class="max-h-64 w-full object-contain rounded-xl cursor-zoom-in">
                                             <div class="slide-fallback-box hidden text-center p-5 space-y-2">
@@ -2865,7 +2836,7 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
             }
 
             const has = (id) => uniqueIds.includes(id);
-            let verdict = 'synergy'; // 'synergy' | 'caution' | 'incompatible'
+            let verdict = 'synergy';
             const escalate = (lvl) => {
                 const rank = { synergy: 0, caution: 1, incompatible: 2 };
                 if (rank[lvl] > rank[verdict]) verdict = lvl;
@@ -2930,7 +2901,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
                 });
             }
 
-            // تداخلات بين النباتات وبعضها
             if (has('hyoscyamus')) {
                 escalate('incompatible');
                 warnings.push('السكران المصري (Hyoscyamus muticus) يحتوي على قلويدات التروبان عالية السمية (بوصفة طبية فقط)، ويعاكس الملينات لأنه يثبط حركة الأمعاء.');
@@ -2944,7 +2914,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
                 warnings.push('خطر نقص البوتاسيوم (Hypokalemia): الجمع المطوّل بين عرق السوس والملينات الأنثراكينونية يضاعف فقدان البوتاسيوم.');
             }
 
-            // تداخلات مع الأدوية والحالات المرضية الـ 11
             if (cond === 'digitalis') {
                 if (has('liquorice')) {
                     escalate('incompatible');
@@ -3067,7 +3036,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
                         التركيبة المفحوصة: <span class="text-[#064E3B]">${titleLine}</span>
                     </div>
 
-                    <!-- 1. الحكم الإكلينيكي -->
                     <div class="p-4 rounded-2xl border-2 ${v.boxCls} flex items-center justify-between gap-3 flex-wrap">
                         <div class="flex items-center gap-2">
                             <i data-lucide="${v.icon}" class="w-5 h-5 shrink-0"></i>
@@ -3076,7 +3044,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
                         <span class="px-3 py-1 rounded-full text-[11px] font-bold ${v.pillCls}">${v.label}</span>
                     </div>
 
-                    <!-- 2. التأثير المشترك ودور كل نبات -->
                     <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-3">
                         <div class="text-xs font-extrabold text-[#064E3B] flex items-center gap-1.5">
                             <i data-lucide="git-merge" class="w-4 h-4 text-[#D97706]"></i>
@@ -3090,7 +3057,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
                         </ul>
                     </div>
 
-                    <!-- 3. التحذيرات والبدائل الآمنة -->
                     <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2.5">
                         <div class="text-xs font-extrabold text-[#0F172A] flex items-center gap-1.5">
                             <i data-lucide="shield-alert" class="w-4 h-4 text-[#D97706]"></i>
@@ -3475,7 +3441,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
             renderQuizQuestion();
             renderFlashcard();
 
-            // قائمة الموبايل
             const mobBtn = document.getElementById('mobile-menu-toggle');
             const mobDrawer = document.getElementById('mobile-menu-drawer');
             if (mobBtn && mobDrawer) {
@@ -3483,7 +3448,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
                 mobDrawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobDrawer.classList.add('hidden')));
             }
 
-            // إرسال السؤال عند الضغط على Enter
             const aiInp = document.getElementById('ai-chat-input');
             if (aiInp) {
                 aiInp.addEventListener('keydown', (e) => {
@@ -3494,7 +3458,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
                 });
             }
 
-            // إغلاق النوافذ بزر Escape
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
                     closeLightbox();
@@ -3503,7 +3466,6 @@ Answer clearly, accurately, and concisely in the user's language (Arabic, Egypti
                 }
             });
 
-            // زر العودة للأعلى
             const topBtn = document.getElementById('scroll-top-btn');
             window.addEventListener('scroll', () => {
                 if (!topBtn) return;
